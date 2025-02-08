@@ -83,6 +83,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Climb</span>
 <span class="extends-implements">extends edu.wpi.first.wpilibj2.command.SubsystemBase</span></div>
+<div class="block">Subsystem that handles the climbing mechanism.
+ Controls a motor with a ratchet for climbing operations.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -95,7 +97,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">Climb</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates a new Climb subsystem.</div>
+</div>
 </div>
 </section>
 </li>
@@ -112,10 +116,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Climb.html" title="class in frc.robot.subsystems">Climb</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInstance()" class="member-name-link">getInstance</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Returns the singleton instance of the Climb subsystem.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>frc.robot.subsystems.Climb.RachetState</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gets the current state of the ratchet mechanism.</div>
+</div>
 </div>
 </div>
 </div>
@@ -143,6 +151,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;()">
 <h3>Climb</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Climb</span>()</div>
+<div class="block">Creates a new Climb subsystem.
+ Initializes the motor controller and sets initial ratchet state.</div>
 </section>
 </li>
 </ul>
@@ -157,12 +167,22 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getInstance()">
 <h3>getInstance</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Climb.html" title="class in frc.robot.subsystems">Climb</a></span>&nbsp;<span class="element-name">getInstance</span>()</div>
+<div class="block">Returns the singleton instance of the Climb subsystem.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the Climb subsystem instance</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">frc.robot.subsystems.Climb.RachetState</span>&nbsp;<span class="element-name">getState</span>()</div>
+<div class="block">Gets the current state of the ratchet mechanism.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the current RachetState</dd>
+</dl>
 </section>
 </li>
 </ul>
