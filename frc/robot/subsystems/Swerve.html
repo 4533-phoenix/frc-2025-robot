@@ -83,6 +83,20 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Swerve</span>
 <span class="extends-implements">extends edu.wpi.first.wpilibj2.command.SubsystemBase</span></div>
+<div class="block">Manages the robot's swerve drive system, providing control over movement, autonomous path following,
+ and odometry tracking. This subsystem handles both autonomous and teleoperated drive control,
+ integrating with PathPlanner for advanced autonomous capabilities.
+ 
+ <p>Features include:
+ <ul>
+   <li>Field-oriented drive control
+   <li>Autonomous path following and path finding
+   <li>Odometry tracking and pose estimation
+   <li>Wheel locking for stability
+ </ul>
+ 
+ <p>Uses YAGSL (Yet Another Generic Swerve Library) for underlying swerve drive implementation
+ and PathPlanner for autonomous navigation.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -235,13 +249,19 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="driveFieldOriented(java.util.function.Supplier)">
 <h3>driveFieldOriented</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">driveFieldOriented</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.kinematics.ChassisSpeeds&gt;&nbsp;velocity)</span></div>
-<div class="block">Creates a command to drive the robot in field-oriented mode.</div>
+<div class="block">Creates a command to drive the robot in field-oriented mode.
+ Takes into account the robot's current heading to maintain consistent field-relative movement.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>velocity</code> - a supplier that provides the desired chassis speeds</dd>
+<dd><code>velocity</code> - a supplier that provides the desired chassis speeds in field-oriented coordinates</dd>
 <dt>Returns:</dt>
-<dd>a command that continuously updates drive output based on supplied
-         velocities</dd>
+<dd>a command that continuously updates drive output based on supplied velocities</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><code>ChassisSpeeds</code></li>
+</ul>
+</dd>
 </dl>
 </section>
 </li>

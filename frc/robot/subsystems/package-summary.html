@@ -39,7 +39,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="sub-nav-list">
 <li>Package:&nbsp;</li>
-<li>Description&nbsp;|&nbsp;</li>
+<li><a href="#package-description">Description</a>&nbsp;|&nbsp;</li>
 <li><a href="#related-package-summary">Related Packages</a>&nbsp;|&nbsp;</li>
 <li><a href="#class-summary">Classes and Interfaces</a></li>
 </ul>
@@ -59,6 +59,18 @@ loadScripts(document, 'script');</script>
 </div>
 <hr>
 <div class="package-signature">package <span class="element-name">frc.robot.subsystems</span></div>
+<section class="package-description" id="package-description">
+<div class="block">Robot subsystems that handle major mechanisms and control systems.
+ 
+ <p>Contains subsystems for:
+ <ul>
+   <li>Swerve drive control and autonomous navigation
+   <li>Coral mechanism (elevator/arm/intake) manipulation
+ </ul>
+ 
+ <p>Each subsystem follows the singleton pattern for global access and implements
+ WPILib's SubsystemBase for integration with the command-based framework.</div>
+</section>
 <section class="summary">
 <ul class="summary-list">
 <li>
@@ -80,18 +92,21 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Subsystem that handles the alga arm mechanism.</div>
+<div class="block">Controls the alga arm mechanism for game piece manipulation.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Climb.html" title="class in frc.robot.subsystems">Climb</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Subsystem that handles the climbing mechanism.</div>
+<div class="block">Controls the robot's climbing mechanism for end-game scoring.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Subsystem that handles the coral mechanism, including elevator, arm, and intake components.</div>
+<div class="block">Controls the Coral mechanism, a multi-joint manipulator consisting of an elevator, arm, and intake.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Swerve.html" title="class in frc.robot.subsystems">Swerve</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Manages the robot's swerve drive system, providing control over movement, autonomous path following,
+ and odometry tracking.</div>
+</div>
 </div>
 </div>
 </li>

@@ -83,8 +83,19 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Climb</span>
 <span class="extends-implements">extends edu.wpi.first.wpilibj2.command.SubsystemBase</span></div>
-<div class="block">Subsystem that handles the climbing mechanism.
- Controls a motor with a ratchet for climbing operations.</div>
+<div class="block">Controls the robot's climbing mechanism for end-game scoring.
+ This subsystem manages a motor with an integrated ratchet system that allows
+ controlled ascent while preventing uncontrolled descent.
+ 
+ <p>Features include:
+ <ul>
+   <li>Ratchet-based climbing mechanism
+   <li>State tracking for ratchet engagement
+   <li>Safety features including brake mode
+ </ul>
+ 
+ <p>Uses a REV Robotics SparkMax controller with brake mode enabled
+ and includes a mechanical ratchet system for secure climbing operations.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -152,7 +163,9 @@ loadScripts(document, 'script');</script>
 <h3>Climb</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Climb</span>()</div>
 <div class="block">Creates a new Climb subsystem.
- Initializes the motor controller and sets initial ratchet state.</div>
+ Initializes the motor controller with brake mode enabled and sets the initial
+ ratchet state to LOCKED for safety. Motor configuration is non-persistent
+ to ensure consistent behavior across reboots.</div>
 </section>
 </li>
 </ul>
@@ -178,10 +191,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">frc.robot.subsystems.Climb.RachetState</span>&nbsp;<span class="element-name">getState</span>()</div>
-<div class="block">Gets the current state of the ratchet mechanism.</div>
+<div class="block">Gets the current state of the ratchet mechanism.
+ Used to verify safe operation before movement commands.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the current RachetState</dd>
+<dd>the current RachetState, indicating whether movement is restricted</dd>
 </dl>
 </section>
 </li>

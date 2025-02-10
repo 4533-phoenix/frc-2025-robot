@@ -87,10 +87,19 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Robot</span>
 <span class="extends-implements">extends edu.wpi.first.wpilibj.TimedRobot</span></div>
-<div class="block">The VM is configured to automatically run this class, and to call the functions corresponding to
- each mode, as described in the TimedRobot documentation. If you change the name of this class or
- the package after creating this project, you must also update the build.gradle file in the
- project.</div>
+<div class="block">Main robot class that manages the robot's lifecycle and operational modes.
+ This class follows the TimedRobot model, executing code in a timed loop for each robot mode.
+ 
+ <p>Features include:
+ <ul>
+   <li>Autonomous command management
+   <li>Teleop control initialization
+   <li>Test mode handling
+   <li>Periodic updates across all modes
+ </ul>
+ 
+ <p>The robot code is organized using WPILib's command-based framework, with subsystems
+ and commands managed through the RobotContainer class.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -162,7 +171,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#robotPeriodic()" class="member-name-link">robotPeriodic</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">This function is called every 20 ms, no matter the mode.</div>
+<div class="block">Periodic function called every 20ms in all robot modes.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#teleopExit()" class="member-name-link">teleopExit</a>()</code></div>
@@ -239,9 +248,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="robotPeriodic()">
 <h3>robotPeriodic</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">robotPeriodic</span>()</div>
-<div class="block">This function is called every 20 ms, no matter the mode.
- Use this for items like diagnostics that you want ran during disabled,
- autonomous, teleoperated and test.</div>
+<div class="block">Periodic function called every 20ms in all robot modes.
+ Runs the command scheduler to execute ongoing commands and update subsystems.
+ This method is crucial for continuous robot operation and should not be blocked
+ or delayed.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code>robotPeriodic</code>&nbsp;in class&nbsp;<code>edu.wpi.first.wpilibj.IterativeRobotBase</code></dd>
@@ -286,7 +296,8 @@ loadScripts(document, 'script');</script>
 <h3>autonomousInit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">autonomousInit</span>()</div>
 <div class="block">Called when autonomous mode is initialized.
- Schedules the autonomous command selected by the user.</div>
+ Retrieves and schedules the selected autonomous command from RobotContainer.
+ If no command is selected, this method will gracefully handle the null case.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code>autonomousInit</code>&nbsp;in class&nbsp;<code>edu.wpi.first.wpilibj.IterativeRobotBase</code></dd>
@@ -320,7 +331,8 @@ loadScripts(document, 'script');</script>
 <h3>teleopInit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">teleopInit</span>()</div>
 <div class="block">Called when operator control is initialized.
- Cancels the autonomous command if it's still running.</div>
+ Cancels any running autonomous command to ensure safe transition to manual control.
+ This prevents autonomous commands from interfering with driver inputs.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code>teleopInit</code>&nbsp;in class&nbsp;<code>edu.wpi.first.wpilibj.IterativeRobotBase</code></dd>
@@ -354,7 +366,9 @@ loadScripts(document, 'script');</script>
 <h3>testInit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">testInit</span>()</div>
 <div class="block">Called when test mode is initialized.
- Cancels all running commands.</div>
+ Cancels all running commands to ensure a clean slate for testing.
+ This helps prevent interference from commands that might have been
+ left running in other modes.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code>testInit</code>&nbsp;in class&nbsp;<code>edu.wpi.first.wpilibj.IterativeRobotBase</code></dd>

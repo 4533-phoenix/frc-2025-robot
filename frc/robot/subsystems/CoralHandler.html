@@ -83,7 +83,20 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">CoralHandler</span>
 <span class="extends-implements">extends edu.wpi.first.wpilibj2.command.SubsystemBase</span></div>
-<div class="block">Subsystem that handles the coral mechanism, including elevator, arm, and intake components.</div>
+<div class="block">Controls the Coral mechanism, a multi-joint manipulator consisting of an elevator, arm, and intake.
+ This subsystem manages coordinated movement between components and provides preset positions
+ for common operations.
+ 
+ <p>Features include:
+ <ul>
+   <li>Position-controlled elevator and arm using encoders and limit switches
+   <li>Automatic position detection using limit switches
+   <li>Predefined positions for common operations (ground pickup, scoring)
+   <li>Safety features including position limits and state validation
+ </ul>
+ 
+ <p>The subsystem uses REV Robotics SparkMax controllers with closed-loop position control
+ and hardware limit switches for position detection and safety.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -178,10 +191,20 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setPosition(frc.robot.subsystems.CoralHandler.HandlerPosition)">
 <h3>setPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(frc.robot.subsystems.CoralHandler.HandlerPosition&nbsp;targetPosition)</span></div>
-<div class="block">Sets both elevator and arm to a predefined position.</div>
+<div class="block">Sets both elevator and arm to a predefined position.
+ Will not execute if either subsystem's position is unknown or if already at target position.
+ 
+ <p>For CUSTOM positions, this method will maintain the current position.
+ For predefined positions, it will move both mechanisms to their respective targets.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>targetPosition</code> - The desired position for both mechanisms</dd>
+<dd><code>targetPosition</code> - The desired preset position for both mechanisms</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><code>CoralHandler.HandlerPosition</code></li>
+</ul>
+</dd>
 </dl>
 </section>
 </li>
@@ -189,7 +212,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="zeroIfNeeded()">
 <h3>zeroIfNeeded</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">zeroIfNeeded</span>()</div>
-<div class="block">Applies zeroing voltage to subsystems with unknown positions.</div>
+<div class="block">Applies zeroing voltage to subsystems with unknown positions.
+ This helps bring mechanisms to their limit switches for position detection.
+ 
+ <p>Only applies voltage if a subsystem's position is currently unknown.
+ Once a limit switch is triggered, the position will be updated automatically.</div>
 </section>
 </li>
 </ul>

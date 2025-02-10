@@ -83,8 +83,18 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AlgaArm</span>
 <span class="extends-implements">extends edu.wpi.first.wpilibj2.command.SubsystemBase</span></div>
-<div class="block">Subsystem that handles the alga arm mechanism.
- Controls a motor for intaking and manipulating alga game pieces.</div>
+<div class="block">Controls the alga arm mechanism for game piece manipulation.
+ This subsystem manages a single motor used for intaking and controlling alga game pieces.
+ 
+ <p>Features include:
+ <ul>
+   <li>Simple voltage-based control for intake
+   <li>Game piece detection
+   <li>Brake mode for secure holding
+ </ul>
+ 
+ <p>Uses a REV Robotics SparkMax controller in brushless mode with brake mode enabled
+ for precise control and secure game piece retention.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -127,12 +137,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#intakeAlga()" class="member-name-link">intakeAlga</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Activates the intake motor to collect alga.</div>
+<div class="block">Activates the intake motor to collect alga game pieces.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stopIntake()" class="member-name-link">stopIntake</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Stops the intake motor.</div>
+<div class="block">Stops the intake motor's operation.</div>
 </div>
 </div>
 </div>
@@ -162,7 +172,8 @@ loadScripts(document, 'script');</script>
 <h3>AlgaArm</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">AlgaArm</span>()</div>
 <div class="block">Creates a new AlgaArm subsystem.
- Initializes the motor controller in brake mode.</div>
+ Initializes the motor controller with brake mode enabled for secure game piece holding.
+ Motor configuration is non-persistent to ensure consistent behavior across reboots.</div>
 </section>
 </li>
 </ul>
@@ -189,26 +200,28 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="intakeAlga()">
 <h3>intakeAlga</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">intakeAlga</span>()</div>
-<div class="block">Activates the intake motor to collect alga.
- Applies a constant voltage to intake the game piece.</div>
+<div class="block">Activates the intake motor to collect alga game pieces.
+ Applies a constant voltage defined in constants to ensure consistent intake behavior.
+ The motor will continue running until explicitly stopped.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="stopIntake()">
 <h3>stopIntake</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">stopIntake</span>()</div>
-<div class="block">Stops the intake motor.
- Sets the motor voltage to zero.</div>
+<div class="block">Stops the intake motor's operation.
+ Due to brake mode, this will actively hold the game piece in place.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="hasAlga()">
 <h3>hasAlga</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasAlga</span>()</div>
-<div class="block">Checks if the mechanism currently has an alga game piece.</div>
+<div class="block">Checks if the mechanism currently has an alga game piece.
+ Implementation pending for game piece detection.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>true if an alga is detected, false otherwise</dd>
+<dd>true if an alga game piece is detected, false otherwise</dd>
 </dl>
 </section>
 </li>
