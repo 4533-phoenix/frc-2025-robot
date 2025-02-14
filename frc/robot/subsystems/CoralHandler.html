@@ -130,13 +130,18 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInstance()" class="member-name-link">getInstance</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(frc.robot.subsystems.CoralHandler.HandlerPosition)" class="member-name-link">setPosition</a><wbr>(frc.robot.subsystems.CoralHandler.HandlerPosition&nbsp;targetPosition)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCustomPosition(edu.wpi.first.math.geometry.Translation2d)" class="member-name-link">setCustomPosition</a><wbr>(edu.wpi.first.math.geometry.Translation2d&nbsp;target)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets both elevator and arm to a predefined position.</div>
+<div class="block">Sets the end effector to a custom 2D position.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#zeroIfNeeded()" class="member-name-link">zeroIfNeeded</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(frc.robot.subsystems.CoralHandler.HandlerPosition)" class="member-name-link">setPosition</a><wbr>(frc.robot.subsystems.CoralHandler.HandlerPosition&nbsp;targetPosition)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets both elevator and arm to a predefined position.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#zeroIfNeeded()" class="member-name-link">zeroIfNeeded</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Applies zeroing voltage to subsystems with unknown positions.</div>
 </div>
 </div>
@@ -191,21 +196,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setPosition(frc.robot.subsystems.CoralHandler.HandlerPosition)">
 <h3>setPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(frc.robot.subsystems.CoralHandler.HandlerPosition&nbsp;targetPosition)</span></div>
-<div class="block">Sets both elevator and arm to a predefined position.
- Will not execute if either subsystem's position is unknown or if already at target position.
- 
- <p>For CUSTOM positions, this method will maintain the current position.
- For predefined positions, it will move both mechanisms to their respective targets.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>targetPosition</code> - The desired preset position for both mechanisms</dd>
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><code>CoralHandler.HandlerPosition</code></li>
-</ul>
-</dd>
-</dl>
+<div class="block">Sets both elevator and arm to a predefined position.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setCustomPosition(edu.wpi.first.math.geometry.Translation2d)">
+<h3>setCustomPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCustomPosition</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Translation2d&nbsp;target)</span></div>
+<div class="block">Sets the end effector to a custom 2D position.</div>
 </section>
 </li>
 <li>
