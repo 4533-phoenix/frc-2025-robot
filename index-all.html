@@ -31,6 +31,7 @@ loadScripts(document, 'script');</script>
 <li>Package</li>
 <li>Class</li>
 <li><a href="overview-tree.html">Tree</a></li>
+<li><a href="deprecated-list.html">Deprecated</a></li>
 <li class="nav-bar-cell1-rev">Index</li>
 <li><a href="help-doc.html#index">Help</a></li>
 </ul>
@@ -49,7 +50,7 @@ loadScripts(document, 'script');</script>
 <div class="header">
 <h1>Index</h1>
 </div>
-<a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:Z">Z</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a><span class="vertical-separator">|</span><a href="constant-values.html">Constant&nbsp;Field&nbsp;Values</a>
+<a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:K">K</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:Z">Z</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a><span class="vertical-separator">|</span><a href="constant-values.html">Constant&nbsp;Field&nbsp;Values</a>
 <h2 class="title" id="I:A">A</h2>
 <dl class="index">
 <dt><a href="frc/robot/subsystems/AlgaArm.html" class="type-name-link" title="class in frc.robot.subsystems">AlgaArm</a> - Class in <a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a></dt>
@@ -105,12 +106,21 @@ loadScripts(document, 'script');</script>
 <div class="block">Called periodically during autonomous mode.</div>
 </dd>
 </dl>
+<h2 class="title" id="I:B">B</h2>
+<dl class="index">
+<dt><a href="frc/robot/Constants.ClimbConstants.html#BOTTOM_LIMIT_CHANNEL" class="member-name-link">BOTTOM_LIMIT_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ClimbConstants.html" title="class in frc.robot">Constants.ClimbConstants</a></dt>
+<dd>&nbsp;</dd>
+</dl>
 <h2 class="title" id="I:C">C</h2>
 <dl class="index">
 <dt><a href="frc/robot/Constants.AlgaArmConstants.html#CAN_ID" class="member-name-link">CAN_ID</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.AlgaArmConstants.html" title="class in frc.robot">Constants.AlgaArmConstants</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.ClimbConstants.html#CAN_ID" class="member-name-link">CAN_ID</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ClimbConstants.html" title="class in frc.robot">Constants.ClimbConstants</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/Climb.html#climb()" class="member-name-link">climb()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
+<dd>
+<div class="block">Sets the climb motor to move upward at the configured power.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/Climb.html" class="type-name-link" title="class in frc.robot.subsystems">Climb</a> - Class in <a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a></dt>
 <dd>
 <div class="block">Controls the robot's climbing mechanism for end-game scoring.</div>
@@ -119,6 +129,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a new Climb subsystem.</div>
 </dd>
+<dt><a href="frc/robot/Constants.ClimbConstants.html#CLIMB_POWER" class="member-name-link">CLIMB_POWER</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ClimbConstants.html" title="class in frc.robot">Constants.ClimbConstants</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.html" class="type-name-link" title="class in frc.robot">Constants</a> - Class in <a href="frc/robot/package-summary.html">frc.robot</a></dt>
 <dd>
 <div class="block">Constants used throughout the robot code.</div>
@@ -187,6 +199,30 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates a command to autonomously drive the robot to a specific pose using
  PathPlanner.</div>
 </dd>
+<dt><a href="frc/robot/commands/DropAlgaCommand.html" class="type-name-link" title="class in frc.robot.commands">DropAlgaCommand</a> - Class in <a href="frc/robot/commands/package-summary.html">frc.robot.commands</a></dt>
+<dd>
+<div class="block">Command that runs the alga intake in reverse until the game piece is released.</div>
+</dd>
+<dt><a href="frc/robot/commands/DropAlgaCommand.html#%3Cinit%3E()" class="member-name-link">DropAlgaCommand()</a> - Constructor for class frc.robot.commands.<a href="frc/robot/commands/DropAlgaCommand.html" title="class in frc.robot.commands">DropAlgaCommand</a></dt>
+<dd>
+<div class="block">Creates a new DropAlgaCommand.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/CoralHandler.html#dropCoral()" class="member-name-link">dropCoral()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
+<dd>
+<div class="block">Runs the intake in reverse to release the coral.</div>
+</dd>
+<dt><a href="frc/robot/commands/DropCoralCommand.html" class="type-name-link" title="class in frc.robot.commands">DropCoralCommand</a> - Class in <a href="frc/robot/commands/package-summary.html">frc.robot.commands</a></dt>
+<dd>
+<div class="block">Command that runs the coral intake in reverse until the game piece is released.</div>
+</dd>
+<dt><a href="frc/robot/commands/DropCoralCommand.html#%3Cinit%3E()" class="member-name-link">DropCoralCommand()</a> - Constructor for class frc.robot.commands.<a href="frc/robot/commands/DropCoralCommand.html" title="class in frc.robot.commands">DropCoralCommand</a></dt>
+<dd>
+<div class="block">Creates a new DropCoralCommand.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#dropGamepiece()" class="member-name-link">dropGamepiece()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Runs the intake in reverse to release the alga.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:E">E</h2>
 <dl class="index">
@@ -214,10 +250,30 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">DIO channel for top limit switch.</div>
 </dd>
+<dt><a href="frc/robot/commands/DropAlgaCommand.html#end(boolean)" class="member-name-link">end(boolean)</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/DropAlgaCommand.html" title="class in frc.robot.commands">DropAlgaCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/DropCoralCommand.html#end(boolean)" class="member-name-link">end(boolean)</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/DropCoralCommand.html" title="class in frc.robot.commands">DropCoralCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/IntakeAlgaCommand.html#end(boolean)" class="member-name-link">end(boolean)</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/IntakeAlgaCommand.html" title="class in frc.robot.commands">IntakeAlgaCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/IntakeCoralCommand.html#end(boolean)" class="member-name-link">end(boolean)</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/IntakeCoralCommand.html" title="class in frc.robot.commands">IntakeCoralCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/DropAlgaCommand.html#execute()" class="member-name-link">execute()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/DropAlgaCommand.html" title="class in frc.robot.commands">DropAlgaCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/DropCoralCommand.html#execute()" class="member-name-link">execute()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/DropCoralCommand.html" title="class in frc.robot.commands">DropCoralCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/IntakeAlgaCommand.html#execute()" class="member-name-link">execute()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/IntakeAlgaCommand.html" title="class in frc.robot.commands">IntakeAlgaCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/IntakeCoralCommand.html#execute()" class="member-name-link">execute()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/IntakeCoralCommand.html" title="class in frc.robot.commands">IntakeCoralCommand</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:F">F</h2>
 <dl class="index">
 <dt><a href="frc/robot/package-summary.html">frc.robot</a> - package frc.robot</dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/package-summary.html">frc.robot.commands</a> - package frc.robot.commands</dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a> - package frc.robot.subsubsytems</dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a> - package frc.robot.subsystems</dt>
 <dd>
@@ -226,6 +282,8 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:G">G</h2>
 <dl class="index">
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#get()" class="member-name-link">get()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/RobotContainer.html#getAutonomousCommand()" class="member-name-link">getAutonomousCommand()</a> - Method in class frc.robot.<a href="frc/robot/RobotContainer.html" title="class in frc.robot">RobotContainer</a></dt>
 <dd>
 <div class="block">Provides the command to run during autonomous mode.</div>
@@ -244,13 +302,25 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the singleton instance of the Swerve subsystem.</div>
 </dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#getMotor()" class="member-name-link">getMotor()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
+<dd>
+<div class="block">Gets the motor controller for this subsystem.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#getPose()" class="member-name-link">getPose()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
 <div class="block">Retrieves the current estimated pose of the robot on the field.</div>
 </dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#getPosition()" class="member-name-link">getPosition()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
+<dd>
+<div class="block">Gets the current position of the mechanism.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#getRobotVelocity()" class="member-name-link">getRobotVelocity()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
 <div class="block">Gets the current velocity of the robot.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#getState()" class="member-name-link">getState()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
+<dd>
+<div class="block">Gets the current state of the subsystem.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/Climb.html#getState()" class="member-name-link">getState()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
 <dd>
@@ -263,7 +333,11 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:H">H</h2>
 <dl class="index">
-<dt><a href="frc/robot/subsystems/AlgaArm.html#hasAlga()" class="member-name-link">hasAlga()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dt><a href="frc/robot/subsystems/CoralHandler.html#hasCoral()" class="member-name-link">hasCoral()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
+<dd>
+<div class="block">Checks if the mechanism currently has a game piece.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#hasGamepiece()" class="member-name-link">hasGamepiece()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
 <dd>
 <div class="block">Checks if the mechanism currently has an alga game piece.</div>
 </dd>
@@ -274,21 +348,109 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Integral gain.</div>
 </dd>
+<dt><a href="frc/robot/commands/DropAlgaCommand.html#initialize()" class="member-name-link">initialize()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/DropAlgaCommand.html" title="class in frc.robot.commands">DropAlgaCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/DropCoralCommand.html#initialize()" class="member-name-link">initialize()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/DropCoralCommand.html" title="class in frc.robot.commands">DropCoralCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/IntakeAlgaCommand.html#initialize()" class="member-name-link">initialize()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/IntakeAlgaCommand.html" title="class in frc.robot.commands">IntakeAlgaCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/IntakeCoralCommand.html#initialize()" class="member-name-link">initialize()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/IntakeCoralCommand.html" title="class in frc.robot.commands">IntakeCoralCommand</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.CoralConstants.html#INTAKE_CAN_ID" class="member-name-link">INTAKE_CAN_ID</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
 <dd>
 <div class="block">CAN ID for intake motor.</div>
 </dd>
-<dt><a href="frc/robot/Constants.CoralConstants.html#INTAKE_MOTOR_VOLTAGE" class="member-name-link">INTAKE_MOTOR_VOLTAGE</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
+<dt><a href="frc/robot/Constants.AlgaArmConstants.html#INTAKE_POWER" class="member-name-link">INTAKE_POWER</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.AlgaArmConstants.html" title="class in frc.robot">Constants.AlgaArmConstants</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/Constants.CoralConstants.html#INTAKE_POWER" class="member-name-link">INTAKE_POWER</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
 <dd>
-<div class="block">Operating voltage for intake motor.</div>
+<div class="block">Intake motor power (-1.0 to 1.0).</div>
 </dd>
-<dt><a href="frc/robot/subsystems/AlgaArm.html#intakeAlga()" class="member-name-link">intakeAlga()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dt><a href="frc/robot/Constants.CoralConstants.html#INTAKE_SENSOR_CHANNEL" class="member-name-link">INTAKE_SENSOR_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
 <dd>
-<div class="block">Activates the intake motor to collect alga game pieces.</div>
+<div class="block">DIO channel for coral detection limit switch.</div>
 </dd>
+<dt><a href="frc/robot/commands/IntakeAlgaCommand.html" class="type-name-link" title="class in frc.robot.commands">IntakeAlgaCommand</a> - Class in <a href="frc/robot/commands/package-summary.html">frc.robot.commands</a></dt>
+<dd>
+<div class="block">Command that runs the alga intake until either a game piece is detected or the command is cancelled.</div>
+</dd>
+<dt><a href="frc/robot/commands/IntakeAlgaCommand.html#%3Cinit%3E()" class="member-name-link">IntakeAlgaCommand()</a> - Constructor for class frc.robot.commands.<a href="frc/robot/commands/IntakeAlgaCommand.html" title="class in frc.robot.commands">IntakeAlgaCommand</a></dt>
+<dd>
+<div class="block">Creates a new IntakeAlgaCommand.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/CoralHandler.html#intakeCoral()" class="member-name-link">intakeCoral()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
+<dd>
+<div class="block">Activates the intake motor to collect game pieces.</div>
+</dd>
+<dt><a href="frc/robot/commands/IntakeCoralCommand.html" class="type-name-link" title="class in frc.robot.commands">IntakeCoralCommand</a> - Class in <a href="frc/robot/commands/package-summary.html">frc.robot.commands</a></dt>
+<dd>
+<div class="block">Command that runs the coral intake until either a game piece is detected or the command is cancelled.</div>
+</dd>
+<dt><a href="frc/robot/commands/IntakeCoralCommand.html#%3Cinit%3E()" class="member-name-link">IntakeCoralCommand()</a> - Constructor for class frc.robot.commands.<a href="frc/robot/commands/IntakeCoralCommand.html" title="class in frc.robot.commands">IntakeCoralCommand</a></dt>
+<dd>
+<div class="block">Creates a new IntakeCoralCommand.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/Climb.html#isAtBottom()" class="member-name-link">isAtBottom()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitchPair.html#isAtMax()" class="member-name-link">isAtMax()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitchPair.html" title="class in frc.robot.subsubsytems">LimitSwitchPair</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitchPair.html#isAtMin()" class="member-name-link">isAtMin()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitchPair.html" title="class in frc.robot.subsubsytems">LimitSwitchPair</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/Climb.html#isAtTop()" class="member-name-link">isAtTop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/DropAlgaCommand.html#isFinished()" class="member-name-link">isFinished()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/DropAlgaCommand.html" title="class in frc.robot.commands">DropAlgaCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/DropCoralCommand.html#isFinished()" class="member-name-link">isFinished()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/DropCoralCommand.html" title="class in frc.robot.commands">DropCoralCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/IntakeAlgaCommand.html#isFinished()" class="member-name-link">isFinished()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/IntakeAlgaCommand.html" title="class in frc.robot.commands">IntakeAlgaCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/IntakeCoralCommand.html#isFinished()" class="member-name-link">isFinished()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/IntakeCoralCommand.html" title="class in frc.robot.commands">IntakeCoralCommand</a></dt>
+<dd>&nbsp;</dd>
+</dl>
+<h2 class="title" id="I:K">K</h2>
+<dl class="index">
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.SubsystemState.html#KNOWN" class="member-name-link">KNOWN</a> - Enum constant in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.SubsystemState.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.SubsystemState</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:L">L</h2>
 <dl class="index">
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" class="type-name-link" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a> - Class in <a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a></dt>
+<dd>
+<div class="block">Represents a PID-controlled subsystem with limit switches and position
+ control.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#%3Cinit%3E(int,double,double,double,frc.robot.Constants.PID,int,int,double,frc.robot.subsubsytems.LimitedPIDSubsystem.ControlMode)" class="member-name-link">LimitedPIDSubsystem(int, double, double, double, Constants.PID, int, int, double, LimitedPIDSubsystem.ControlMode)</a> - Constructor for class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
+<dd>
+<div class="block">Creates a new motor subsystem with position/velocity control and limit switches.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html" class="type-name-link" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a> - Enum Class in <a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a></dt>
+<dd>
+<div class="block">Control mode for the subsystem.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.SubsystemState.html" class="type-name-link" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.SubsystemState</a> - Enum Class in <a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a></dt>
+<dd>
+<div class="block">State of position knowledge for a subsystem.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.html" class="type-name-link" title="class in frc.robot.subsubsytems">LimitSwitch</a> - Class in <a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a></dt>
+<dd>
+<div class="block">Manages a single limit switch with interrupt-based detection.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#%3Cinit%3E(int,java.lang.Runnable)" class="member-name-link">LimitSwitch(int, Runnable)</a> - Constructor for class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dd>
+<div class="block">Creates a new limit switch with callback only for press.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#%3Cinit%3E(int,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">LimitSwitch(int, Runnable, Runnable)</a> - Constructor for class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dd>
+<div class="block">Creates a new limit switch with callbacks for state changes.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitchPair.html" class="type-name-link" title="class in frc.robot.subsubsytems">LimitSwitchPair</a> - Class in <a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a></dt>
+<dd>
+<div class="block">Manages a pair of limit switches for minimum and maximum positions.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitchPair.html#%3Cinit%3E(int,int,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">LimitSwitchPair(int, int, Runnable, Runnable)</a> - Constructor for class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitchPair.html" title="class in frc.robot.subsubsytems">LimitSwitchPair</a></dt>
+<dd>
+<div class="block">Creates a new limit switch pair with callbacks for position limits.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#lockWheels()" class="member-name-link">lockWheels()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
 <div class="block">Locks the swerve modules in an X pattern to prevent the robot from moving.</div>
@@ -306,16 +468,33 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/Constants.RobotConstants.html#MAX_SPEED" class="member-name-link">MAX_SPEED</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.RobotConstants.html" title="class in frc.robot">Constants.RobotConstants</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="frc/robot/Constants.AlgaArmConstants.html#MOTOR_VOLTAGE" class="member-name-link">MOTOR_VOLTAGE</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.AlgaArmConstants.html" title="class in frc.robot">Constants.AlgaArmConstants</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.ClimbConstants.html#MOTOR_VOLTAGE" class="member-name-link">MOTOR_VOLTAGE</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ClimbConstants.html" title="class in frc.robot">Constants.ClimbConstants</a></dt>
 <dd>&nbsp;</dd>
+</dl>
+<h2 class="title" id="I:O">O</h2>
+<dl class="index">
+<dt><a href="frc/robot/Constants.AlgaArmConstants.html#OUTTAKE_POWER" class="member-name-link">OUTTAKE_POWER</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.AlgaArmConstants.html" title="class in frc.robot">Constants.AlgaArmConstants</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/Constants.CoralConstants.html#OUTTAKE_POWER" class="member-name-link">OUTTAKE_POWER</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
+<dd>
+<div class="block">Outtake motor power (-1.0 to 1.0).</div>
+</dd>
 </dl>
 <h2 class="title" id="I:P">P</h2>
 <dl class="index">
 <dt><a href="frc/robot/Constants.PID.html#p" class="member-name-link">p</a> - Variable in class frc.robot.<a href="frc/robot/Constants.PID.html" title="class in frc.robot">Constants.PID</a></dt>
 <dd>
 <div class="block">Proportional gain.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/CoralHandler.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html#POSITION" class="member-name-link">POSITION</a> - Enum constant in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/Constants.CoralConstants.html#POSITION_TOLERANCE" class="member-name-link">POSITION_TOLERANCE</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
+<dd>
+<div class="block">Maximum allowed offset when hitting limit switches.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:R">R</h2>
@@ -351,9 +530,21 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:S">S</h2>
 <dl class="index">
+<dt><a href="frc/robot/Constants.AlgaArmConstants.html#SENSOR_CHANNEL" class="member-name-link">SENSOR_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.AlgaArmConstants.html" title="class in frc.robot">Constants.AlgaArmConstants</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#set(double)" class="member-name-link">set(double)</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
+<dd>
+<div class="block">Sets the target value (position or velocity) of the mechanism.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/CoralHandler.html#setCustomPosition(edu.wpi.first.math.geometry.Translation2d)" class="member-name-link">setCustomPosition(Translation2d)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
 <dd>
 <div class="block">Sets the end effector to a custom 2D position.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#setPosition(double)" class="member-name-link">setPosition(double)</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use set() instead</div>
+</div>
 </dd>
 <dt><a href="frc/robot/subsystems/CoralHandler.html#setPosition(frc.robot.subsystems.CoralHandler.HandlerPosition)" class="member-name-link">setPosition(CoralHandler.HandlerPosition)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
 <dd>
@@ -363,7 +554,19 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Configures PathPlanner for autonomous path following.</div>
 </dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#startIntake()" class="member-name-link">startIntake()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Activates the intake motor to collect alga game pieces.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/Climb.html#stop()" class="member-name-link">stop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
+<dd>
+<div class="block">Stops the climb motor.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html#stopIntake()" class="member-name-link">stopIntake()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Stops the intake motor's operation.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/CoralHandler.html#stopIntake()" class="member-name-link">stopIntake()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
 <dd>
 <div class="block">Stops the intake motor's operation.</div>
 </dd>
@@ -404,22 +607,53 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Called periodically during test mode.</div>
 </dd>
+<dt><a href="frc/robot/Constants.ClimbConstants.html#TOP_LIMIT_CHANNEL" class="member-name-link">TOP_LIMIT_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ClimbConstants.html" title="class in frc.robot">Constants.ClimbConstants</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:U">U</h2>
 <dl class="index">
-<dt><a href="frc/robot/Constants.CoralConstants.html#UNKNOWN_STATE_VOLTAGE" class="member-name-link">UNKNOWN_STATE_VOLTAGE</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.SubsystemState.html#UNKNOWN" class="member-name-link">UNKNOWN</a> - Enum constant in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.SubsystemState.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.SubsystemState</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/Constants.CoralConstants.html#UNKNOWN_STATE_POWER" class="member-name-link">UNKNOWN_STATE_POWER</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
 <dd>
-<div class="block">Voltage applied when zeroing unknown positions.</div>
+<div class="block">Power applied when zeroing unknown positions (-1.0 to 1.0).</div>
 </dd>
+</dl>
+<h2 class="title" id="I:V">V</h2>
+<dl class="index">
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this class with the specified name.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.SubsystemState.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.SubsystemState.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.SubsystemState</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this class with the specified name.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html#values()" class="member-name-link">values()</a> - Static method in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum class, in
+the order they are declared.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.SubsystemState.html#values()" class="member-name-link">values()</a> - Static method in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.SubsystemState.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.SubsystemState</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum class, in
+the order they are declared.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html#VELOCITY" class="member-name-link">VELOCITY</a> - Enum constant in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:Z">Z</h2>
 <dl class="index">
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#zeroIfNeeded()" class="member-name-link">zeroIfNeeded()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
+<dd>
+<div class="block">Applies zeroing power if position is unknown.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/CoralHandler.html#zeroIfNeeded()" class="member-name-link">zeroIfNeeded()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
 <dd>
 <div class="block">Applies zeroing voltage to subsystems with unknown positions.</div>
 </dd>
 </dl>
-<a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:Z">Z</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a><span class="vertical-separator">|</span><a href="constant-values.html">Constant&nbsp;Field&nbsp;Values</a></main>
+<a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:K">K</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:Z">Z</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a><span class="vertical-separator">|</span><a href="constant-values.html">Constant&nbsp;Field&nbsp;Values</a></main>
 </div>
 </div>
 </body>
