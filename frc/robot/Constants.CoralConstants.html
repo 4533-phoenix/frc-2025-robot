@@ -31,7 +31,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../index-all.html">Index</a></li>
 <li><a href="../../help-doc.html#class">Help</a></li>
 </ul>
@@ -111,20 +110,20 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Maximum arm angle.</div>
 </div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ARM_MAX_LIMIT_CHANNEL" class="member-name-link">ARM_MAX_LIMIT_CHANNEL</a></code></div>
+<div class="col-first even-row-color"><code>static final com.ctre.phoenix.CANifier.GeneralPin</code></div>
+<div class="col-second even-row-color"><code><a href="#ARM_MAX_LIMIT_PIN" class="member-name-link">ARM_MAX_LIMIT_PIN</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">DIO channel for maximum angle limit switch.</div>
+<div class="block">CANifier pin for arm maximum angle limit</div>
 </div>
 <div class="col-first odd-row-color"><code>static final edu.wpi.first.units.measure.Angle</code></div>
 <div class="col-second odd-row-color"><code><a href="#ARM_MIN_ANGLE" class="member-name-link">ARM_MIN_ANGLE</a></code></div>
 <div class="col-last odd-row-color">
 <div class="block">Minimum arm angle.</div>
 </div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ARM_MIN_LIMIT_CHANNEL" class="member-name-link">ARM_MIN_LIMIT_CHANNEL</a></code></div>
+<div class="col-first even-row-color"><code>static final com.ctre.phoenix.CANifier.GeneralPin</code></div>
+<div class="col-second even-row-color"><code><a href="#ARM_MIN_LIMIT_PIN" class="member-name-link">ARM_MIN_LIMIT_PIN</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">DIO channel for minimum angle limit switch.</div>
+<div class="block">CANifier pin for arm minimum angle limit</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="Constants.PID.html" title="class in frc.robot">Constants.PID</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#ARM_PID" class="member-name-link">ARM_PID</a></code></div>
@@ -132,63 +131,68 @@ loadScripts(document, 'script');</script>
 <div class="block">PID constants for arm control.</div>
 </div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ELEVATOR_BOTTOM_LIMIT_CHANNEL" class="member-name-link">ELEVATOR_BOTTOM_LIMIT_CHANNEL</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CANIFIER_ID" class="member-name-link">CANIFIER_ID</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">DIO channel for bottom limit switch.</div>
+<div class="block">CANifier ID</div>
 </div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELEVATOR_CAN_ID" class="member-name-link">ELEVATOR_CAN_ID</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ELEVATOR_BOTTOM_LIMIT_CHANNEL" class="member-name-link">ELEVATOR_BOTTOM_LIMIT_CHANNEL</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">DIO channel for elevator bottom limit switch</div>
+</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#ELEVATOR_CAN_ID" class="member-name-link">ELEVATOR_CAN_ID</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">CAN ID for elevator motor.</div>
 </div>
-<div class="col-first even-row-color"><code>static final edu.wpi.first.units.measure.Distance</code></div>
-<div class="col-second even-row-color"><code><a href="#ELEVATOR_DISTANCE_PER_ROTATION" class="member-name-link">ELEVATOR_DISTANCE_PER_ROTATION</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final edu.wpi.first.units.measure.Distance</code></div>
+<div class="col-second odd-row-color"><code><a href="#ELEVATOR_DISTANCE_PER_ROTATION" class="member-name-link">ELEVATOR_DISTANCE_PER_ROTATION</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Distance traveled per motor rotation.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final edu.wpi.first.units.measure.Distance</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELEVATOR_HEIGHT" class="member-name-link">ELEVATOR_HEIGHT</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final edu.wpi.first.units.measure.Distance</code></div>
+<div class="col-second even-row-color"><code><a href="#ELEVATOR_HEIGHT" class="member-name-link">ELEVATOR_HEIGHT</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Maximum elevator height.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Constants.PID.html" title="class in frc.robot">Constants.PID</a></code></div>
-<div class="col-second even-row-color"><code><a href="#ELEVATOR_PID" class="member-name-link">ELEVATOR_PID</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Constants.PID.html" title="class in frc.robot">Constants.PID</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ELEVATOR_PID" class="member-name-link">ELEVATOR_PID</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">PID constants for elevator control.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELEVATOR_TOP_LIMIT_CHANNEL" class="member-name-link">ELEVATOR_TOP_LIMIT_CHANNEL</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">DIO channel for top limit switch.</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#INTAKE_CAN_ID" class="member-name-link">INTAKE_CAN_ID</a></code></div>
+<div class="col-first even-row-color"><code>static final com.ctre.phoenix.CANifier.GeneralPin</code></div>
+<div class="col-second even-row-color"><code><a href="#ELEVATOR_TOP_LIMIT_PIN" class="member-name-link">ELEVATOR_TOP_LIMIT_PIN</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">CANifier pin for elevator top limit</div>
+</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#INTAKE_CAN_ID" class="member-name-link">INTAKE_CAN_ID</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">CAN ID for intake motor.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final double</code></div>
-<div class="col-second odd-row-color"><code><a href="#INTAKE_POWER" class="member-name-link">INTAKE_POWER</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final double</code></div>
+<div class="col-second even-row-color"><code><a href="#INTAKE_POWER" class="member-name-link">INTAKE_POWER</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Intake motor power (-1.0 to 1.0).</div>
 </div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#INTAKE_SENSOR_CHANNEL" class="member-name-link">INTAKE_SENSOR_CHANNEL</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">DIO channel for coral detection limit switch.</div>
-</div>
-<div class="col-first odd-row-color"><code>static final double</code></div>
-<div class="col-second odd-row-color"><code><a href="#OUTTAKE_POWER" class="member-name-link">OUTTAKE_POWER</a></code></div>
+<div class="col-first odd-row-color"><code>static final com.ctre.phoenix.CANifier.GeneralPin</code></div>
+<div class="col-second odd-row-color"><code><a href="#INTAKE_SENSOR_PIN" class="member-name-link">INTAKE_SENSOR_PIN</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Outtake motor power (-1.0 to 1.0).</div>
+<div class="block">CANifier pin for coral detection</div>
 </div>
 <div class="col-first even-row-color"><code>static final double</code></div>
-<div class="col-second even-row-color"><code><a href="#POSITION_TOLERANCE" class="member-name-link">POSITION_TOLERANCE</a></code></div>
+<div class="col-second even-row-color"><code><a href="#OUTTAKE_POWER" class="member-name-link">OUTTAKE_POWER</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Maximum allowed offset when hitting limit switches.</div>
+<div class="block">Outtake motor power (-1.0 to 1.0).</div>
 </div>
 <div class="col-first odd-row-color"><code>static final double</code></div>
-<div class="col-second odd-row-color"><code><a href="#UNKNOWN_STATE_POWER" class="member-name-link">UNKNOWN_STATE_POWER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#POSITION_TOLERANCE" class="member-name-link">POSITION_TOLERANCE</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">Maximum allowed offset when hitting limit switches.</div>
+</div>
+<div class="col-first even-row-color"><code>static final double</code></div>
+<div class="col-second even-row-color"><code><a href="#UNKNOWN_STATE_POWER" class="member-name-link">UNKNOWN_STATE_POWER</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Power applied when zeroing unknown positions (-1.0 to 1.0).</div>
 </div>
 </div>
@@ -235,25 +239,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="ELEVATOR_TOP_LIMIT_CHANNEL">
-<h3>ELEVATOR_TOP_LIMIT_CHANNEL</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ELEVATOR_TOP_LIMIT_CHANNEL</span></div>
-<div class="block">DIO channel for top limit switch.</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../constant-values.html#frc.robot.Constants.CoralConstants.ELEVATOR_TOP_LIMIT_CHANNEL">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="ELEVATOR_BOTTOM_LIMIT_CHANNEL">
 <h3>ELEVATOR_BOTTOM_LIMIT_CHANNEL</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ELEVATOR_BOTTOM_LIMIT_CHANNEL</span></div>
-<div class="block">DIO channel for bottom limit switch.</div>
+<div class="block">DIO channel for elevator bottom limit switch</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -262,6 +251,13 @@ loadScripts(document, 'script');</script>
 </ul>
 </dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ELEVATOR_TOP_LIMIT_PIN">
+<h3>ELEVATOR_TOP_LIMIT_PIN</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">com.ctre.phoenix.CANifier.GeneralPin</span>&nbsp;<span class="element-name">ELEVATOR_TOP_LIMIT_PIN</span></div>
+<div class="block">CANifier pin for elevator top limit</div>
 </section>
 </li>
 <li>
@@ -301,33 +297,17 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="ARM_MAX_LIMIT_CHANNEL">
-<h3>ARM_MAX_LIMIT_CHANNEL</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ARM_MAX_LIMIT_CHANNEL</span></div>
-<div class="block">DIO channel for maximum angle limit switch.</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../constant-values.html#frc.robot.Constants.CoralConstants.ARM_MAX_LIMIT_CHANNEL">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
+<section class="detail" id="ARM_MAX_LIMIT_PIN">
+<h3>ARM_MAX_LIMIT_PIN</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">com.ctre.phoenix.CANifier.GeneralPin</span>&nbsp;<span class="element-name">ARM_MAX_LIMIT_PIN</span></div>
+<div class="block">CANifier pin for arm maximum angle limit</div>
 </section>
 </li>
 <li>
-<section class="detail" id="ARM_MIN_LIMIT_CHANNEL">
-<h3>ARM_MIN_LIMIT_CHANNEL</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ARM_MIN_LIMIT_CHANNEL</span></div>
-<div class="block">DIO channel for minimum angle limit switch.</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../constant-values.html#frc.robot.Constants.CoralConstants.ARM_MIN_LIMIT_CHANNEL">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
+<section class="detail" id="ARM_MIN_LIMIT_PIN">
+<h3>ARM_MIN_LIMIT_PIN</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">com.ctre.phoenix.CANifier.GeneralPin</span>&nbsp;<span class="element-name">ARM_MIN_LIMIT_PIN</span></div>
+<div class="block">CANifier pin for arm minimum angle limit</div>
 </section>
 </li>
 <li>
@@ -374,18 +354,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="INTAKE_SENSOR_CHANNEL">
-<h3>INTAKE_SENSOR_CHANNEL</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">INTAKE_SENSOR_CHANNEL</span></div>
-<div class="block">DIO channel for coral detection limit switch.</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../constant-values.html#frc.robot.Constants.CoralConstants.INTAKE_SENSOR_CHANNEL">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
+<section class="detail" id="INTAKE_SENSOR_PIN">
+<h3>INTAKE_SENSOR_PIN</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">com.ctre.phoenix.CANifier.GeneralPin</span>&nbsp;<span class="element-name">INTAKE_SENSOR_PIN</span></div>
+<div class="block">CANifier pin for coral detection</div>
 </section>
 </li>
 <li>
@@ -413,6 +385,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <ul class="see-list">
 <li><a href="../../constant-values.html#frc.robot.Constants.CoralConstants.OUTTAKE_POWER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="CANIFIER_ID">
+<h3>CANIFIER_ID</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CANIFIER_ID</span></div>
+<div class="block">CANifier ID</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../constant-values.html#frc.robot.Constants.CoralConstants.CANIFIER_ID">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>

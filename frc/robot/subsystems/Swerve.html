@@ -35,7 +35,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -251,7 +250,12 @@ loadScripts(document, 'script');</script>
 <h3>driveFieldOriented</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">driveFieldOriented</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.kinematics.ChassisSpeeds&gt;&nbsp;velocity)</span></div>
 <div class="block">Creates a command to drive the robot in field-oriented mode.
- Takes into account the robot's current heading to maintain consistent field-relative movement.</div>
+ <p>Example:
+ <pre>
+ <code>
+ Swerve.getInstance().driveFieldOriented(() -&gt; new ChassisSpeeds(1.0, 0.0, 0.5));
+ </code>
+ </pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>velocity</code> - a supplier that provides the desired chassis speeds in field-oriented coordinates</dd>
@@ -271,7 +275,13 @@ loadScripts(document, 'script');</script>
 <h3>lockWheels</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">lockWheels</span>()</div>
 <div class="block">Locks the swerve modules in an X pattern to prevent the robot from moving.
- Useful for maintaining position or preparing for disable.</div>
+ Useful for maintaining position or preparing for disable.
+ <p>Example:
+ <pre>
+ <code>
+ Swerve.getInstance().lockWheels();
+ </code>
+ </pre></div>
 </section>
 </li>
 <li>
@@ -279,14 +289,26 @@ loadScripts(document, 'script');</script>
 <h3>resetOdometry</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resetOdometry</span>()</div>
 <div class="block">Resets the robot's odometry to the center of the field (8.774m, 4.026m, 0°).
- This is typically used at the start of autonomous routines.</div>
+ This is typically used at the start of autonomous routines.
+ <p>Example:
+ <pre>
+ <code>
+ Swerve.getInstance().resetOdometry();
+ </code>
+ </pre></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPose()">
 <h3>getPose</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose2d</span>&nbsp;<span class="element-name">getPose</span>()</div>
-<div class="block">Retrieves the current estimated pose of the robot on the field.</div>
+<div class="block">Retrieves the current estimated pose of the robot on the field.
+ <p>Example:
+ <pre>
+ <code>
+ Pose2d currentPose = Swerve.getInstance().getPose();
+ </code>
+ </pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the current Pose2d representing the robot's position and rotation</dd>
@@ -297,7 +319,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="resetOdometry(edu.wpi.first.math.geometry.Pose2d)">
 <h3>resetOdometry</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resetOdometry</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</span></div>
-<div class="block">Resets the robot's odometry to a specific pose.</div>
+<div class="block">Resets the robot's odometry to a specific pose.
+ <p>Example:
+ <pre>
+ <code>
+ Swerve.getInstance().resetOdometry(new Pose2d(new Translation2d(8.0, 4.0), Rotation2d.fromDegrees(90)));
+ </code>
+ </pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pose</code> - the Pose2d to set as the robot's current position and rotation</dd>
@@ -308,7 +336,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getRobotVelocity()">
 <h3>getRobotVelocity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.kinematics.ChassisSpeeds</span>&nbsp;<span class="element-name">getRobotVelocity</span>()</div>
-<div class="block">Gets the current velocity of the robot.</div>
+<div class="block">Gets the current velocity of the robot.
+ <p>Example:
+ <pre>
+ <code>
+ ChassisSpeeds speeds = Swerve.getInstance().getRobotVelocity();
+ </code>
+ </pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the ChassisSpeeds representing the robot's current velocity</dd>
@@ -319,7 +353,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getSwerveDrive()">
 <h3>getSwerveDrive</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">swervelib.SwerveDrive</span>&nbsp;<span class="element-name">getSwerveDrive</span>()</div>
-<div class="block">Gets the underlying SwerveDrive object.</div>
+<div class="block">Gets the underlying SwerveDrive object.
+ <p>Example:
+ <pre>
+ <code>
+ SwerveDrive drive = Swerve.getInstance().getSwerveDrive();
+ </code>
+ </pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the SwerveDrive instance used by this subsystem</dd>
@@ -331,7 +371,13 @@ loadScripts(document, 'script');</script>
 <h3>driveToPose</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">driveToPose</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</span></div>
 <div class="block">Creates a command to autonomously drive the robot to a specific pose using
- PathPlanner.</div>
+ PathPlanner.
+ <p>Example:
+ <pre>
+ <code>
+ Command autoDrive = Swerve.getInstance().driveToPose(new Pose2d(new Translation2d(6.0, 3.0), Rotation2d.fromDegrees(45)));
+ </code>
+ </pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pose</code> - the target Pose2d to drive to</dd>

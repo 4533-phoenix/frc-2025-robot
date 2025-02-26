@@ -31,7 +31,6 @@ loadScripts(document, 'script');</script>
 <li>Package</li>
 <li>Class</li>
 <li><a href="overview-tree.html">Tree</a></li>
-<li><a href="deprecated-list.html">Deprecated</a></li>
 <li class="nav-bar-cell1-rev">Index</li>
 <li><a href="help-doc.html#index">Help</a></li>
 </ul>
@@ -53,6 +52,10 @@ loadScripts(document, 'script');</script>
 <a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:K">K</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:Z">Z</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a><span class="vertical-separator">|</span><a href="constant-values.html">Constant&nbsp;Field&nbsp;Values</a>
 <h2 class="title" id="I:A">A</h2>
 <dl class="index">
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#addCallback(frc.robot.subsubsytems.LimitSwitch,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">addCallback(LimitSwitch, Runnable, Runnable)</a> - Static method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dd>
+<div class="block">Returns a new limit switch with additional callbacks.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html" class="type-name-link" title="class in frc.robot.subsystems">AlgaArm</a> - Class in <a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a></dt>
 <dd>
 <div class="block">Controls the alga arm mechanism for game piece manipulation.</div>
@@ -77,17 +80,17 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Maximum arm angle.</div>
 </dd>
-<dt><a href="frc/robot/Constants.CoralConstants.html#ARM_MAX_LIMIT_CHANNEL" class="member-name-link">ARM_MAX_LIMIT_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
+<dt><a href="frc/robot/Constants.CoralConstants.html#ARM_MAX_LIMIT_PIN" class="member-name-link">ARM_MAX_LIMIT_PIN</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
 <dd>
-<div class="block">DIO channel for maximum angle limit switch.</div>
+<div class="block">CANifier pin for arm maximum angle limit</div>
 </dd>
 <dt><a href="frc/robot/Constants.CoralConstants.html#ARM_MIN_ANGLE" class="member-name-link">ARM_MIN_ANGLE</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
 <dd>
 <div class="block">Minimum arm angle.</div>
 </dd>
-<dt><a href="frc/robot/Constants.CoralConstants.html#ARM_MIN_LIMIT_CHANNEL" class="member-name-link">ARM_MIN_LIMIT_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
+<dt><a href="frc/robot/Constants.CoralConstants.html#ARM_MIN_LIMIT_PIN" class="member-name-link">ARM_MIN_LIMIT_PIN</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
 <dd>
-<div class="block">DIO channel for minimum angle limit switch.</div>
+<div class="block">CANifier pin for arm minimum angle limit</div>
 </dd>
 <dt><a href="frc/robot/Constants.CoralConstants.html#ARM_PID" class="member-name-link">ARM_PID</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
 <dd>
@@ -117,6 +120,20 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.ClimbConstants.html#CAN_ID" class="member-name-link">CAN_ID</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ClimbConstants.html" title="class in frc.robot">Constants.ClimbConstants</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html#canifier" class="member-name-link">canifier</a> - Variable in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html" title="class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchConfig</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html#canifier(com.ctre.phoenix.CANifier,com.ctre.phoenix.CANifier.GeneralPin,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">canifier(CANifier, CANifier.GeneralPin, Runnable, Runnable)</a> - Static method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html" title="class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchConfig</a></dt>
+<dd>
+<div class="block">Creates a CANifier limit switch configuration.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchType.html#CANIFIER" class="member-name-link">CANIFIER</a> - Enum constant in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchType.html" title="enum class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchType</a></dt>
+<dd>
+<div class="block">CANifier general purpose input</div>
+</dd>
+<dt><a href="frc/robot/Constants.CoralConstants.html#CANIFIER_ID" class="member-name-link">CANIFIER_ID</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
+<dd>
+<div class="block">CANifier ID</div>
+</dd>
 <dt><a href="frc/robot/subsystems/Climb.html#climb()" class="member-name-link">climb()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
 <dd>
 <div class="block">Sets the climb motor to move upward at the configured power.</div>
@@ -167,6 +184,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a new CoralHandler, initializing all subsystems.</div>
 </dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#create(frc.robot.subsubsytems.LimitSwitch.LimitSwitchConfig)" class="member-name-link">create(LimitSwitch.LimitSwitchConfig)</a> - Static method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dd>
+<div class="block">Creates a limit switch using a configuration object.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#create(frc.robot.subsubsytems.LimitSwitch.LimitSwitchType,int,com.ctre.phoenix.CANifier,com.ctre.phoenix.CANifier.GeneralPin,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">create(LimitSwitch.LimitSwitchType, int, CANifier, CANifier.GeneralPin, Runnable, Runnable)</a> - Static method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dd>
+<div class="block">Creates a limit switch based on the specified type.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#createCANifier(com.ctre.phoenix.CANifier,com.ctre.phoenix.CANifier.GeneralPin,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">createCANifier(CANifier, CANifier.GeneralPin, Runnable, Runnable)</a> - Static method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dd>
+<div class="block">Creates a new limit switch using a CANifier.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#createDIO(int,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">createDIO(int, Runnable, Runnable)</a> - Static method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dd>
+<div class="block">Creates a new limit switch using a DIO channel.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:D">D</h2>
 <dl class="index">
@@ -174,6 +207,16 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Derivative gain.</div>
 </dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html#dio(int,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">dio(int, Runnable, Runnable)</a> - Static method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html" title="class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchConfig</a></dt>
+<dd>
+<div class="block">Creates a DIO limit switch configuration.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchType.html#DIO" class="member-name-link">DIO</a> - Enum constant in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchType.html" title="enum class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchType</a></dt>
+<dd>
+<div class="block">Digital Input/Output port on the RoboRIO</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html#dioChannel" class="member-name-link">dioChannel</a> - Variable in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html" title="class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchConfig</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/Robot.html#disabledExit()" class="member-name-link">disabledExit()</a> - Method in class frc.robot.<a href="frc/robot/Robot.html" title="class in frc.robot">Robot</a></dt>
 <dd>
 <div class="block">Called once when disabled mode is exited.</div>
@@ -221,14 +264,14 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html#dropGamepiece()" class="member-name-link">dropGamepiece()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
 <dd>
-<div class="block">Runs the intake in reverse to release the alga.</div>
+<div class="block">Runs the motor in reverse to release the alga.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:E">E</h2>
 <dl class="index">
 <dt><a href="frc/robot/Constants.CoralConstants.html#ELEVATOR_BOTTOM_LIMIT_CHANNEL" class="member-name-link">ELEVATOR_BOTTOM_LIMIT_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
 <dd>
-<div class="block">DIO channel for bottom limit switch.</div>
+<div class="block">DIO channel for elevator bottom limit switch</div>
 </dd>
 <dt><a href="frc/robot/Constants.CoralConstants.html#ELEVATOR_CAN_ID" class="member-name-link">ELEVATOR_CAN_ID</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
 <dd>
@@ -246,9 +289,9 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">PID constants for elevator control.</div>
 </dd>
-<dt><a href="frc/robot/Constants.CoralConstants.html#ELEVATOR_TOP_LIMIT_CHANNEL" class="member-name-link">ELEVATOR_TOP_LIMIT_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
+<dt><a href="frc/robot/Constants.CoralConstants.html#ELEVATOR_TOP_LIMIT_PIN" class="member-name-link">ELEVATOR_TOP_LIMIT_PIN</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
 <dd>
-<div class="block">DIO channel for top limit switch.</div>
+<div class="block">CANifier pin for elevator top limit</div>
 </dd>
 <dt><a href="frc/robot/commands/DropAlgaCommand.html#end(boolean)" class="member-name-link">end(boolean)</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/DropAlgaCommand.html" title="class in frc.robot.commands">DropAlgaCommand</a></dt>
 <dd>&nbsp;</dd>
@@ -283,10 +326,16 @@ loadScripts(document, 'script');</script>
 <h2 class="title" id="I:G">G</h2>
 <dl class="index">
 <dt><a href="frc/robot/subsubsytems/LimitSwitch.html#get()" class="member-name-link">get()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the current state of the limit switch.</div>
+</dd>
 <dt><a href="frc/robot/RobotContainer.html#getAutonomousCommand()" class="member-name-link">getAutonomousCommand()</a> - Method in class frc.robot.<a href="frc/robot/RobotContainer.html" title="class in frc.robot">RobotContainer</a></dt>
 <dd>
 <div class="block">Provides the command to run during autonomous mode.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#getBoolean()" class="member-name-link">getBoolean()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dd>
+<div class="block">Gets the current state as a primitive boolean.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html#getInstance()" class="member-name-link">getInstance()</a> - Static method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
 <dd>
@@ -304,7 +353,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#getMotor()" class="member-name-link">getMotor()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
 <dd>
-<div class="block">Gets the motor controller for this subsystem.</div>
+<div class="block">Returns the underlying SparkMax motor controller.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#getPose()" class="member-name-link">getPose()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
@@ -312,7 +361,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#getPosition()" class="member-name-link">getPosition()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
 <dd>
-<div class="block">Gets the current position of the mechanism.</div>
+<div class="block">Returns the current position of the mechanism.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#getRobotVelocity()" class="member-name-link">getRobotVelocity()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
@@ -320,7 +369,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#getState()" class="member-name-link">getState()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
 <dd>
-<div class="block">Gets the current state of the subsystem.</div>
+<div class="block">Returns the current position knowledge state of the subsystem.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/Climb.html#getState()" class="member-name-link">getState()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
 <dd>
@@ -329,6 +378,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsystems/Swerve.html#getSwerveDrive()" class="member-name-link">getSwerveDrive()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
 <div class="block">Gets the underlying SwerveDrive object.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#getType()" class="member-name-link">getType()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dd>
+<div class="block">Gets the type of this limit switch.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:H">H</h2>
@@ -339,7 +392,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html#hasGamepiece()" class="member-name-link">hasGamepiece()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
 <dd>
-<div class="block">Checks if the mechanism currently has an alga game piece.</div>
+<div class="block">Checks if the alga game piece is detected.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:I">I</h2>
@@ -366,9 +419,9 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Intake motor power (-1.0 to 1.0).</div>
 </dd>
-<dt><a href="frc/robot/Constants.CoralConstants.html#INTAKE_SENSOR_CHANNEL" class="member-name-link">INTAKE_SENSOR_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
+<dt><a href="frc/robot/Constants.CoralConstants.html#INTAKE_SENSOR_PIN" class="member-name-link">INTAKE_SENSOR_PIN</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
 <dd>
-<div class="block">DIO channel for coral detection limit switch.</div>
+<div class="block">CANifier pin for coral detection</div>
 </dd>
 <dt><a href="frc/robot/commands/IntakeAlgaCommand.html" class="type-name-link" title="class in frc.robot.commands">IntakeAlgaCommand</a> - Class in <a href="frc/robot/commands/package-summary.html">frc.robot.commands</a></dt>
 <dd>
@@ -395,9 +448,13 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsystems/Climb.html#isAtBottom()" class="member-name-link">isAtBottom()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsubsytems/LimitSwitchPair.html#isAtMax()" class="member-name-link">isAtMax()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitchPair.html" title="class in frc.robot.subsubsytems">LimitSwitchPair</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns true if the maximum limit switch is triggered.</div>
+</dd>
 <dt><a href="frc/robot/subsubsytems/LimitSwitchPair.html#isAtMin()" class="member-name-link">isAtMin()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitchPair.html" title="class in frc.robot.subsubsytems">LimitSwitchPair</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns true if the minimum limit switch is triggered.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/Climb.html#isAtTop()" class="member-name-link">isAtTop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/commands/DropAlgaCommand.html#isFinished()" class="member-name-link">isFinished()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/DropAlgaCommand.html" title="class in frc.robot.commands">DropAlgaCommand</a></dt>
@@ -418,12 +475,11 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" class="type-name-link" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a> - Class in <a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a></dt>
 <dd>
-<div class="block">Represents a PID-controlled subsystem with limit switches and position
- control.</div>
+<div class="block">Represents a PID-controlled subsystem with limit switches and position control.</div>
 </dd>
-<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#%3Cinit%3E(int,double,double,double,frc.robot.Constants.PID,int,int,double,frc.robot.subsubsytems.LimitedPIDSubsystem.ControlMode)" class="member-name-link">LimitedPIDSubsystem(int, double, double, double, Constants.PID, int, int, double, LimitedPIDSubsystem.ControlMode)</a> - Constructor for class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
+<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#%3Cinit%3E(int,double,double,double,frc.robot.Constants.PID,frc.robot.subsubsytems.LimitSwitch,frc.robot.subsubsytems.LimitSwitch,double,frc.robot.subsubsytems.LimitedPIDSubsystem.ControlMode)" class="member-name-link">LimitedPIDSubsystem(int, double, double, double, Constants.PID, LimitSwitch, LimitSwitch, double, LimitedPIDSubsystem.ControlMode)</a> - Constructor for class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
 <dd>
-<div class="block">Creates a new motor subsystem with position/velocity control and limit switches.</div>
+<div class="block">Creates a new motor subsystem with position/velocity control and pre-created limit switches.</div>
 </dd>
 <dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html" class="type-name-link" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a> - Enum Class in <a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a></dt>
 <dd>
@@ -435,23 +491,35 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/subsubsytems/LimitSwitch.html" class="type-name-link" title="class in frc.robot.subsubsytems">LimitSwitch</a> - Class in <a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a></dt>
 <dd>
-<div class="block">Manages a single limit switch with interrupt-based detection.</div>
+<div class="block">Abstraction for limit switches with different backend implementations.</div>
 </dd>
-<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#%3Cinit%3E(int,java.lang.Runnable)" class="member-name-link">LimitSwitch(int, Runnable)</a> - Constructor for class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html" class="type-name-link" title="class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchConfig</a> - Class in <a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a></dt>
 <dd>
-<div class="block">Creates a new limit switch with callback only for press.</div>
+<div class="block">Configuration class to simplify limit switch creation.</div>
 </dd>
-<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#%3Cinit%3E(int,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">LimitSwitch(int, Runnable, Runnable)</a> - Constructor for class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchType.html" class="type-name-link" title="enum class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchType</a> - Enum Class in <a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a></dt>
 <dd>
-<div class="block">Creates a new limit switch with callbacks for state changes.</div>
+<div class="block">Enum representing the type of limit switch backend.</div>
 </dd>
 <dt><a href="frc/robot/subsubsytems/LimitSwitchPair.html" class="type-name-link" title="class in frc.robot.subsubsytems">LimitSwitchPair</a> - Class in <a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a></dt>
 <dd>
-<div class="block">Manages a pair of limit switches for minimum and maximum positions.</div>
+<div class="block">Manages a pair of limit switches for a mechanism's min and max positions.</div>
 </dd>
 <dt><a href="frc/robot/subsubsytems/LimitSwitchPair.html#%3Cinit%3E(int,int,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">LimitSwitchPair(int, int, Runnable, Runnable)</a> - Constructor for class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitchPair.html" title="class in frc.robot.subsubsytems">LimitSwitchPair</a></dt>
 <dd>
-<div class="block">Creates a new limit switch pair with callbacks for position limits.</div>
+<div class="block">Creates a new LimitSwitchPair with DIO channels.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitchPair.html#%3Cinit%3E(com.ctre.phoenix.CANifier,com.ctre.phoenix.CANifier.GeneralPin,com.ctre.phoenix.CANifier.GeneralPin,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">LimitSwitchPair(CANifier, CANifier.GeneralPin, CANifier.GeneralPin, Runnable, Runnable)</a> - Constructor for class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitchPair.html" title="class in frc.robot.subsubsytems">LimitSwitchPair</a></dt>
+<dd>
+<div class="block">Creates a new LimitSwitchPair with CANifier pins.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitchPair.html#%3Cinit%3E(frc.robot.subsubsytems.LimitSwitch.LimitSwitchType,frc.robot.subsubsytems.LimitSwitch.LimitSwitchType,int,int,com.ctre.phoenix.CANifier,com.ctre.phoenix.CANifier.GeneralPin,com.ctre.phoenix.CANifier.GeneralPin,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">LimitSwitchPair(LimitSwitch.LimitSwitchType, LimitSwitch.LimitSwitchType, int, int, CANifier, CANifier.GeneralPin, CANifier.GeneralPin, Runnable, Runnable)</a> - Constructor for class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitchPair.html" title="class in frc.robot.subsubsytems">LimitSwitchPair</a></dt>
+<dd>
+<div class="block">Creates a new LimitSwitchPair with different backend types for min and max.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitchPair.html#%3Cinit%3E(java.util.function.Supplier,java.util.function.Supplier,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">LimitSwitchPair(Supplier&lt;Boolean&gt;, Supplier&lt;Boolean&gt;, Runnable, Runnable)</a> - Constructor for class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitchPair.html" title="class in frc.robot.subsubsytems">LimitSwitchPair</a></dt>
+<dd>
+<div class="block">Creates a new LimitSwitchPair with mixed suppliers.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#lockWheels()" class="member-name-link">lockWheels()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
@@ -475,6 +543,10 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:O">O</h2>
 <dl class="index">
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html#onPress" class="member-name-link">onPress</a> - Variable in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html" title="class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchConfig</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html#onRelease" class="member-name-link">onRelease</a> - Variable in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html" title="class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchConfig</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.AlgaArmConstants.html#OUTTAKE_POWER" class="member-name-link">OUTTAKE_POWER</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.AlgaArmConstants.html" title="class in frc.robot">Constants.AlgaArmConstants</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.CoralConstants.html#OUTTAKE_POWER" class="member-name-link">OUTTAKE_POWER</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralConstants.html" title="class in frc.robot">Constants.CoralConstants</a></dt>
@@ -491,6 +563,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsystems/AlgaArm.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/CoralHandler.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html#pin" class="member-name-link">pin</a> - Variable in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html" title="class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchConfig</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html#POSITION" class="member-name-link">POSITION</a> - Enum constant in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a></dt>
 <dd>&nbsp;</dd>
@@ -536,17 +610,11 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#set(double)" class="member-name-link">set(double)</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
 <dd>
-<div class="block">Sets the target value (position or velocity) of the mechanism.</div>
+<div class="block">Sets the target (position or velocity) of the mechanism.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/CoralHandler.html#setCustomPosition(edu.wpi.first.math.geometry.Translation2d)" class="member-name-link">setCustomPosition(Translation2d)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
 <dd>
 <div class="block">Sets the end effector to a custom 2D position.</div>
-</dd>
-<dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#setPosition(double)" class="member-name-link">setPosition(double)</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
-<dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">Use set() instead</div>
-</div>
 </dd>
 <dt><a href="frc/robot/subsystems/CoralHandler.html#setPosition(frc.robot.subsystems.CoralHandler.HandlerPosition)" class="member-name-link">setPosition(CoralHandler.HandlerPosition)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
 <dd>
@@ -566,7 +634,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html#stopIntake()" class="member-name-link">stopIntake()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
 <dd>
-<div class="block">Stops the intake motor's operation.</div>
+<div class="block">Stops the intake motor.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/CoralHandler.html#stopIntake()" class="member-name-link">stopIntake()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
 <dd>
@@ -611,6 +679,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/Constants.ClimbConstants.html#TOP_LIMIT_CHANNEL" class="member-name-link">TOP_LIMIT_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ClimbConstants.html" title="class in frc.robot">Constants.ClimbConstants</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html#type" class="member-name-link">type</a> - Variable in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchConfig.html" title="class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchConfig</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:U">U</h2>
 <dl class="index">
@@ -620,6 +690,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Power applied when zeroing unknown positions (-1.0 to 1.0).</div>
 </dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.html#updatePolledSwitches()" class="member-name-link">updatePolledSwitches()</a> - Static method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
+<dd>
+<div class="block">Polls and updates all limit switches that require periodic polling.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:V">V</h2>
 <dl class="index">
@@ -628,6 +702,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the enum constant of this class with the specified name.</div>
 </dd>
 <dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.SubsystemState.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.SubsystemState.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.SubsystemState</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this class with the specified name.</div>
+</dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchType.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchType.html" title="enum class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchType</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this class with the specified name.</div>
 </dd>
@@ -641,6 +719,11 @@ the order they are declared.</div>
 <div class="block">Returns an array containing the constants of this enum class, in
 the order they are declared.</div>
 </dd>
+<dt><a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchType.html#values()" class="member-name-link">values()</a> - Static method in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.LimitSwitchType.html" title="enum class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchType</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum class, in
+the order they are declared.</div>
+</dd>
 <dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html#VELOCITY" class="member-name-link">VELOCITY</a> - Enum constant in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a></dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -648,7 +731,7 @@ the order they are declared.</div>
 <dl class="index">
 <dt><a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html#zeroIfNeeded()" class="member-name-link">zeroIfNeeded()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPIDSubsystem.html" title="class in frc.robot.subsubsytems">LimitedPIDSubsystem</a></dt>
 <dd>
-<div class="block">Applies zeroing power if position is unknown.</div>
+<div class="block">Applies zeroing power if the subsystem's position is unknown.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/CoralHandler.html#zeroIfNeeded()" class="member-name-link">zeroIfNeeded()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralHandler.html" title="class in frc.robot.subsystems">CoralHandler</a></dt>
 <dd>

@@ -35,7 +35,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -78,8 +77,30 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">LimitedPIDSubsystem</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Represents a PID-controlled subsystem with limit switches and position
- control.</div>
+<div class="block">Represents a PID-controlled subsystem with limit switches and position control.
+
+ <p>Example usage:
+ <pre>
+ <code>
+ // Assume minSwitch and maxSwitch are created previously:
+ LimitSwitch minSwitch = LimitSwitch.createDIO(0, 
+         () -&gt; System.out.println("Min limit triggered"), null);
+ LimitSwitch maxSwitch = LimitSwitch.createDIO(1, 
+         () -&gt; System.out.println("Max limit triggered"), null);
+ 
+ // Create the limited PID subsystem:
+ LimitedPIDSubsystem subsystem = new LimitedPIDSubsystem(
+         10,            // CAN ID
+         1.0,           // conversionFactor
+         0.0,           // minPosition
+         100.0,         // maxPosition
+         new PID(0.1, 0.0, 0.0), // PID constants
+         minSwitch,     // min limit switch
+         maxSwitch,     // max limit switch
+         5.0,           // tolerance
+         LimitedPIDSubsystem.ControlMode.POSITION);
+ </code>
+ </pre></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -113,17 +134,17 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,double,double,double,frc.robot.Constants.PID,int,int,double,frc.robot.subsubsytems.LimitedPIDSubsystem.ControlMode)" class="member-name-link">LimitedPIDSubsystem</a><wbr>(int&nbsp;canId,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,double,double,double,frc.robot.Constants.PID,frc.robot.subsubsytems.LimitSwitch,frc.robot.subsubsytems.LimitSwitch,double,frc.robot.subsubsytems.LimitedPIDSubsystem.ControlMode)" class="member-name-link">LimitedPIDSubsystem</a><wbr>(int&nbsp;canId,
  double&nbsp;conversionFactor,
  double&nbsp;minPosition,
  double&nbsp;maxPosition,
  <a href="../Constants.PID.html" title="class in frc.robot">Constants.PID</a>&nbsp;pidConstants,
- int&nbsp;minLimitChannel,
- int&nbsp;maxLimitChannel,
+ <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;minLimitSwitch,
+ <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;maxLimitSwitch,
  double&nbsp;tolerance,
  <a href="LimitedPIDSubsystem.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a>&nbsp;controlMode)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Creates a new motor subsystem with position/velocity control and limit switches.</div>
+<div class="block">Creates a new motor subsystem with position/velocity control and pre-created limit switches.</div>
 </div>
 </div>
 </section>
@@ -133,7 +154,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -142,34 +163,27 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.revrobotics.spark.SparkMax</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMotor()" class="member-name-link">getMotor</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the motor controller for this subsystem.</div>
+<div class="block">Returns the underlying SparkMax motor controller.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition()" class="member-name-link">getPosition</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the current position of the mechanism.</div>
+<div class="block">Returns the current position of the mechanism.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LimitedPIDSubsystem.SubsystemState.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.SubsystemState</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the current state of the subsystem.</div>
+<div class="block">Returns the current position knowledge state of the subsystem.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(double)" class="member-name-link">set</a><wbr>(double&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets the target value (position or velocity) of the mechanism.</div>
+<div class="block">Sets the target (position or velocity) of the mechanism.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#setPosition(double)" class="member-name-link">setPosition</a><wbr>(double&nbsp;position)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">Use set() instead</div>
-</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#zeroIfNeeded()" class="member-name-link">zeroIfNeeded</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Applies zeroing power if position is unknown.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#zeroIfNeeded()" class="member-name-link">zeroIfNeeded</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Applies zeroing power if the subsystem's position is unknown.</div>
 </div>
 </div>
 </div>
@@ -189,27 +203,28 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,double,double,double,frc.robot.Constants.PID,int,int,double,frc.robot.subsubsytems.LimitedPIDSubsystem.ControlMode)">
+<section class="detail" id="&lt;init&gt;(int,double,double,double,frc.robot.Constants.PID,frc.robot.subsubsytems.LimitSwitch,frc.robot.subsubsytems.LimitSwitch,double,frc.robot.subsubsytems.LimitedPIDSubsystem.ControlMode)">
 <h3>LimitedPIDSubsystem</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">LimitedPIDSubsystem</span><wbr><span class="parameters">(int&nbsp;canId,
  double&nbsp;conversionFactor,
  double&nbsp;minPosition,
  double&nbsp;maxPosition,
  <a href="../Constants.PID.html" title="class in frc.robot">Constants.PID</a>&nbsp;pidConstants,
- int&nbsp;minLimitChannel,
- int&nbsp;maxLimitChannel,
+ <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;minLimitSwitch,
+ <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;maxLimitSwitch,
  double&nbsp;tolerance,
  <a href="LimitedPIDSubsystem.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a>&nbsp;controlMode)</span></div>
-<div class="block">Creates a new motor subsystem with position/velocity control and limit switches.</div>
+<div class="block">Creates a new motor subsystem with position/velocity control and pre-created limit switches.
+ This is the only supported constructor as it promotes cleaner code organization.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>canId</code> - CAN ID of the motor controller</dd>
+<dd><code>canId</code> - The CAN ID of the motor controller</dd>
 <dd><code>conversionFactor</code> - Factor to convert motor rotations to position/velocity units</dd>
 <dd><code>minPosition</code> - Minimum allowed position value</dd>
 <dd><code>maxPosition</code> - Maximum allowed position value</dd>
 <dd><code>pidConstants</code> - PID constants for control</dd>
-<dd><code>minLimitChannel</code> - DIO channel for minimum position limit switch</dd>
-<dd><code>maxLimitChannel</code> - DIO channel for maximum position limit switch</dd>
+<dd><code>minLimitSwitch</code> - Pre-created limit switch for minimum position</dd>
+<dd><code>maxLimitSwitch</code> - Pre-created limit switch for maximum position</dd>
 <dd><code>tolerance</code> - Tolerance for position offset</dd>
 <dd><code>controlMode</code> - Whether to use position or velocity control</dd>
 </dl>
@@ -227,21 +242,39 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="zeroIfNeeded()">
 <h3>zeroIfNeeded</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">zeroIfNeeded</span>()</div>
-<div class="block">Applies zeroing power if position is unknown.</div>
+<div class="block">Applies zeroing power if the subsystem's position is unknown.
+ <p>Example:
+ <pre>
+ <code>
+ subsystem.zeroIfNeeded();
+ </code>
+ </pre></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LimitedPIDSubsystem.SubsystemState.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.SubsystemState</a></span>&nbsp;<span class="element-name">getState</span>()</div>
-<div class="block">Gets the current state of the subsystem.</div>
+<div class="block">Returns the current position knowledge state of the subsystem.
+ <p>Example:
+ <pre>
+ <code>
+ SubsystemState state = subsystem.getState();
+ </code>
+ </pre></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPosition()">
 <h3>getPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getPosition</span>()</div>
-<div class="block">Gets the current position of the mechanism.</div>
+<div class="block">Returns the current position of the mechanism.
+ <p>Example:
+ <pre>
+ <code>
+ double pos = subsystem.getPosition();
+ </code>
+ </pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>current position in mechanism units</dd>
@@ -252,9 +285,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="set(double)">
 <h3>set</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(double&nbsp;value)</span></div>
-<div class="block">Sets the target value (position or velocity) of the mechanism.
- For position control, value is clamped to valid range.
- For velocity control, value is zeroed at limits.</div>
+<div class="block">Sets the target (position or velocity) of the mechanism.
+ <p>Example:
+ <pre>
+ <code>
+ subsystem.set(50.0);
+ </code>
+ </pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - target value in mechanism units</dd>
@@ -262,23 +299,19 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setPosition(double)">
-<h3>setPosition</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(double&nbsp;position)</span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">Use set() instead</div>
-</div>
-</section>
-</li>
-<li>
 <section class="detail" id="getMotor()">
 <h3>getMotor</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.revrobotics.spark.SparkMax</span>&nbsp;<span class="element-name">getMotor</span>()</div>
-<div class="block">Gets the motor controller for this subsystem.</div>
+<div class="block">Returns the underlying SparkMax motor controller.
+ <p>Example:
+ <pre>
+ <code>
+ SparkMax motor = subsystem.getMotor();
+ </code>
+ </pre></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the SparkMax motor controller</dd>
+<dd>the motor controller</dd>
 </dl>
 </section>
 </li>
