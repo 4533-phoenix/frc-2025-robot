@@ -146,6 +146,35 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Creates a new motor subsystem with position/velocity control and pre-created limit switches.</div>
 </div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(int,double,double,double,frc.robot.Constants.PID,frc.robot.subsubsytems.LimitSwitch,frc.robot.subsubsytems.LimitSwitch,double,frc.robot.subsubsytems.LimitedPIDSubsystem.ControlMode,boolean)" class="member-name-link">LimitedPIDSubsystem</a><wbr>(int&nbsp;canId,
+ double&nbsp;conversionFactor,
+ double&nbsp;minPosition,
+ double&nbsp;maxPosition,
+ <a href="../Constants.PID.html" title="class in frc.robot">Constants.PID</a>&nbsp;pidConstants,
+ <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;minLimitSwitch,
+ <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;maxLimitSwitch,
+ double&nbsp;tolerance,
+ <a href="LimitedPIDSubsystem.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a>&nbsp;controlMode,
+ boolean&nbsp;isInverted)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Creates a new motor subsystem with position/velocity control, pre-created limit switches, 
+ and motor inversion setting.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,double,double,double,frc.robot.Constants.PID,frc.robot.subsubsytems.LimitSwitch,frc.robot.subsubsytems.LimitSwitch,double,frc.robot.subsubsytems.LimitedPIDSubsystem.ControlMode,boolean,double)" class="member-name-link">LimitedPIDSubsystem</a><wbr>(int&nbsp;canId,
+ double&nbsp;conversionFactor,
+ double&nbsp;minPosition,
+ double&nbsp;maxPosition,
+ <a href="../Constants.PID.html" title="class in frc.robot">Constants.PID</a>&nbsp;pidConstants,
+ <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;minLimitSwitch,
+ <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;maxLimitSwitch,
+ double&nbsp;tolerance,
+ <a href="LimitedPIDSubsystem.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a>&nbsp;controlMode,
+ boolean&nbsp;isInverted,
+ double&nbsp;zeroingPower)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Creates a new motor subsystem with position/velocity control, pre-created limit switches, 
+ motor inversion setting, and custom zeroing power.</div>
+</div>
 </div>
 </section>
 </li>
@@ -174,6 +203,16 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the current position knowledge state of the subsystem.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isAtMaxLimit()" class="member-name-link">isAtMaxLimit</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns whether the maximum limit switch is currently triggered.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isAtMinLimit()" class="member-name-link">isAtMinLimit</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns whether the minimum limit switch is currently triggered.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(double)" class="member-name-link">set</a><wbr>(double&nbsp;value)</code></div>
@@ -227,6 +266,68 @@ loadScripts(document, 'script');</script>
 <dd><code>maxLimitSwitch</code> - Pre-created limit switch for maximum position</dd>
 <dd><code>tolerance</code> - Tolerance for position offset</dd>
 <dd><code>controlMode</code> - Whether to use position or velocity control</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(int,double,double,double,frc.robot.Constants.PID,frc.robot.subsubsytems.LimitSwitch,frc.robot.subsubsytems.LimitSwitch,double,frc.robot.subsubsytems.LimitedPIDSubsystem.ControlMode,boolean)">
+<h3>LimitedPIDSubsystem</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">LimitedPIDSubsystem</span><wbr><span class="parameters">(int&nbsp;canId,
+ double&nbsp;conversionFactor,
+ double&nbsp;minPosition,
+ double&nbsp;maxPosition,
+ <a href="../Constants.PID.html" title="class in frc.robot">Constants.PID</a>&nbsp;pidConstants,
+ <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;minLimitSwitch,
+ <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;maxLimitSwitch,
+ double&nbsp;tolerance,
+ <a href="LimitedPIDSubsystem.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a>&nbsp;controlMode,
+ boolean&nbsp;isInverted)</span></div>
+<div class="block">Creates a new motor subsystem with position/velocity control, pre-created limit switches, 
+ and motor inversion setting.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>canId</code> - The CAN ID of the motor controller</dd>
+<dd><code>conversionFactor</code> - Factor to convert motor rotations to position/velocity units</dd>
+<dd><code>minPosition</code> - Minimum allowed position value</dd>
+<dd><code>maxPosition</code> - Maximum allowed position value</dd>
+<dd><code>pidConstants</code> - PID constants for control</dd>
+<dd><code>minLimitSwitch</code> - Pre-created limit switch for minimum position</dd>
+<dd><code>maxLimitSwitch</code> - Pre-created limit switch for maximum position</dd>
+<dd><code>tolerance</code> - Tolerance for position offset</dd>
+<dd><code>controlMode</code> - Whether to use position or velocity control</dd>
+<dd><code>isInverted</code> - Whether to invert the motor direction</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(int,double,double,double,frc.robot.Constants.PID,frc.robot.subsubsytems.LimitSwitch,frc.robot.subsubsytems.LimitSwitch,double,frc.robot.subsubsytems.LimitedPIDSubsystem.ControlMode,boolean,double)">
+<h3>LimitedPIDSubsystem</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">LimitedPIDSubsystem</span><wbr><span class="parameters">(int&nbsp;canId,
+ double&nbsp;conversionFactor,
+ double&nbsp;minPosition,
+ double&nbsp;maxPosition,
+ <a href="../Constants.PID.html" title="class in frc.robot">Constants.PID</a>&nbsp;pidConstants,
+ <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;minLimitSwitch,
+ <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;maxLimitSwitch,
+ double&nbsp;tolerance,
+ <a href="LimitedPIDSubsystem.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPIDSubsystem.ControlMode</a>&nbsp;controlMode,
+ boolean&nbsp;isInverted,
+ double&nbsp;zeroingPower)</span></div>
+<div class="block">Creates a new motor subsystem with position/velocity control, pre-created limit switches, 
+ motor inversion setting, and custom zeroing power.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>canId</code> - The CAN ID of the motor controller</dd>
+<dd><code>conversionFactor</code> - Factor to convert motor rotations to position/velocity units</dd>
+<dd><code>minPosition</code> - Minimum allowed position value</dd>
+<dd><code>maxPosition</code> - Maximum allowed position value</dd>
+<dd><code>pidConstants</code> - PID constants for control</dd>
+<dd><code>minLimitSwitch</code> - Pre-created limit switch for minimum position</dd>
+<dd><code>maxLimitSwitch</code> - Pre-created limit switch for maximum position</dd>
+<dd><code>tolerance</code> - Tolerance for position offset</dd>
+<dd><code>controlMode</code> - Whether to use position or velocity control</dd>
+<dd><code>isInverted</code> - Whether to invert the motor direction</dd>
+<dd><code>zeroingPower</code> - Power to apply when zeroing the mechanism</dd>
 </dl>
 </section>
 </li>
@@ -312,6 +413,28 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the motor controller</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isAtMinLimit()">
+<h3>isAtMinLimit</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isAtMinLimit</span>()</div>
+<div class="block">Returns whether the minimum limit switch is currently triggered.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>true if at minimum limit, false otherwise</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isAtMaxLimit()">
+<h3>isAtMaxLimit</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isAtMaxLimit</span>()</div>
+<div class="block">Returns whether the maximum limit switch is currently triggered.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>true if at maximum limit, false otherwise</dd>
 </dl>
 </section>
 </li>
