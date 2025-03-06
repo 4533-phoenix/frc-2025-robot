@@ -43,15 +43,15 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested-class-summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor-summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
 <ul class="sub-nav-list">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor-detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-detail">Method</a></li>
 </ul>
 </div>
@@ -74,53 +74,26 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">frc.robot.subsubsytems.LimitSwitch</div>
 </div>
 <section class="class-description" id="class-description">
-<dl class="notes">
-<dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</code></dd>
-</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">LimitSwitch</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</span></div>
-<div class="block">Abstraction for limit switches with different backend implementations.
- Supports both DIO and CANifier-based limit switches.
-
- <p>Example usage:
- <pre>
- <code>
- // Create a limit switch using DIO:
- LimitSwitch dioSwitch = LimitSwitch.createDIO(2,
-         () -&gt; System.out.println("DIO switch pressed"),
-         () -&gt; System.out.println("DIO switch released"));
-
- // Create a limit switch using CANifier:
- CANifier canifier = new CANifier(1);
- LimitSwitch canSwitch = LimitSwitch.createCANifier(canifier, CANifier.GeneralPin.kB,
-         () -&gt; System.out.println("CANifier switch pressed"),
-         () -&gt; System.out.println("CANifier switch released"));
- </code>
- </pre></div>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Manages a single limit switch with interrupt-based detection.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
-<!-- ======== NESTED CLASS SUMMARY ======== -->
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li>
-<section class="nested-class-summary" id="nested-class-summary">
-<h2>Nested Class Summary</h2>
-<div class="caption"><span>Nested Classes</span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Class</div>
+<section class="constructor-summary" id="constructor-summary">
+<h2>Constructor Summary</h2>
+<div class="caption"><span>Constructors</span></div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static class&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="LimitSwitch.LimitSwitchConfig.html" class="type-name-link" title="class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchConfig</a></code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">LimitSwitch</a><wbr>(int&nbsp;channel,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onPress,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onRelease)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Configuration class to simplify limit switch creation.</div>
-</div>
-<div class="col-first odd-row-color"><code>static enum&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="LimitSwitch.LimitSwitchType.html" class="type-name-link" title="enum class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchType</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">Enum representing the type of limit switch backend.</div>
+<div class="block">Creates a new limit switch with callbacks for state changes.</div>
 </div>
 </div>
 </section>
@@ -130,90 +103,15 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#addCallback(frc.robot.subsubsytems.LimitSwitch,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">addCallback</a><wbr>(<a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;existingSwitch,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onPress,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onRelease)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Returns a new limit switch with additional callbacks.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCallbacks(java.lang.Runnable,java.lang.Runnable)" class="member-name-link">addCallbacks</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onPress,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onRelease)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Adds callbacks to an existing limit switch without creating a new DigitalInput.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#create(frc.robot.subsubsytems.LimitSwitch.LimitSwitchConfig)" class="member-name-link">create</a><wbr>(<a href="LimitSwitch.LimitSwitchConfig.html" title="class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchConfig</a>&nbsp;config)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Creates a limit switch using a configuration object.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#create(frc.robot.subsubsytems.LimitSwitch.LimitSwitchType,int,com.ctre.phoenix.CANifier,com.ctre.phoenix.CANifier.GeneralPin,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">create</a><wbr>(<a href="LimitSwitch.LimitSwitchType.html" title="enum class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchType</a>&nbsp;type,
- int&nbsp;dioChannel,
- com.ctre.phoenix.CANifier&nbsp;canifier,
- com.ctre.phoenix.CANifier.GeneralPin&nbsp;pin,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onPress,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onRelease)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Creates a limit switch based on the specified type.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createCANifier(com.ctre.phoenix.CANifier,com.ctre.phoenix.CANifier.GeneralPin,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">createCANifier</a><wbr>(com.ctre.phoenix.CANifier&nbsp;canifier,
- com.ctre.phoenix.CANifier.GeneralPin&nbsp;pin,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onPress,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onRelease)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Creates a new limit switch using a CANifier.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createDIO(int,java.lang.Runnable,java.lang.Runnable)" class="member-name-link">createDIO</a><wbr>(int&nbsp;channel,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onPress,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onRelease)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Creates a new limit switch using a DIO channel.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get()" class="member-name-link">get</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the current state of the limit switch.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBoolean()" class="member-name-link">getBoolean</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the current state as a primitive boolean.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.ctre.phoenix.CANifier</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCANifier()" class="member-name-link">getCANifier</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the CANifier if this is a CANifier switch.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDIOChannel()" class="member-name-link">getDIOChannel</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the DIO channel if this is a DIO switch.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.ctre.phoenix.CANifier.GeneralPin</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPin()" class="member-name-link">getPin</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the CANifier pin if this is a CANifier switch.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LimitSwitch.LimitSwitchType.html" title="enum class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the type of this limit switch.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#updatePolledSwitches()" class="member-name-link">updatePolledSwitches</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Polls and updates all limit switches that require periodic polling.</div>
-</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -226,203 +124,41 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 </section>
 <section class="details">
 <ul class="details-list">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<li>
+<section class="constructor-details" id="constructor-detail">
+<h2>Constructor Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="&lt;init&gt;(int,java.lang.Runnable,java.lang.Runnable)">
+<h3>LimitSwitch</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">LimitSwitch</span><wbr><span class="parameters">(int&nbsp;channel,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onPress,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onRelease)</span></div>
+<div class="block">Creates a new limit switch with callbacks for state changes.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>channel</code> - DIO channel for the switch</dd>
+<dd><code>onPress</code> - Callback executed when switch is pressed (rising edge)</dd>
+<dd><code>onRelease</code> - Callback executed when switch is released (falling edge)</dd>
+</dl>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ============ METHOD DETAIL ========== -->
 <li>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="createDIO(int,java.lang.Runnable,java.lang.Runnable)">
-<h3>createDIO</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></span>&nbsp;<span class="element-name">createDIO</span><wbr><span class="parameters">(int&nbsp;channel,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onPress,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onRelease)</span></div>
-<div class="block">Creates a new limit switch using a DIO channel.
- <p>Example:
- <pre>
- <code>
- LimitSwitch dioSwitch = LimitSwitch.createDIO(2,
-         () -&gt; System.out.println("Pressed"),
-         () -&gt; System.out.println("Released"));
- </code>
- </pre></div>
-</section>
-</li>
-<li>
-<section class="detail" id="createCANifier(com.ctre.phoenix.CANifier,com.ctre.phoenix.CANifier.GeneralPin,java.lang.Runnable,java.lang.Runnable)">
-<h3>createCANifier</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></span>&nbsp;<span class="element-name">createCANifier</span><wbr><span class="parameters">(com.ctre.phoenix.CANifier&nbsp;canifier,
- com.ctre.phoenix.CANifier.GeneralPin&nbsp;pin,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onPress,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onRelease)</span></div>
-<div class="block">Creates a new limit switch using a CANifier.
- <p>Example:
- <pre>
- <code>
- CANifier canifier = new CANifier(1);
- LimitSwitch canSwitch = LimitSwitch.createCANifier(canifier, CANifier.GeneralPin.kB,
-         () -&gt; System.out.println("Pressed"),
-         () -&gt; System.out.println("Released"));
- </code>
- </pre></div>
-</section>
-</li>
-<li>
-<section class="detail" id="create(frc.robot.subsubsytems.LimitSwitch.LimitSwitchType,int,com.ctre.phoenix.CANifier,com.ctre.phoenix.CANifier.GeneralPin,java.lang.Runnable,java.lang.Runnable)">
-<h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></span>&nbsp;<span class="element-name">create</span><wbr><span class="parameters">(<a href="LimitSwitch.LimitSwitchType.html" title="enum class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchType</a>&nbsp;type,
- int&nbsp;dioChannel,
- com.ctre.phoenix.CANifier&nbsp;canifier,
- com.ctre.phoenix.CANifier.GeneralPin&nbsp;pin,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onPress,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onRelease)</span></div>
-<div class="block">Creates a limit switch based on the specified type.
- <p>Example:
- <pre>
- <code>
- LimitSwitch ls = LimitSwitch.create(LimitSwitch.LimitSwitchType.DIO, 2, null, null,
-         () -&gt; System.out.println("Pressed"),
-         () -&gt; System.out.println("Released"));
- </code>
- </pre></div>
-</section>
-</li>
-<li>
-<section class="detail" id="create(frc.robot.subsubsytems.LimitSwitch.LimitSwitchConfig)">
-<h3>create</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></span>&nbsp;<span class="element-name">create</span><wbr><span class="parameters">(<a href="LimitSwitch.LimitSwitchConfig.html" title="class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchConfig</a>&nbsp;config)</span></div>
-<div class="block">Creates a limit switch using a configuration object.
- <p>Example:
- <pre>
- <code>
- LimitSwitchConfig config = LimitSwitchConfig.dio(2, 
-         () -&gt; System.out.println("Pressed"), 
-         () -&gt; System.out.println("Released"));
- LimitSwitch ls = LimitSwitch.create(config);
- </code>
- </pre></div>
-</section>
-</li>
-<li>
 <section class="detail" id="get()">
 <h3>get</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">get</span>()</div>
-<div class="block">Gets the current state of the limit switch.
- <p>Example:
- <pre>
- <code>
- boolean pressed = ls.get();
- </code>
- </pre></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html#get()" title="class or interface in java.util.function" class="external-link">get</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getBoolean()">
-<h3>getBoolean</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getBoolean</span>()</div>
-<div class="block">Gets the current state as a primitive boolean.
- <p>Example:
- <pre>
- <code>
- boolean pressed = ls.getBoolean();
- </code>
- </pre></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getType()">
-<h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LimitSwitch.LimitSwitchType.html" title="enum class in frc.robot.subsubsytems">LimitSwitch.LimitSwitchType</a></span>&nbsp;<span class="element-name">getType</span>()</div>
-<div class="block">Gets the type of this limit switch.
- <p>Example:
- <pre>
- <code>
- LimitSwitchType type = ls.getType();
- </code>
- </pre></div>
-</section>
-</li>
-<li>
-<section class="detail" id="updatePolledSwitches()">
-<h3>updatePolledSwitches</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updatePolledSwitches</span>()</div>
-<div class="block">Polls and updates all limit switches that require periodic polling.
- <p>Example:
- <pre>
- <code>
- LimitSwitch.updatePolledSwitches();
- </code>
- </pre></div>
-</section>
-</li>
-<li>
-<section class="detail" id="addCallbacks(java.lang.Runnable,java.lang.Runnable)">
-<h3>addCallbacks</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></span>&nbsp;<span class="element-name">addCallbacks</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onPress,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onRelease)</span></div>
-<div class="block">Adds callbacks to an existing limit switch without creating a new DigitalInput.
- <p>Example:
- <pre>
- <code>
- LimitSwitch existingSwitch = LimitSwitch.createDIO(2, null, null);
- existingSwitch.addCallbacks(
-         () -&gt; System.out.println("New pressed callback"),
-         () -&gt; System.out.println("New released callback"));
- </code>
- </pre></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>onPress</code> - Callback to run when switch is pressed</dd>
-<dd><code>onRelease</code> - Callback to run when switch is released</dd>
-<dt>Returns:</dt>
-<dd>this switch instance for method chaining</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="addCallback(frc.robot.subsubsytems.LimitSwitch,java.lang.Runnable,java.lang.Runnable)">
-<h3>addCallback</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></span>&nbsp;<span class="element-name">addCallback</span><wbr><span class="parameters">(<a href="LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a>&nbsp;existingSwitch,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onPress,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;onRelease)</span></div>
-<div class="block">Returns a new limit switch with additional callbacks.
- <p>This method reuses the existing DigitalInput if possible to avoid resource conflicts.</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getDIOChannel()">
-<h3>getDIOChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getDIOChannel</span>()</div>
-<div class="block">Gets the DIO channel if this is a DIO switch.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">get</span>()</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the DIO channel, or -1 if not a DIO switch</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCANifier()">
-<h3>getCANifier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.ctre.phoenix.CANifier</span>&nbsp;<span class="element-name">getCANifier</span>()</div>
-<div class="block">Gets the CANifier if this is a CANifier switch.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the CANifier, or null if not a CANifier switch</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getPin()">
-<h3>getPin</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.ctre.phoenix.CANifier.GeneralPin</span>&nbsp;<span class="element-name">getPin</span>()</div>
-<div class="block">Gets the CANifier pin if this is a CANifier switch.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the pin, or null if not a CANifier switch</dd>
+<dd>true if switch is pressed</dd>
 </dl>
 </section>
 </li>
