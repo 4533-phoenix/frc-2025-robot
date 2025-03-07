@@ -93,8 +93,13 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#simpleBackwardDrive()" class="member-name-link">simpleBackwardDrive</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#midBlueToReef()" class="member-name-link">midBlueToReef</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Creates a command that follows the "Mid to Reef" path and performs coral actions.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#simpleBackwardDrive()" class="member-name-link">simpleBackwardDrive</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a command that drives the robot backward at half speed for 1 second.</div>
 </div>
 </div>
@@ -119,6 +124,25 @@ loadScripts(document, 'script');</script>
 <h3>simpleBackwardDrive</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">simpleBackwardDrive</span>()</div>
 <div class="block">Creates a command that drives the robot backward at half speed for 1 second.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The command to run</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="midBlueToReef()">
+<h3>midBlueToReef</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">midBlueToReef</span>()</div>
+<div class="block">Creates a command that follows the "Mid to Reef" path and performs coral actions.
+ This command works for both blue and red alliance - the PathPlanner configuration
+ in Swerve.java handles the alliance-specific path mirroring automatically.
+ 
+ The sequence:
+ 1. Teleports the robot to the path's starting position
+ 2. Moves to "Mid to Reef" while positioning arm to mid
+ 3. Waits for coral to drop
+ 4. Returns arm to intake position</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The command to run</dd>
