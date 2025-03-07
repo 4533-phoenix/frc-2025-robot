@@ -89,10 +89,13 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Value</div>
 <div class="col-first even-row-color"><code id="frc.robot.Constants.ApriltagConstants.CAMERA_DEBOUNCE_TIME">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/Constants.ApriltagConstants.html#CAMERA_DEBOUNCE_TIME">CAMERA_DEBOUNCE_TIME</a></code></div>
-<div class="col-last even-row-color"><code>0.015</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.ApriltagConstants.MAXIMUM_AMBIGUITY">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.ApriltagConstants.html#MAXIMUM_AMBIGUITY">MAXIMUM_AMBIGUITY</a></code></div>
-<div class="col-last odd-row-color"><code>0.25</code></div>
+<div class="col-last even-row-color"><code>0.1</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.ApriltagConstants.MAX_CAMERA_RESULTS">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.ApriltagConstants.html#MAX_CAMERA_RESULTS">MAX_CAMERA_RESULTS</a></code></div>
+<div class="col-last odd-row-color"><code>1</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.ApriltagConstants.MAXIMUM_AMBIGUITY">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.ApriltagConstants.html#MAXIMUM_AMBIGUITY">MAXIMUM_AMBIGUITY</a></code></div>
+<div class="col-last even-row-color"><code>0.25</code></div>
 </div>
 </li>
 <li>
@@ -109,7 +112,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color"><code>14</code></div>
 <div class="col-first even-row-color"><code id="frc.robot.Constants.ClimbConstants.CLIMB_POWER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/Constants.ClimbConstants.html#CLIMB_POWER">CLIMB_POWER</a></code></div>
-<div class="col-last even-row-color"><code>-0.05</code></div>
+<div class="col-last even-row-color"><code>-0.5</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.Constants.ClimbConstants.IS_INVERTED">public&nbsp;static&nbsp;final&nbsp;boolean</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/Constants.ClimbConstants.html#IS_INVERTED">IS_INVERTED</a></code></div>
 <div class="col-last odd-row-color"><code>false</code></div>
@@ -119,86 +122,100 @@ loadScripts(document, 'script');</script>
 </div>
 </li>
 <li>
-<div class="caption"><span>frc.robot.<a href="frc/robot/Constants.CoralSuperstructureConstants.html" title="class in frc.robot">Constants.CoralSuperstructureConstants</a></span></div>
+<div class="caption"><span>frc.robot.<a href="frc/robot/Constants.CoralArmConstants.html" title="class in frc.robot">Constants.CoralArmConstants</a></span></div>
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Constant Field</div>
 <div class="table-header col-last">Value</div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.DROP_POWER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#DROP_POWER">DROP_POWER</a></code></div>
-<div class="col-last even-row-color"><code>1.0</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.EJECT_POWER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#EJECT_POWER">EJECT_POWER</a></code></div>
-<div class="col-last odd-row-color"><code>1.0</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELBOW_CAN_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELBOW_CAN_ID">ELBOW_CAN_ID</a></code></div>
-<div class="col-last even-row-color"><code>16</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELBOW_CURRENT_LIMIT">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELBOW_CURRENT_LIMIT">ELBOW_CURRENT_LIMIT</a></code></div>
-<div class="col-last odd-row-color"><code>20</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELBOW_INVERTED">public&nbsp;static&nbsp;final&nbsp;boolean</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELBOW_INVERTED">ELBOW_INVERTED</a></code></div>
-<div class="col-last even-row-color"><code>false</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELBOW_MAX_LIMIT_CHANNEL">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELBOW_MAX_LIMIT_CHANNEL">ELBOW_MAX_LIMIT_CHANNEL</a></code></div>
-<div class="col-last odd-row-color"><code>4</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELBOW_MIN_LIMIT_CHANNEL">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELBOW_MIN_LIMIT_CHANNEL">ELBOW_MIN_LIMIT_CHANNEL</a></code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELBOW_BACK_LIMIT_CHANNEL">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELBOW_BACK_LIMIT_CHANNEL">ELBOW_BACK_LIMIT_CHANNEL</a></code></div>
 <div class="col-last even-row-color"><code>3</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELBOW_RAMP_RATE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELBOW_RAMP_RATE">ELBOW_RAMP_RATE</a></code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELBOW_CAN_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELBOW_CAN_ID">ELBOW_CAN_ID</a></code></div>
+<div class="col-last odd-row-color"><code>16</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELBOW_CURRENT_LIMIT">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELBOW_CURRENT_LIMIT">ELBOW_CURRENT_LIMIT</a></code></div>
+<div class="col-last even-row-color"><code>20</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELBOW_FRONT_LIMIT_CHANNEL">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELBOW_FRONT_LIMIT_CHANNEL">ELBOW_FRONT_LIMIT_CHANNEL</a></code></div>
+<div class="col-last odd-row-color"><code>4</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELBOW_INVERTED">public&nbsp;static&nbsp;final&nbsp;boolean</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELBOW_INVERTED">ELBOW_INVERTED</a></code></div>
+<div class="col-last even-row-color"><code>false</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELBOW_RAMP_RATE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELBOW_RAMP_RATE">ELBOW_RAMP_RATE</a></code></div>
 <div class="col-last odd-row-color"><code>0.3</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELBOW_ZEROING_POWER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELBOW_ZEROING_POWER">ELBOW_ZEROING_POWER</a></code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELBOW_ZEROING_POWER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELBOW_ZEROING_POWER">ELBOW_ZEROING_POWER</a></code></div>
 <div class="col-last even-row-color"><code>0.15</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELEVATOR_BOTTOM_LIMIT_CHANNEL">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELEVATOR_BOTTOM_LIMIT_CHANNEL">ELEVATOR_BOTTOM_LIMIT_CHANNEL</a></code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELEVATOR_BOTTOM_LIMIT_CHANNEL">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELEVATOR_BOTTOM_LIMIT_CHANNEL">ELEVATOR_BOTTOM_LIMIT_CHANNEL</a></code></div>
 <div class="col-last odd-row-color"><code>0</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELEVATOR_CAN_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELEVATOR_CAN_ID">ELEVATOR_CAN_ID</a></code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELEVATOR_CAN_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELEVATOR_CAN_ID">ELEVATOR_CAN_ID</a></code></div>
 <div class="col-last even-row-color"><code>15</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELEVATOR_CURRENT_LIMIT">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELEVATOR_CURRENT_LIMIT">ELEVATOR_CURRENT_LIMIT</a></code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELEVATOR_CURRENT_LIMIT">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELEVATOR_CURRENT_LIMIT">ELEVATOR_CURRENT_LIMIT</a></code></div>
 <div class="col-last odd-row-color"><code>30</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELEVATOR_INVERTED">public&nbsp;static&nbsp;final&nbsp;boolean</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELEVATOR_INVERTED">ELEVATOR_INVERTED</a></code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELEVATOR_INVERTED">public&nbsp;static&nbsp;final&nbsp;boolean</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELEVATOR_INVERTED">ELEVATOR_INVERTED</a></code></div>
 <div class="col-last even-row-color"><code>true</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELEVATOR_RAMP_RATE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELEVATOR_RAMP_RATE">ELEVATOR_RAMP_RATE</a></code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELEVATOR_RAMP_RATE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELEVATOR_RAMP_RATE">ELEVATOR_RAMP_RATE</a></code></div>
 <div class="col-last odd-row-color"><code>0.25</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELEVATOR_TOP_LIMIT_CHANNEL">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELEVATOR_TOP_LIMIT_CHANNEL">ELEVATOR_TOP_LIMIT_CHANNEL</a></code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELEVATOR_TOP_LIMIT_CHANNEL">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELEVATOR_TOP_LIMIT_CHANNEL">ELEVATOR_TOP_LIMIT_CHANNEL</a></code></div>
 <div class="col-last even-row-color"><code>2</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELEVATOR_ZEROING_POWER_DOWN">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELEVATOR_ZEROING_POWER_DOWN">ELEVATOR_ZEROING_POWER_DOWN</a></code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELEVATOR_ZEROING_POWER_DOWN">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELEVATOR_ZEROING_POWER_DOWN">ELEVATOR_ZEROING_POWER_DOWN</a></code></div>
 <div class="col-last odd-row-color"><code>-0.15</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.ELEVATOR_ZEROING_POWER_UP">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ELEVATOR_ZEROING_POWER_UP">ELEVATOR_ZEROING_POWER_UP</a></code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralArmConstants.ELEVATOR_ZEROING_POWER_UP">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#ELEVATOR_ZEROING_POWER_UP">ELEVATOR_ZEROING_POWER_UP</a></code></div>
 <div class="col-last even-row-color"><code>0.15</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.INTAKE_POWER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#INTAKE_POWER">INTAKE_POWER</a></code></div>
-<div class="col-last odd-row-color"><code>0.2</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.INTERMEDIATE_ELBOW_BACK_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#INTERMEDIATE_ELBOW_BACK_ANGLE">INTERMEDIATE_ELBOW_BACK_ANGLE</a></code></div>
-<div class="col-last even-row-color"><code>-45.0</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.INTERMEDIATE_ELBOW_FRONT_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#INTERMEDIATE_ELBOW_FRONT_ANGLE">INTERMEDIATE_ELBOW_FRONT_ANGLE</a></code></div>
-<div class="col-last odd-row-color"><code>45.0</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.MANIPULATOR_CAN_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#MANIPULATOR_CAN_ID">MANIPULATOR_CAN_ID</a></code></div>
-<div class="col-last even-row-color"><code>17</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.MANIPULATOR_INVERTED">public&nbsp;static&nbsp;final&nbsp;boolean</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#MANIPULATOR_INVERTED">MANIPULATOR_INVERTED</a></code></div>
-<div class="col-last odd-row-color"><code>false</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.MANIPULATOR_SENSOR_CHANNEL">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#MANIPULATOR_SENSOR_CHANNEL">MANIPULATOR_SENSOR_CHANNEL</a></code></div>
-<div class="col-last even-row-color"><code>1</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.POSITION_TOLERANCE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#POSITION_TOLERANCE">POSITION_TOLERANCE</a></code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralArmConstants.INTERMEDIATE_ELBOW_BACK_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#INTERMEDIATE_ELBOW_BACK_ANGLE">INTERMEDIATE_ELBOW_BACK_ANGLE</a></code></div>
+<div class="col-last odd-row-color"><code>-45.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralArmConstants.INTERMEDIATE_ELBOW_FRONT_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#INTERMEDIATE_ELBOW_FRONT_ANGLE">INTERMEDIATE_ELBOW_FRONT_ANGLE</a></code></div>
+<div class="col-last even-row-color"><code>45.0</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralArmConstants.POSITION_TOLERANCE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#POSITION_TOLERANCE">POSITION_TOLERANCE</a></code></div>
 <div class="col-last odd-row-color"><code>1.0</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralSuperstructureConstants.UNKNOWN_STATE_POWER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralSuperstructureConstants.html#UNKNOWN_STATE_POWER">UNKNOWN_STATE_POWER</a></code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralArmConstants.UNKNOWN_STATE_POWER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralArmConstants.html#UNKNOWN_STATE_POWER">UNKNOWN_STATE_POWER</a></code></div>
 <div class="col-last even-row-color"><code>0.1</code></div>
+</div>
+</li>
+<li>
+<div class="caption"><span>frc.robot.<a href="frc/robot/Constants.CoralManipulatorConstants.html" title="class in frc.robot">Constants.CoralManipulatorConstants</a></span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Constant Field</div>
+<div class="table-header col-last">Value</div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralManipulatorConstants.CAN_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralManipulatorConstants.html#CAN_ID">CAN_ID</a></code></div>
+<div class="col-last even-row-color"><code>17</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralManipulatorConstants.CURRENT_LIMIT">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralManipulatorConstants.html#CURRENT_LIMIT">CURRENT_LIMIT</a></code></div>
+<div class="col-last odd-row-color"><code>20</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralManipulatorConstants.DROP_POWER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralManipulatorConstants.html#DROP_POWER">DROP_POWER</a></code></div>
+<div class="col-last even-row-color"><code>1.0</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralManipulatorConstants.EJECT_POWER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralManipulatorConstants.html#EJECT_POWER">EJECT_POWER</a></code></div>
+<div class="col-last odd-row-color"><code>1.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralManipulatorConstants.INTAKE_POWER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralManipulatorConstants.html#INTAKE_POWER">INTAKE_POWER</a></code></div>
+<div class="col-last even-row-color"><code>0.2</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralManipulatorConstants.INVERTED">public&nbsp;static&nbsp;final&nbsp;boolean</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralManipulatorConstants.html#INVERTED">INVERTED</a></code></div>
+<div class="col-last odd-row-color"><code>false</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.Constants.CoralManipulatorConstants.RAMP_RATE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/Constants.CoralManipulatorConstants.html#RAMP_RATE">RAMP_RATE</a></code></div>
+<div class="col-last even-row-color"><code>0.1</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.Constants.CoralManipulatorConstants.SENSOR_CHANNEL">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/Constants.CoralManipulatorConstants.html#SENSOR_CHANNEL">SENSOR_CHANNEL</a></code></div>
+<div class="col-last odd-row-color"><code>1</code></div>
 </div>
 </li>
 <li>

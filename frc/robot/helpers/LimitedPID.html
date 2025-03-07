@@ -5,7 +5,7 @@
 <title>LimitedPID (frc-2025-robot API)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="description" content="declaration: package: frc.robot.subsubsytems, class: LimitedPID">
+<meta name="description" content="declaration: package: frc.robot.helpers, class: LimitedPID">
 <meta name="generator" content="javadoc/ClassWriterImpl">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../script-dir/jquery-ui.min.css" title="Style">
@@ -67,18 +67,17 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">frc.robot.subsubsytems</a></div>
+<div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">frc.robot.helpers</a></div>
 <h1 title="Class LimitedPID" class="title">Class LimitedPID</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance">frc.robot.subsubsytems.LimitedPID</div>
+<div class="inheritance">frc.robot.helpers.LimitedPID</div>
 </div>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">LimitedPID</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Represents a PID-controlled subsystem with limit switches and position
- control.</div>
+<div class="block">Represents a PID-controlled subsystem with limit switches and position control.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -92,13 +91,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static enum&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="LimitedPID.ControlMode.html" class="type-name-link" title="enum class in frc.robot.subsubsytems">LimitedPID.ControlMode</a></code></div>
+<div class="col-second even-row-color"><code><a href="LimitedPID.SubsystemState.html" class="type-name-link" title="enum class in frc.robot.helpers">LimitedPID.SubsystemState</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Control mode for the subsystem.</div>
-</div>
-<div class="col-first odd-row-color"><code>static enum&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="LimitedPID.SubsystemState.html" class="type-name-link" title="enum class in frc.robot.subsubsytems">LimitedPID.SubsystemState</a></code></div>
-<div class="col-last odd-row-color">
 <div class="block">State of position knowledge for a subsystem.</div>
 </div>
 </div>
@@ -112,7 +106,7 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,double,double,double,frc.robot.Constants.PID,int,int,double,frc.robot.subsubsytems.LimitedPID.ControlMode,boolean,double,int)" class="member-name-link">LimitedPID</a><wbr>(int&nbsp;canId,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,double,double,double,frc.robot.Constants.PID,int,int,double,boolean,double,int)" class="member-name-link">LimitedPID</a><wbr>(int&nbsp;canId,
  double&nbsp;conversionFactor,
  double&nbsp;minPosition,
  double&nbsp;maxPosition,
@@ -120,12 +114,11 @@ loadScripts(document, 'script');</script>
  int&nbsp;minLimitChannel,
  int&nbsp;maxLimitChannel,
  double&nbsp;tolerance,
- <a href="LimitedPID.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPID.ControlMode</a>&nbsp;controlMode,
  boolean&nbsp;isInverted,
  double&nbsp;rampRate,
  int&nbsp;currentLimit)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Creates a new motor subsystem with position/velocity control and limit switches.</div>
+<div class="block">Creates a new motor subsystem with position control and limit switches.</div>
 </div>
 </div>
 </section>
@@ -151,7 +144,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Gets the current position of the mechanism.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LimitedPID.SubsystemState.html" title="enum class in frc.robot.subsubsytems">LimitedPID.SubsystemState</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LimitedPID.SubsystemState.html" title="enum class in frc.robot.helpers">LimitedPID.SubsystemState</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Gets the current state of the subsystem.</div>
@@ -167,9 +160,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Checks if the mechanism is at the minimum limit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(double)" class="member-name-link">set</a><wbr>(double&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(double)" class="member-name-link">setPosition</a><wbr>(double&nbsp;position)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets the target value (position or velocity) of the mechanism.</div>
+<div class="block">Sets the target position of the mechanism.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update()" class="member-name-link">update</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Updates the mechanism status by checking limit switches.</div>
 </div>
 </div>
 </div>
@@ -189,7 +187,7 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,double,double,double,frc.robot.Constants.PID,int,int,double,frc.robot.subsubsytems.LimitedPID.ControlMode,boolean,double,int)">
+<section class="detail" id="&lt;init&gt;(int,double,double,double,frc.robot.Constants.PID,int,int,double,boolean,double,int)">
 <h3>LimitedPID</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">LimitedPID</span><wbr><span class="parameters">(int&nbsp;canId,
  double&nbsp;conversionFactor,
@@ -199,22 +197,20 @@ loadScripts(document, 'script');</script>
  int&nbsp;minLimitChannel,
  int&nbsp;maxLimitChannel,
  double&nbsp;tolerance,
- <a href="LimitedPID.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPID.ControlMode</a>&nbsp;controlMode,
  boolean&nbsp;isInverted,
  double&nbsp;rampRate,
  int&nbsp;currentLimit)</span></div>
-<div class="block">Creates a new motor subsystem with position/velocity control and limit switches.</div>
+<div class="block">Creates a new motor subsystem with position control and limit switches.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>canId</code> - CAN ID of the motor controller</dd>
-<dd><code>conversionFactor</code> - Factor to convert motor rotations to position/velocity units</dd>
+<dd><code>conversionFactor</code> - Factor to convert motor rotations to position units</dd>
 <dd><code>minPosition</code> - Minimum allowed position value</dd>
 <dd><code>maxPosition</code> - Maximum allowed position value</dd>
 <dd><code>pidConstants</code> - PID constants for control</dd>
 <dd><code>minLimitChannel</code> - DIO channel for minimum position limit switch</dd>
 <dd><code>maxLimitChannel</code> - DIO channel for maximum position limit switch</dd>
 <dd><code>tolerance</code> - Tolerance for position offset</dd>
-<dd><code>controlMode</code> - Whether to use position or velocity control</dd>
 <dd><code>isInverted</code> - Whether the motor direction is inverted</dd>
 <dd><code>rampRate</code> - Ramp rate in seconds from 0 to full throttle</dd>
 <dd><code>currentLimit</code> - Maximum current limit in amps</dd>
@@ -232,7 +228,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LimitedPID.SubsystemState.html" title="enum class in frc.robot.subsubsytems">LimitedPID.SubsystemState</a></span>&nbsp;<span class="element-name">getState</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LimitedPID.SubsystemState.html" title="enum class in frc.robot.helpers">LimitedPID.SubsystemState</a></span>&nbsp;<span class="element-name">getState</span>()</div>
 <div class="block">Gets the current state of the subsystem.</div>
 </section>
 </li>
@@ -248,15 +244,14 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="set(double)">
-<h3>set</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(double&nbsp;value)</span></div>
-<div class="block">Sets the target value (position or velocity) of the mechanism.
- For position control, value is clamped to valid range.
- For velocity control, value is zeroed at limits.</div>
+<section class="detail" id="setPosition(double)">
+<h3>setPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(double&nbsp;position)</span></div>
+<div class="block">Sets the target position of the mechanism.
+ Position is clamped to valid range.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>value</code> - target value in mechanism units</dd>
+<dd><code>position</code> - target position in mechanism units</dd>
 </dl>
 </section>
 </li>
@@ -291,6 +286,13 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>true if at maximum limit, false otherwise</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="update()">
+<h3>update</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">update</span>()</div>
+<div class="block">Updates the mechanism status by checking limit switches.</div>
 </section>
 </li>
 </ul>
