@@ -96,10 +96,10 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static enum&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="Apriltag.Camera.html" class="type-name-link" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></code></div>
+<div class="col-first even-row-color"><code>static class&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="Apriltag.Camera.html" class="type-name-link" title="class in frc.robot.subsystems">Apriltag.Camera</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Enum defining the robot's cameras and their configurations.</div>
+<div class="block">Class representing a camera on the robot.</div>
 </div>
 </div>
 </section>
@@ -121,25 +121,30 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Calculate a target pose relative to an AprilTag on the field.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDistanceFromAprilTag(int)" class="member-name-link">getDistanceFromAprilTag</a><wbr>(int&nbsp;id)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Apriltag.Camera.html" title="class in frc.robot.subsystems">Apriltag.Camera</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCameras()" class="member-name-link">getCameras</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get all cameras configured in this subsystem.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDistanceFromAprilTag(int)" class="member-name-link">getDistanceFromAprilTag</a><wbr>(int&nbsp;id)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get the distance of the robot from a specific AprilTag.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInstance()" class="member-name-link">getInstance</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInstance()" class="member-name-link">getInstance</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Gets the instance of the <a href="Apriltag.html" title="class in frc.robot.subsystems"><code>Apriltag</code></a> class.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>org.photonvision.targeting.PhotonTrackedTarget</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTargetFromId(int,frc.robot.subsystems.Apriltag.Camera)" class="member-name-link">getTargetFromId</a><wbr>(int&nbsp;id,
- <a href="Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a>&nbsp;camera)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>org.photonvision.targeting.PhotonTrackedTarget</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTargetFromId(int,java.lang.String)" class="member-name-link">getTargetFromId</a><wbr>(int&nbsp;id,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cameraName)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get tracked target from a camera for a specific AprilTag ID.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Updates the pose estimation in the Swerve subsystem with vision measurements.</div>
 </div>
 </div>
@@ -212,17 +217,28 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getTargetFromId(int,frc.robot.subsystems.Apriltag.Camera)">
+<section class="detail" id="getTargetFromId(int,java.lang.String)">
 <h3>getTargetFromId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">org.photonvision.targeting.PhotonTrackedTarget</span>&nbsp;<span class="element-name">getTargetFromId</span><wbr><span class="parameters">(int&nbsp;id,
- <a href="Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a>&nbsp;camera)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cameraName)</span></div>
 <div class="block">Get tracked target from a camera for a specific AprilTag ID.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>id</code> - AprilTag ID</dd>
-<dd><code>camera</code> - Camera to check</dd>
+<dd><code>cameraName</code> - Name of the camera to check</dd>
 <dt>Returns:</dt>
 <dd>Tracked target, or null if not found</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCameras()">
+<h3>getCameras</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Apriltag.Camera.html" title="class in frc.robot.subsystems">Apriltag.Camera</a>&gt;</span>&nbsp;<span class="element-name">getCameras</span>()</div>
+<div class="block">Get all cameras configured in this subsystem.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Map of camera name to Camera object</dd>
 </dl>
 </section>
 </li>
