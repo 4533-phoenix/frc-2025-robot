@@ -56,6 +56,18 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html" class="type-name-link" title="class in frc.robot.subsystems">AlgaArm</a> - Class in <a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.html" class="type-name-link" title="class in frc.robot.subsystems">Apriltag</a> - Class in <a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a></dt>
+<dd>
+<div class="block">The subsystem for AprilTag vision processing.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html" class="type-name-link" title="enum class in frc.robot.subsystems">Apriltag.Camera</a> - Enum Class in <a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a></dt>
+<dd>
+<div class="block">Enum defining the robot's cameras and their configurations.</div>
+</dd>
+<dt><a href="frc/robot/Constants.ApriltagConstants.ApriltagCameraConfig.html#%3Cinit%3E(java.lang.String,edu.wpi.first.math.geometry.Transform3d,org.photonvision.PhotonPoseEstimator.PoseStrategy)" class="member-name-link">ApriltagCameraConfig(String, Transform3d, PhotonPoseEstimator.PoseStrategy)</a> - Constructor for class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.ApriltagCameraConfig.html" title="class in frc.robot">Constants.ApriltagConstants.ApriltagCameraConfig</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/Constants.ApriltagConstants.html#%3Cinit%3E()" class="member-name-link">ApriltagConstants()</a> - Constructor for class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.html" title="class in frc.robot">Constants.ApriltagConstants</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.CoralSuperstructureConstants.html#ARM_LENGTH" class="member-name-link">ARM_LENGTH</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralSuperstructureConstants.html" title="class in frc.robot">Constants.CoralSuperstructureConstants</a></dt>
 <dd>
 <div class="block">Arm length.</div>
@@ -83,11 +95,21 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:B">B</h2>
 <dl class="index">
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html#BACK_CAMERA" class="member-name-link">BACK_CAMERA</a> - Enum constant in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.ClimbConstants.html#BOTTOM_LIMIT_CHANNEL" class="member-name-link">BOTTOM_LIMIT_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ClimbConstants.html" title="class in frc.robot">Constants.ClimbConstants</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:C">C</h2>
 <dl class="index">
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html#camera" class="member-name-link">camera</a> - Variable in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></dt>
+<dd>
+<div class="block">Camera instance for communication</div>
+</dd>
+<dt><a href="frc/robot/Constants.ApriltagConstants.html#CAMERA_DEBOUNCE_TIME" class="member-name-link">CAMERA_DEBOUNCE_TIME</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.html" title="class in frc.robot">Constants.ApriltagConstants</a></dt>
+<dd>
+<div class="block">Debounce time for camera reads in seconds</div>
+</dd>
 <dt><a href="frc/robot/Constants.AlgaArmConstants.html#CAN_ID" class="member-name-link">CAN_ID</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.AlgaArmConstants.html" title="class in frc.robot">Constants.AlgaArmConstants</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.ClimbConstants.html#CAN_ID" class="member-name-link">CAN_ID</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ClimbConstants.html" title="class in frc.robot">Constants.ClimbConstants</a></dt>
@@ -112,6 +134,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Constants for the alga arm mechanism.</div>
 </dd>
+<dt><a href="frc/robot/Constants.ApriltagConstants.html" class="type-name-link" title="class in frc.robot">Constants.ApriltagConstants</a> - Class in <a href="frc/robot/package-summary.html">frc.robot</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/Constants.ApriltagConstants.ApriltagCameraConfig.html" class="type-name-link" title="class in frc.robot">Constants.ApriltagConstants.ApriltagCameraConfig</a> - Class in <a href="frc/robot/package-summary.html">frc.robot</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.ClimbConstants.html" class="type-name-link" title="class in frc.robot">Constants.ClimbConstants</a> - Class in <a href="frc/robot/package-summary.html">frc.robot</a></dt>
 <dd>
 <div class="block">Constants for the climbing mechanism.</div>
@@ -149,6 +175,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsystems/CoralSuperstructure.ArmState.html" class="type-name-link" title="class in frc.robot.subsystems">CoralSuperstructure.ArmState</a> - Record Class in <a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a></dt>
 <dd>
 <div class="block">Represents a specific position state of the arm</div>
+</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html#curStdDevs" class="member-name-link">curStdDevs</a> - Variable in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></dt>
+<dd>
+<div class="block">Current standard deviations in use</div>
 </dd>
 </dl>
 <h2 class="title" id="I:D">D</h2>
@@ -287,9 +317,15 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </dd>
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html#estimatedRobotPose" class="member-name-link">estimatedRobotPose</a> - Variable in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></dt>
+<dd>
+<div class="block">Latest estimated robot pose</div>
+</dd>
 </dl>
 <h2 class="title" id="I:F">F</h2>
 <dl class="index">
+<dt><a href="frc/robot/Constants.ApriltagConstants.html#FIELD_LAYOUT" class="member-name-link">FIELD_LAYOUT</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.html" title="class in frc.robot">Constants.ApriltagConstants</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/package-summary.html">frc.robot</a> - package frc.robot</dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/commands/package-summary.html">frc.robot.commands</a> - package frc.robot.commands</dt>
@@ -298,17 +334,35 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a> - package frc.robot.subsystems</dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html#FRONT_CAMERA" class="member-name-link">FRONT_CAMERA</a> - Enum constant in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:G">G</h2>
 <dl class="index">
 <dt><a href="frc/robot/subsubsytems/LimitSwitch.html#get()" class="member-name-link">get()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitSwitch.html" title="class in frc.robot.subsubsytems">LimitSwitch</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.html#getAprilTagPose(int,edu.wpi.first.math.geometry.Transform2d)" class="member-name-link">getAprilTagPose(int, Transform2d)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></dt>
+<dd>
+<div class="block">Calculate a target pose relative to an AprilTag on the field.</div>
+</dd>
 <dt><a href="frc/robot/RobotContainer.html#getAutonomousCommand()" class="member-name-link">getAutonomousCommand()</a> - Method in class frc.robot.<a href="frc/robot/RobotContainer.html" title="class in frc.robot">RobotContainer</a></dt>
 <dd>
 <div class="block">Provides the command to run during autonomous mode.</div>
 </dd>
+<dt><a href="frc/robot/subsystems/Apriltag.html#getDistanceFromAprilTag(int)" class="member-name-link">getDistanceFromAprilTag(int)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></dt>
+<dd>
+<div class="block">Get the distance of the robot from a specific AprilTag.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html#getEstimatedGlobalPose(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getEstimatedGlobalPose(Pose2d)</a> - Method in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></dt>
+<dd>
+<div class="block">Get estimated global robot pose from this camera.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html#getInstance()" class="member-name-link">getInstance()</a> - Static method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.html#getInstance()" class="member-name-link">getInstance()</a> - Static method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></dt>
+<dd>
+<div class="block">Gets the instance of the <a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems"><code>Apriltag</code></a> class.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/Climb.html#getInstance()" class="member-name-link">getInstance()</a> - Static method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/CoralSuperstructure.html#getInstance()" class="member-name-link">getInstance()</a> - Static method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralSuperstructure.html" title="class in frc.robot.subsystems">CoralSuperstructure</a></dt>
@@ -322,6 +376,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsubsytems/LimitedPID.html#getMotor()" class="member-name-link">getMotor()</a> - Method in class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPID.html" title="class in frc.robot.subsubsytems">LimitedPID</a></dt>
 <dd>
 <div class="block">Gets the motor controller for this subsystem.</div>
+</dd>
+<dt><a href="frc/robot/Constants.ApriltagConstants.ApriltagCameraConfig.html#getName()" class="member-name-link">getName()</a> - Method in class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.ApriltagCameraConfig.html" title="class in frc.robot">Constants.ApriltagConstants.ApriltagCameraConfig</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html#getName()" class="member-name-link">getName()</a> - Method in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></dt>
+<dd>
+<div class="block">Get the camera name.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#getPose()" class="member-name-link">getPose()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
@@ -339,10 +399,18 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Gets the current state of the subsystem.</div>
 </dd>
+<dt><a href="frc/robot/Constants.ApriltagConstants.ApriltagCameraConfig.html#getStrategy()" class="member-name-link">getStrategy()</a> - Method in class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.ApriltagCameraConfig.html" title="class in frc.robot">Constants.ApriltagConstants.ApriltagCameraConfig</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#getSwerveDrive()" class="member-name-link">getSwerveDrive()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
 <div class="block">Gets the underlying SwerveDrive object.</div>
 </dd>
+<dt><a href="frc/robot/subsystems/Apriltag.html#getTargetFromId(int,frc.robot.subsystems.Apriltag.Camera)" class="member-name-link">getTargetFromId(int, Apriltag.Camera)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></dt>
+<dd>
+<div class="block">Get tracked target from a camera for a specific AprilTag ID.</div>
+</dd>
+<dt><a href="frc/robot/Constants.ApriltagConstants.ApriltagCameraConfig.html#getTransform()" class="member-name-link">getTransform()</a> - Method in class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.ApriltagCameraConfig.html" title="class in frc.robot">Constants.ApriltagConstants.ApriltagCameraConfig</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/CoralSuperstructure.html#goToSetpoint(frc.robot.subsystems.CoralSuperstructure.ArmSetpoint)" class="member-name-link">goToSetpoint(CoralSuperstructure.ArmSetpoint)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralSuperstructure.html" title="class in frc.robot.subsystems">CoralSuperstructure</a></dt>
 <dd>
 <div class="block">Sets the arm to move to a predefined setpoint with safety checks</div>
@@ -407,6 +475,10 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:L">L</h2>
 <dl class="index">
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html#latencyAlert" class="member-name-link">latencyAlert</a> - Variable in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></dt>
+<dd>
+<div class="block">Latency alert for high camera latency</div>
+</dd>
 <dt><a href="frc/robot/subsubsytems/LimitedPID.html" class="type-name-link" title="class in frc.robot.subsubsytems">LimitedPID</a> - Class in <a href="frc/robot/subsubsytems/package-summary.html">frc.robot.subsubsytems</a></dt>
 <dd>
 <div class="block">Represents a PID-controlled subsystem with limit switches and position
@@ -465,8 +537,16 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.RobotConstants.html#MAX_SPEED" class="member-name-link">MAX_SPEED</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.RobotConstants.html" title="class in frc.robot">Constants.RobotConstants</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/Constants.ApriltagConstants.html#MAXIMUM_AMBIGUITY" class="member-name-link">MAXIMUM_AMBIGUITY</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.html" title="class in frc.robot">Constants.ApriltagConstants</a></dt>
+<dd>
+<div class="block">Maximum allowed ambiguity for pose estimation (0-1, lower is better)</div>
+</dd>
 <dt><a href="frc/robot/subsystems/CoralSuperstructure.ArmSetpoint.html#MID" class="member-name-link">MID</a> - Enum constant in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralSuperstructure.ArmSetpoint.html" title="enum class in frc.robot.subsystems">CoralSuperstructure.ArmSetpoint</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/Constants.ApriltagConstants.html#MULTI_TAG_STD_DEVS" class="member-name-link">MULTI_TAG_STD_DEVS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.html" title="class in frc.robot">Constants.ApriltagConstants</a></dt>
+<dd>
+<div class="block">Standard deviations for multi-tag pose estimation</div>
+</dd>
 </dl>
 <h2 class="title" id="I:P">P</h2>
 <dl class="index">
@@ -476,14 +556,22 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></dt>
+<dd>
+<div class="block">Updates the pose estimation in the Swerve subsystem with vision measurements.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/Climb.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/CoralSuperstructure.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralSuperstructure.html" title="class in frc.robot.subsystems">CoralSuperstructure</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="frc/robot/subsystems/Swerve.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
+<dt><a href="frc/robot/Constants.ApriltagConstants.html#PHOTON_CAMERAS" class="member-name-link">PHOTON_CAMERAS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.html" title="class in frc.robot">Constants.ApriltagConstants</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.PickupPoints.html#PICKUP_POINTS" class="member-name-link">PICKUP_POINTS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.PickupPoints.html" title="class in frc.robot">Constants.PickupPoints</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html#poseEstimator" class="member-name-link">poseEstimator</a> - Variable in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></dt>
+<dd>
+<div class="block">Pose estimator for this camera</div>
+</dd>
 <dt><a href="frc/robot/subsubsytems/LimitedPID.ControlMode.html#POSITION" class="member-name-link">POSITION</a> - Enum constant in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPID.ControlMode.html" title="enum class in frc.robot.subsubsytems">LimitedPID.ControlMode</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.CoralSuperstructureConstants.html#POSITION_TOLERANCE" class="member-name-link">POSITION_TOLERANCE</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralSuperstructureConstants.html" title="class in frc.robot">Constants.CoralSuperstructureConstants</a></dt>
@@ -500,6 +588,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsystems/Swerve.html#resetOdometry(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">resetOdometry(Pose2d)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
 <div class="block">Resets the robot's odometry to a specific pose.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html#resultsList" class="member-name-link">resultsList</a> - Variable in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></dt>
+<dd>
+<div class="block">Results cache to avoid unnecessary queries</div>
 </dd>
 <dt><a href="frc/robot/Robot.html" class="type-name-link" title="class in frc.robot">Robot</a> - Class in <a href="frc/robot/package-summary.html">frc.robot</a></dt>
 <dd>
@@ -556,6 +648,10 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/subsystems/CoralSuperstructure.html#setZero()" class="member-name-link">setZero()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralSuperstructure.html" title="class in frc.robot.subsystems">CoralSuperstructure</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/Constants.ApriltagConstants.html#SINGLE_TAG_STD_DEVS" class="member-name-link">SINGLE_TAG_STD_DEVS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.html" title="class in frc.robot">Constants.ApriltagConstants</a></dt>
+<dd>
+<div class="block">Standard deviations for single tag pose estimation</div>
+</dd>
 <dt><a href="frc/robot/subsystems/CoralSuperstructure.ArmSetpoint.html#state" class="member-name-link">state</a> - Variable in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralSuperstructure.ArmSetpoint.html" title="enum class in frc.robot.subsystems">CoralSuperstructure.ArmSetpoint</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html#stop()" class="member-name-link">stop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
@@ -635,6 +731,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the enum constant of this class with the specified name.</div>
 </dd>
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this class with the specified name.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/CoralSuperstructure.ArmSetpoint.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralSuperstructure.ArmSetpoint.html" title="enum class in frc.robot.subsystems">CoralSuperstructure.ArmSetpoint</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this class with the specified name.</div>
@@ -645,6 +745,11 @@ loadScripts(document, 'script');</script>
 the order they are declared.</div>
 </dd>
 <dt><a href="frc/robot/subsubsytems/LimitedPID.SubsystemState.html#values()" class="member-name-link">values()</a> - Static method in enum class frc.robot.subsubsytems.<a href="frc/robot/subsubsytems/LimitedPID.SubsystemState.html" title="enum class in frc.robot.subsubsytems">LimitedPID.SubsystemState</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum class, in
+the order they are declared.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.Camera.html#values()" class="member-name-link">values()</a> - Static method in enum class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="enum class in frc.robot.subsystems">Apriltag.Camera</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum class, in
 the order they are declared.</div>
