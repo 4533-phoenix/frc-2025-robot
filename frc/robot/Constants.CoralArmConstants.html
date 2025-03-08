@@ -39,7 +39,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested-class-summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field-summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
@@ -81,6 +81,23 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="Constants.CoralArmConstants.ArmState.html" class="type-name-link" title="class in frc.robot">Constants.CoralArmConstants.ArmState</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Represents a specific position state of the arm</div>
+</div>
+</div>
+</section>
+</li>
 <!-- =========== FIELD SUMMARY =========== -->
 <li>
 <section class="field-summary" id="field-summary">
@@ -95,118 +112,123 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Arm length.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final edu.wpi.first.units.measure.Angle</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELBOW_ANGLE_PER_ROTATION" class="member-name-link">ELBOW_ANGLE_PER_ROTATION</a></code></div>
+<div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Constants.CoralArmConstants.ArmState.html" title="class in frc.robot">Constants.CoralArmConstants.ArmState</a>&gt;</code></div>
+<div class="col-second odd-row-color"><code><a href="#ARM_SETPOINTS" class="member-name-link">ARM_SETPOINTS</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">Predefined arm positions</div>
+</div>
+<div class="col-first even-row-color"><code>static final edu.wpi.first.units.measure.Angle</code></div>
+<div class="col-second even-row-color"><code><a href="#ELBOW_ANGLE_PER_ROTATION" class="member-name-link">ELBOW_ANGLE_PER_ROTATION</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Angle traveled per motor rotation.</div>
 </div>
-<div class="col-first even-row-color"><code>static final edu.wpi.first.units.measure.Angle</code></div>
-<div class="col-second even-row-color"><code><a href="#ELBOW_BACK_ANGLE" class="member-name-link">ELBOW_BACK_ANGLE</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELBOW_BACK_LIMIT_CHANNEL" class="member-name-link">ELBOW_BACK_LIMIT_CHANNEL</a></code></div>
+<div class="col-first odd-row-color"><code>static final edu.wpi.first.units.measure.Angle</code></div>
+<div class="col-second odd-row-color"><code><a href="#ELBOW_BACK_ANGLE" class="member-name-link">ELBOW_BACK_ANGLE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ELBOW_CAN_ID" class="member-name-link">ELBOW_CAN_ID</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ELBOW_BACK_LIMIT_CHANNEL" class="member-name-link">ELBOW_BACK_LIMIT_CHANNEL</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELBOW_CURRENT_LIMIT" class="member-name-link">ELBOW_CURRENT_LIMIT</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ELBOW_CAN_ID" class="member-name-link">ELBOW_CAN_ID</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final edu.wpi.first.units.measure.Angle</code></div>
-<div class="col-second even-row-color"><code><a href="#ELBOW_FRONT_ANGLE" class="member-name-link">ELBOW_FRONT_ANGLE</a></code></div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#ELBOW_CURRENT_LIMIT" class="member-name-link">ELBOW_CURRENT_LIMIT</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELBOW_FRONT_LIMIT_CHANNEL" class="member-name-link">ELBOW_FRONT_LIMIT_CHANNEL</a></code></div>
+<div class="col-first odd-row-color"><code>static final edu.wpi.first.units.measure.Angle</code></div>
+<div class="col-second odd-row-color"><code><a href="#ELBOW_FRONT_ANGLE" class="member-name-link">ELBOW_FRONT_ANGLE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final boolean</code></div>
-<div class="col-second even-row-color"><code><a href="#ELBOW_INVERTED" class="member-name-link">ELBOW_INVERTED</a></code></div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#ELBOW_FRONT_LIMIT_CHANNEL" class="member-name-link">ELBOW_FRONT_LIMIT_CHANNEL</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static final <a href="Constants.PID.html" title="class in frc.robot">Constants.PID</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#ELBOW_PID" class="member-name-link">ELBOW_PID</a></code></div>
+<div class="col-first odd-row-color"><code>static final boolean</code></div>
+<div class="col-second odd-row-color"><code><a href="#ELBOW_INVERTED" class="member-name-link">ELBOW_INVERTED</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final double</code></div>
-<div class="col-second even-row-color"><code><a href="#ELBOW_RAMP_RATE" class="member-name-link">ELBOW_RAMP_RATE</a></code></div>
+<div class="col-first even-row-color"><code>static final <a href="Constants.PID.html" title="class in frc.robot">Constants.PID</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ELBOW_PID" class="member-name-link">ELBOW_PID</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final double</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELBOW_ZEROING_POWER" class="member-name-link">ELBOW_ZEROING_POWER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ELBOW_RAMP_RATE" class="member-name-link">ELBOW_RAMP_RATE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ELEVATOR_BOTTOM_LIMIT_CHANNEL" class="member-name-link">ELEVATOR_BOTTOM_LIMIT_CHANNEL</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first even-row-color"><code>static final double</code></div>
+<div class="col-second even-row-color"><code><a href="#ELBOW_ZEROING_POWER" class="member-name-link">ELBOW_ZEROING_POWER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#ELEVATOR_BOTTOM_LIMIT_CHANNEL" class="member-name-link">ELEVATOR_BOTTOM_LIMIT_CHANNEL</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">DIO channel for elevator bottom limit switch</div>
 </div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELEVATOR_CAN_ID" class="member-name-link">ELEVATOR_CAN_ID</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#ELEVATOR_CAN_ID" class="member-name-link">ELEVATOR_CAN_ID</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">CAN ID for elevator motor.</div>
 </div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ELEVATOR_CURRENT_LIMIT" class="member-name-link">ELEVATOR_CURRENT_LIMIT</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#ELEVATOR_CURRENT_LIMIT" class="member-name-link">ELEVATOR_CURRENT_LIMIT</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Current limit for elevator motor in amps</div>
 </div>
-<div class="col-first odd-row-color"><code>static final edu.wpi.first.units.measure.Distance</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELEVATOR_DISTANCE_PER_ROTATION" class="member-name-link">ELEVATOR_DISTANCE_PER_ROTATION</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final edu.wpi.first.units.measure.Distance</code></div>
+<div class="col-second even-row-color"><code><a href="#ELEVATOR_DISTANCE_PER_ROTATION" class="member-name-link">ELEVATOR_DISTANCE_PER_ROTATION</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Distance traveled per motor rotation.</div>
 </div>
-<div class="col-first even-row-color"><code>static final boolean</code></div>
-<div class="col-second even-row-color"><code><a href="#ELEVATOR_INVERTED" class="member-name-link">ELEVATOR_INVERTED</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final boolean</code></div>
+<div class="col-second odd-row-color"><code><a href="#ELEVATOR_INVERTED" class="member-name-link">ELEVATOR_INVERTED</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Whether elevator motor is inverted</div>
 </div>
-<div class="col-first odd-row-color"><code>static final edu.wpi.first.units.measure.Distance</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELEVATOR_MAX_POSITION" class="member-name-link">ELEVATOR_MAX_POSITION</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final edu.wpi.first.units.measure.Distance</code></div>
+<div class="col-second even-row-color"><code><a href="#ELEVATOR_MAX_POSITION" class="member-name-link">ELEVATOR_MAX_POSITION</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Maximum elevator height.</div>
 </div>
-<div class="col-first even-row-color"><code>static final edu.wpi.first.units.measure.Distance</code></div>
-<div class="col-second even-row-color"><code><a href="#ELEVATOR_MIN_POSITION" class="member-name-link">ELEVATOR_MIN_POSITION</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final edu.wpi.first.units.measure.Distance</code></div>
+<div class="col-second odd-row-color"><code><a href="#ELEVATOR_MIN_POSITION" class="member-name-link">ELEVATOR_MIN_POSITION</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Minimum elevator height.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Constants.PID.html" title="class in frc.robot">Constants.PID</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#ELEVATOR_PID" class="member-name-link">ELEVATOR_PID</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Constants.PID.html" title="class in frc.robot">Constants.PID</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ELEVATOR_PID" class="member-name-link">ELEVATOR_PID</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">PID constants for elevator control.</div>
 </div>
-<div class="col-first even-row-color"><code>static final double</code></div>
-<div class="col-second even-row-color"><code><a href="#ELEVATOR_RAMP_RATE" class="member-name-link">ELEVATOR_RAMP_RATE</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final double</code></div>
+<div class="col-second odd-row-color"><code><a href="#ELEVATOR_RAMP_RATE" class="member-name-link">ELEVATOR_RAMP_RATE</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Ramp rate for elevator motor (seconds from 0 to full throttle)</div>
 </div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELEVATOR_TOP_LIMIT_CHANNEL" class="member-name-link">ELEVATOR_TOP_LIMIT_CHANNEL</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#ELEVATOR_TOP_LIMIT_CHANNEL" class="member-name-link">ELEVATOR_TOP_LIMIT_CHANNEL</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">CANifier pin for elevator top limit</div>
 </div>
-<div class="col-first even-row-color"><code>static final double</code></div>
-<div class="col-second even-row-color"><code><a href="#ELEVATOR_ZEROING_POWER_DOWN" class="member-name-link">ELEVATOR_ZEROING_POWER_DOWN</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final double</code></div>
+<div class="col-second odd-row-color"><code><a href="#ELEVATOR_ZEROING_POWER_DOWN" class="member-name-link">ELEVATOR_ZEROING_POWER_DOWN</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Power to use when zeroing elevator down</div>
 </div>
-<div class="col-first odd-row-color"><code>static final double</code></div>
-<div class="col-second odd-row-color"><code><a href="#ELEVATOR_ZEROING_POWER_UP" class="member-name-link">ELEVATOR_ZEROING_POWER_UP</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final double</code></div>
+<div class="col-second even-row-color"><code><a href="#ELEVATOR_ZEROING_POWER_UP" class="member-name-link">ELEVATOR_ZEROING_POWER_UP</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Power to use when zeroing elevator up</div>
 </div>
+<div class="col-first odd-row-color"><code>static final double</code></div>
+<div class="col-second odd-row-color"><code><a href="#INTERMEDIATE_ELBOW_BACK_ANGLE" class="member-name-link">INTERMEDIATE_ELBOW_BACK_ANGLE</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final double</code></div>
-<div class="col-second even-row-color"><code><a href="#INTERMEDIATE_ELBOW_BACK_ANGLE" class="member-name-link">INTERMEDIATE_ELBOW_BACK_ANGLE</a></code></div>
+<div class="col-second even-row-color"><code><a href="#INTERMEDIATE_ELBOW_FRONT_ANGLE" class="member-name-link">INTERMEDIATE_ELBOW_FRONT_ANGLE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final double</code></div>
-<div class="col-second odd-row-color"><code><a href="#INTERMEDIATE_ELBOW_FRONT_ANGLE" class="member-name-link">INTERMEDIATE_ELBOW_FRONT_ANGLE</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final double</code></div>
-<div class="col-second even-row-color"><code><a href="#POSITION_TOLERANCE" class="member-name-link">POSITION_TOLERANCE</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-second odd-row-color"><code><a href="#POSITION_TOLERANCE" class="member-name-link">POSITION_TOLERANCE</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Maximum allowed offset when hitting limit switches.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final edu.wpi.first.units.measure.Distance</code></div>
-<div class="col-second odd-row-color"><code><a href="#SAFE_ELEVATOR_HEIGHT" class="member-name-link">SAFE_ELEVATOR_HEIGHT</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final double</code></div>
-<div class="col-second even-row-color"><code><a href="#UNKNOWN_STATE_POWER" class="member-name-link">UNKNOWN_STATE_POWER</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first even-row-color"><code>static final edu.wpi.first.units.measure.Distance</code></div>
+<div class="col-second even-row-color"><code><a href="#SAFE_ELEVATOR_HEIGHT" class="member-name-link">SAFE_ELEVATOR_HEIGHT</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final double</code></div>
+<div class="col-second odd-row-color"><code><a href="#UNKNOWN_STATE_POWER" class="member-name-link">UNKNOWN_STATE_POWER</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Power applied when zeroing unknown positions (-1.0 to 1.0).</div>
 </div>
 </div>
@@ -570,6 +592,13 @@ loadScripts(document, 'script');</script>
 </ul>
 </dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ARM_SETPOINTS">
+<h3>ARM_SETPOINTS</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Constants.CoralArmConstants.ArmState.html" title="class in frc.robot">Constants.CoralArmConstants.ArmState</a>&gt;</span>&nbsp;<span class="element-name">ARM_SETPOINTS</span></div>
+<div class="block">Predefined arm positions</div>
 </section>
 </li>
 </ul>
