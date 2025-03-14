@@ -67,14 +67,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/Constants.AlgaArmConstants.html#ALGA_INVERTED" class="member-name-link">ALGA_INVERTED</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.AlgaArmConstants.html" title="class in frc.robot">Constants.AlgaArmConstants</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.FieldConstants.html#ALGA_STATIONS" class="member-name-link">ALGA_STATIONS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.FieldConstants.html" title="class in frc.robot">Constants.FieldConstants</a></dt>
-<dd>
-<div class="block">Alga station locations</div>
-</dd>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html" class="type-name-link" title="class in frc.robot.subsystems">AlgaArm</a> - Class in <a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="frc/robot/Constants.FieldConstants.POI.html#alliance()" class="member-name-link">alliance()</a> - Method in record class frc.robot.<a href="frc/robot/Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a></dt>
+<dt><a href="frc/robot/Constants.FieldConstants.html#ALL_POIS" class="member-name-link">ALL_POIS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.FieldConstants.html" title="class in frc.robot">Constants.FieldConstants</a></dt>
 <dd>
-<div class="block">Returns the value of the <code>alliance</code> record component.</div>
+<div class="block">All consolidated points of interest on the field</div>
 </dd>
 <dt><a href="frc/robot/helpers/CustomSwerveInput.html#allianceRelativeControl(boolean)" class="member-name-link">allianceRelativeControl(boolean)</a> - Method in class frc.robot.helpers.<a href="frc/robot/helpers/CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></dt>
 <dd>
@@ -138,6 +136,8 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:C">C</h2>
 <dl class="index">
+<dt><a href="frc/robot/Constants.FieldConstants.html#CAGES" class="member-name-link">CAGES</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.FieldConstants.html" title="class in frc.robot">Constants.FieldConstants</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/Apriltag.Camera.html#camera" class="member-name-link">camera</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="class in frc.robot.subsystems">Apriltag.Camera</a></dt>
 <dd>
 <div class="block">Camera instance for communication</div>
@@ -196,10 +196,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Constants for field positions and points of interest</div>
 </dd>
-<dt><a href="frc/robot/Constants.FieldConstants.POI.html" class="type-name-link" title="class in frc.robot">Constants.FieldConstants.POI</a> - Record Class in <a href="frc/robot/package-summary.html">frc.robot</a></dt>
+<dt><a href="frc/robot/Constants.FieldConstants.POI.html" class="type-name-link" title="class in frc.robot">Constants.FieldConstants.POI</a> - Class in <a href="frc/robot/package-summary.html">frc.robot</a></dt>
 <dd>
 <div class="block">Point of Interest on the field
- Contains a pose and an alliance designation</div>
+ Contains a pose, alliance designation, and a descriptive tag</div>
 </dd>
 <dt><a href="frc/robot/Constants.OIConstants.html" class="type-name-link" title="class in frc.robot">Constants.OIConstants</a> - Class in <a href="frc/robot/package-summary.html">frc.robot</a></dt>
 <dd>
@@ -222,9 +222,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Copy the <a href="frc/robot/helpers/CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> object.</div>
 </dd>
 <dt><a href="frc/robot/Constants.FieldConstants.html#CORAL_REEF_BARS" class="member-name-link">CORAL_REEF_BARS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.FieldConstants.html" title="class in frc.robot">Constants.FieldConstants</a></dt>
-<dd>
-<div class="block">Coral reef bar locations</div>
-</dd>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.PickupPoints.html#CORAL_SIDE_POINTS" class="member-name-link">CORAL_SIDE_POINTS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.PickupPoints.html" title="class in frc.robot">Constants.PickupPoints</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/CoralArm.html" class="type-name-link" title="class in frc.robot.subsystems">CoralArm</a> - Class in <a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a></dt>
@@ -232,6 +230,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsystems/CoralManipulator.html" class="type-name-link" title="class in frc.robot.subsystems">CoralManipulator</a> - Class in <a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a></dt>
 <dd>
 <div class="block">Subsystem that controls the coral manipulator (intake/output mechanism).</div>
+</dd>
+<dt><a href="frc/robot/subsystems/Swerve.html#createPointToClosestSupplier(frc.robot.Constants.FieldConstants.POI%5B%5D)" class="member-name-link">createPointToClosestSupplier(Constants.FieldConstants.POI[])</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/Swerve.html#createPointToClosestSupplier(frc.robot.Constants.FieldConstants.POI%5B%5D,java.lang.String)" class="member-name-link">createPointToClosestSupplier(Constants.FieldConstants.POI[], String)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
+<dd>
+<div class="block">Creates a supplier that returns a Rotation2d pointing toward the closest POI with a specific tag.</div>
 </dd>
 <dt><a href="frc/robot/helpers/CustomSwerveInput.html#cubeRotationControllerAxis(boolean)" class="member-name-link">cubeRotationControllerAxis(boolean)</a> - Method in class frc.robot.helpers.<a href="frc/robot/helpers/CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></dt>
 <dd>
@@ -307,18 +311,6 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.OIConstants.html#DRIVER_DEADBAND" class="member-name-link">DRIVER_DEADBAND</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.OIConstants.html" title="class in frc.robot">Constants.OIConstants</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="frc/robot/subsystems/Swerve.html#driveToClosestAlgaStation()" class="member-name-link">driveToClosestAlgaStation()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
-<dd>
-<div class="block">Creates a command to drive to the closest alga station for the current alliance.</div>
-</dd>
-<dt><a href="frc/robot/subsystems/Swerve.html#driveToClosestCoralReefBar()" class="member-name-link">driveToClosestCoralReefBar()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
-<dd>
-<div class="block">Creates a command to drive to the closest coral reef bar for the current alliance.</div>
-</dd>
-<dt><a href="frc/robot/subsystems/Swerve.html#driveToClosestIntakeStation()" class="member-name-link">driveToClosestIntakeStation()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
-<dd>
-<div class="block">Creates a command to drive to the closest intake station for the current alliance.</div>
-</dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#driveToPose(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">driveToPose(Pose2d)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
 <div class="block">Creates a command to autonomously drive the robot to a specific pose using
@@ -358,6 +350,15 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/Constants.CoralManipulatorConstants.html#EJECT_POWER" class="member-name-link">EJECT_POWER</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralManipulatorConstants.html" title="class in frc.robot">Constants.CoralManipulatorConstants</a></dt>
 <dd>
 <div class="block">Power level for ejecting stuck objects</div>
+</dd>
+<dt><a href="frc/robot/subsystems/CoralManipulator.html#ejectOrDrop()" class="member-name-link">ejectOrDrop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
+<dd>
+<div class="block">Command that toggles between different states:
+ - If stopped: Drops coral if detected, otherwise ejects
+ - If already running: Stops all operations
+ 
+ This provides an easy way to perform the most intuitive action based on
+ context.</div>
 </dd>
 <dt><a href="frc/robot/Constants.CoralArmConstants.html#ELBOW_ANGLE_PER_ROTATION" class="member-name-link">ELBOW_ANGLE_PER_ROTATION</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralArmConstants.html" title="class in frc.robot">Constants.CoralArmConstants</a></dt>
 <dd>
@@ -443,10 +444,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </dd>
-<dt><a href="frc/robot/Constants.FieldConstants.POI.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in record class frc.robot.<a href="frc/robot/Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a></dt>
-<dd>
-<div class="block">Indicates whether some other object is "equal to" this one.</div>
-</dd>
 <dt><a href="frc/robot/subsystems/Apriltag.Camera.html#estimatedRobotPose" class="member-name-link">estimatedRobotPose</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="class in frc.robot.subsystems">Apriltag.Camera</a></dt>
 <dd>
 <div class="block">Latest estimated robot pose</div>
@@ -477,6 +474,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Gets a <code>ChassisSpeeds</code></div>
 </dd>
+<dt><a href="frc/robot/Constants.FieldConstants.POI.html#get(edu.wpi.first.wpilibj.DriverStation.Alliance)" class="member-name-link">get(DriverStation.Alliance)</a> - Method in class frc.robot.<a href="frc/robot/Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/Apriltag.html#getAprilTagPose(int,edu.wpi.first.math.geometry.Transform2d)" class="member-name-link">getAprilTagPose(int, Transform2d)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></dt>
 <dd>
 <div class="block">Calculate a target pose relative to an AprilTag on the field.</div>
@@ -488,6 +487,18 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsystems/Apriltag.html#getCameras()" class="member-name-link">getCameras()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></dt>
 <dd>
 <div class="block">Get all cameras configured in this subsystem.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/Swerve.html#getClosestPOI(frc.robot.Constants.FieldConstants.POI%5B%5D)" class="member-name-link">getClosestPOI(Constants.FieldConstants.POI[])</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
+<dd>
+<div class="block">Finds the closest point from an array of field POIs to the robot's current position.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/Swerve.html#getClosestPOIByTag(frc.robot.Constants.FieldConstants.POI%5B%5D,java.lang.String)" class="member-name-link">getClosestPOIByTag(Constants.FieldConstants.POI[], String)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
+<dd>
+<div class="block">Finds the closest POI with a specific tag to the robot's current position.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/Swerve.html#getClosestPoint(edu.wpi.first.math.geometry.Pose2d%5B%5D)" class="member-name-link">getClosestPoint(Pose2d[])</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
+<dd>
+<div class="block">Finds the closest point from an array of positions to the robot's current position.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/CoralArm.html#getCurrentElbowAngle()" class="member-name-link">getCurrentElbowAngle()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralArm.html" title="class in frc.robot.subsystems">CoralArm</a></dt>
 <dd>
@@ -555,6 +566,10 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/RobotContainer.html#getTable()" class="member-name-link">getTable()</a> - Method in class frc.robot.<a href="frc/robot/RobotContainer.html" title="class in frc.robot">RobotContainer</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/Constants.FieldConstants.POI.html#getTag()" class="member-name-link">getTag()</a> - Method in class frc.robot.<a href="frc/robot/Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a></dt>
+<dd>
+<div class="block">Gets the descriptive tag for this POI</div>
+</dd>
 <dt><a href="frc/robot/subsystems/Apriltag.html#getTargetFromId(int,java.lang.String)" class="member-name-link">getTargetFromId(int, String)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></dt>
 <dd>
 <div class="block">Get tracked target from a camera for a specific AprilTag ID.</div>
@@ -569,10 +584,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsystems/CoralManipulator.html#hasCoral" class="member-name-link">hasCoral</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.CoralArmConstants.ArmState.html#hashCode()" class="member-name-link">hashCode()</a> - Method in record class frc.robot.<a href="frc/robot/Constants.CoralArmConstants.ArmState.html" title="class in frc.robot">Constants.CoralArmConstants.ArmState</a></dt>
-<dd>
-<div class="block">Returns a hash code value for this object.</div>
-</dd>
-<dt><a href="frc/robot/Constants.FieldConstants.POI.html#hashCode()" class="member-name-link">hashCode()</a> - Method in record class frc.robot.<a href="frc/robot/Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a></dt>
 <dd>
 <div class="block">Returns a hash code value for this object.</div>
 </dd>
@@ -603,6 +614,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Integral gain.</div>
 </dd>
+<dt><a href="frc/robot/subsystems/CoralManipulator.html#instantStop()" class="member-name-link">instantStop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html#intake()" class="member-name-link">intake()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/CoralManipulator.html#intake()" class="member-name-link">intake()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
@@ -615,7 +628,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/Constants.FieldConstants.html#INTAKE_STATIONS" class="member-name-link">INTAKE_STATIONS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.FieldConstants.html" title="class in frc.robot">Constants.FieldConstants</a></dt>
 <dd>
-<div class="block">Intake station locations</div>
+<div class="block">Legacy POI lists for backward compatibility - reference the consolidated list by tag</div>
 </dd>
 <dt><a href="frc/robot/Constants.CoralArmConstants.html#INTERMEDIATE_ELBOW_BACK_ANGLE" class="member-name-link">INTERMEDIATE_ELBOW_BACK_ANGLE</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralArmConstants.html" title="class in frc.robot">Constants.CoralArmConstants</a></dt>
 <dd>&nbsp;</dd>
@@ -648,6 +661,11 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsystems/Apriltag.Camera.html#latencyAlert" class="member-name-link">latencyAlert</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="class in frc.robot.subsystems">Apriltag.Camera</a></dt>
 <dd>
 <div class="block">Latency alert for high camera latency</div>
+</dd>
+<dt><a href="frc/robot/commands/AutoCommands.html#leftToReef()" class="member-name-link">leftToReef()</a> - Static method in class frc.robot.commands.<a href="frc/robot/commands/AutoCommands.html" title="class in frc.robot.commands">AutoCommands</a></dt>
+<dd>
+<div class="block">Creates a command that follows the "Mid to Reef" path and performs coral
+ actions.</div>
 </dd>
 <dt><a href="frc/robot/helpers/LimitedPID.html" class="type-name-link" title="class in frc.robot.helpers">LimitedPID</a> - Class in <a href="frc/robot/helpers/package-summary.html">frc.robot.helpers</a></dt>
 <dd>
@@ -686,11 +704,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Maximum allowed ambiguity for pose estimation (0-1, lower is better)</div>
 </dd>
-<dt><a href="frc/robot/commands/AutoCommands.html#midBlueToReef()" class="member-name-link">midBlueToReef()</a> - Static method in class frc.robot.commands.<a href="frc/robot/commands/AutoCommands.html" title="class in frc.robot.commands">AutoCommands</a></dt>
-<dd>
-<div class="block">Creates a command that follows the "Mid to Reef" path and performs coral
- actions.</div>
-</dd>
 <dt><a href="frc/robot/Constants.ApriltagConstants.html#MULTI_TAG_STD_DEVS" class="member-name-link">MULTI_TAG_STD_DEVS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.html" title="class in frc.robot">Constants.ApriltagConstants</a></dt>
 <dd>
 <div class="block">Standard deviations for multi-tag pose estimation</div>
@@ -702,6 +715,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Create basic <a href="frc/robot/helpers/CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> without any rotation components.</div>
 </dd>
+<dt><a href="frc/robot/subsystems/CoralArm.html#onFront" class="member-name-link">onFront</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralArm.html" title="class in frc.robot.subsystems">CoralArm</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:P">P</h2>
 <dl class="index">
@@ -725,14 +740,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.PickupPoints.html#PICKUP_POINTS" class="member-name-link">PICKUP_POINTS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.PickupPoints.html" title="class in frc.robot">Constants.PickupPoints</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="frc/robot/Constants.FieldConstants.POI.html#%3Cinit%3E(edu.wpi.first.math.geometry.Pose2d,edu.wpi.first.wpilibj.DriverStation.Alliance)" class="member-name-link">POI(Pose2d, DriverStation.Alliance)</a> - Constructor for record class frc.robot.<a href="frc/robot/Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a></dt>
-<dd>
-<div class="block">Creates an instance of a <code>POI</code> record class.</div>
-</dd>
-<dt><a href="frc/robot/Constants.FieldConstants.POI.html#pose()" class="member-name-link">pose()</a> - Method in record class frc.robot.<a href="frc/robot/Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a></dt>
-<dd>
-<div class="block">Returns the value of the <code>pose</code> record component.</div>
-</dd>
+<dt><a href="frc/robot/Constants.FieldConstants.POI.html#%3Cinit%3E(edu.wpi.first.math.geometry.Pose2d,java.lang.String)" class="member-name-link">POI(Pose2d, String)</a> - Constructor for class frc.robot.<a href="frc/robot/Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/Apriltag.Camera.html#poseEstimator" class="member-name-link">poseEstimator</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.Camera.html" title="class in frc.robot.subsystems">Apriltag.Camera</a></dt>
 <dd>
 <div class="block">Pose estimator for this camera</div>
@@ -915,10 +924,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/Constants.ClimbConstants.html#TOP_LIMIT_CHANNEL" class="member-name-link">TOP_LIMIT_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ClimbConstants.html" title="class in frc.robot">Constants.ClimbConstants</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Constants.CoralArmConstants.ArmState.html#toString()" class="member-name-link">toString()</a> - Method in record class frc.robot.<a href="frc/robot/Constants.CoralArmConstants.ArmState.html" title="class in frc.robot">Constants.CoralArmConstants.ArmState</a></dt>
-<dd>
-<div class="block">Returns a string representation of this record class.</div>
-</dd>
-<dt><a href="frc/robot/Constants.FieldConstants.POI.html#toString()" class="member-name-link">toString()</a> - Method in record class frc.robot.<a href="frc/robot/Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a></dt>
 <dd>
 <div class="block">Returns a string representation of this record class.</div>
 </dd>
