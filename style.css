@@ -692,3 +692,81 @@ section.hierarchy a.external-link {
     display: block;
 }
 
+/* Completely rewrite the table styling to match original javadoc grid layout */
+.two-column-summary {
+    display: grid;
+    grid-template-columns: minmax(15%, max-content) minmax(15%, auto);
+}
+
+.three-column-summary {
+    display: grid;
+    grid-template-columns: minmax(10%, max-content) minmax(15%, max-content) minmax(15%, auto);
+}
+
+.four-column-summary {
+    display: grid;
+    grid-template-columns: minmax(10%, max-content) minmax(10%, max-content) minmax(10%, max-content) minmax(10%, auto);
+}
+
+.summary-table > div, .details-table > div {
+    text-align: left;
+    padding: 8px 3px 3px 7px;
+}
+
+/* Remove table-specific display properties */
+.even-row-color, .odd-row-color {
+    display: block;
+}
+
+.table-header, .col-first, .col-second, .col-last {
+    display: block;
+}
+
+/* Color settings */
+.even-row-color {
+    background-color: var(--table-row-color);
+}
+
+.odd-row-color {
+    background-color: var(--table-alt-row-color);
+}
+
+.table-header {
+    background-color: var(--table-header-color);
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Fix cell spacing and padding */
+.col-first, .col-second, .col-last {
+    padding: 8px 12px;
+    vertical-align: top;
+    border-top: none;
+}
+
+/* Restore original media queries */
+@media screen and (max-width: 600px) {
+    .two-column-summary {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .three-column-summary {
+        display: grid;
+        grid-template-columns: minmax(10%, max-content) minmax(25%, auto);
+    }
+    
+    .three-column-summary .col-last {
+        grid-column-end: span 2;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .four-column-summary {
+        display: grid;
+        grid-template-columns: minmax(15%, max-content) minmax(15%, auto);
+    }
+}
+
