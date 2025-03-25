@@ -128,12 +128,12 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation2d&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createPointToClosestSupplier(frc.robot.Constants.FieldConstants.POI%5B%5D)" class="member-name-link">createPointToClosestSupplier</a><wbr>(<a href="../Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a>[]&nbsp;points)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createPointToClosestSupplier(frc.robot.helpers.POI%5B%5D)" class="member-name-link">createPointToClosestSupplier</a><wbr>(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">For backward compatibility.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation2d&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createPointToClosestSupplier(frc.robot.Constants.FieldConstants.POI%5B%5D,java.lang.String)" class="member-name-link">createPointToClosestSupplier</a><wbr>(<a href="../Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a>[]&nbsp;points,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createPointToClosestSupplier(frc.robot.helpers.POI%5B%5D,java.lang.String)" class="member-name-link">createPointToClosestSupplier</a><wbr>(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tag)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Creates a supplier that returns a Rotation2d pointing toward the closest POI with a specific
@@ -150,12 +150,12 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates a command to autonomously drive the robot to a specific pose using PathPlanner.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.geometry.Pose2d</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClosestPOI(frc.robot.Constants.FieldConstants.POI%5B%5D)" class="member-name-link">getClosestPOI</a><wbr>(<a href="../Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a>[]&nbsp;points)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClosestPOI(frc.robot.helpers.POI%5B%5D)" class="member-name-link">getClosestPOI</a><wbr>(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Finds the closest point from an array of field POIs to the robot's current position.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.geometry.Pose2d</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClosestPOIByTag(frc.robot.Constants.FieldConstants.POI%5B%5D,java.lang.String)" class="member-name-link">getClosestPOIByTag</a><wbr>(<a href="../Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a>[]&nbsp;points,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClosestPOIByTag(frc.robot.helpers.POI%5B%5D,java.lang.String)" class="member-name-link">getClosestPOIByTag</a><wbr>(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tag)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Finds the closest POI with a specific tag to the robot's current position.</div>
@@ -429,9 +429,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getClosestPOI(frc.robot.Constants.FieldConstants.POI[])">
+<section class="detail" id="getClosestPOI(frc.robot.helpers.POI[])">
 <h3>getClosestPOI</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose2d</span>&nbsp;<span class="element-name">getClosestPOI</span><wbr><span class="parameters">(<a href="../Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a>[]&nbsp;points)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose2d</span>&nbsp;<span class="element-name">getClosestPOI</span><wbr><span class="parameters">(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points)</span></div>
 <div class="block">Finds the closest point from an array of field POIs to the robot's current position. Takes
  alliance into account and optimizes calculations for frequent calls.</div>
 <dl class="notes">
@@ -443,9 +443,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getClosestPOIByTag(frc.robot.Constants.FieldConstants.POI[],java.lang.String)">
+<section class="detail" id="getClosestPOIByTag(frc.robot.helpers.POI[],java.lang.String)">
 <h3>getClosestPOIByTag</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose2d</span>&nbsp;<span class="element-name">getClosestPOIByTag</span><wbr><span class="parameters">(<a href="../Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a>[]&nbsp;points,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose2d</span>&nbsp;<span class="element-name">getClosestPOIByTag</span><wbr><span class="parameters">(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tag)</span></div>
 <div class="block">Finds the closest POI with a specific tag to the robot's current position. Highly optimized for
  frequent calls in control loops.</div>
@@ -459,9 +459,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="createPointToClosestSupplier(frc.robot.Constants.FieldConstants.POI[],java.lang.String)">
+<section class="detail" id="createPointToClosestSupplier(frc.robot.helpers.POI[],java.lang.String)">
 <h3>createPointToClosestSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation2d&gt;</span>&nbsp;<span class="element-name">createPointToClosestSupplier</span><wbr><span class="parameters">(<a href="../Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a>[]&nbsp;points,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation2d&gt;</span>&nbsp;<span class="element-name">createPointToClosestSupplier</span><wbr><span class="parameters">(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tag)</span></div>
 <div class="block">Creates a supplier that returns a Rotation2d pointing toward the closest POI with a specific
  tag.</div>
@@ -475,9 +475,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="createPointToClosestSupplier(frc.robot.Constants.FieldConstants.POI[])">
+<section class="detail" id="createPointToClosestSupplier(frc.robot.helpers.POI[])">
 <h3>createPointToClosestSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation2d&gt;</span>&nbsp;<span class="element-name">createPointToClosestSupplier</span><wbr><span class="parameters">(<a href="../Constants.FieldConstants.POI.html" title="class in frc.robot">Constants.FieldConstants.POI</a>[]&nbsp;points)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation2d&gt;</span>&nbsp;<span class="element-name">createPointToClosestSupplier</span><wbr><span class="parameters">(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points)</span></div>
 <div class="block">For backward compatibility.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
