@@ -547,10 +547,6 @@ ul.horizontal li {
     margin-right: 0.5em;
 }
 
-ul.horizontal li:not(:last-child)::after {
-    content: ",";
-}
-
 /* Class hierarchy tree styling */
 section.hierarchy {
     margin-bottom: 2.5em;
@@ -676,19 +672,23 @@ section.hierarchy a.external-link {
 /* Ensure responsive behavior */
 @media screen and (max-width: 800px) {
     .three-column-summary {
-        grid-template-columns: minmax(30%, 30%) 1fr;
+        display: table;
     }
+    
     .three-column-summary .col-last {
-        grid-column: span 2;
+        display: table-cell;
+        grid-column: unset;
     }
 }
 
 @media screen and (max-width: 600px) {
     .two-column-summary {
-        grid-template-columns: 1fr;
+        display: table;
     }
-    .col-first, .col-second, .col-last {
-        padding: 8px 10px;
-    }
+}
+
+/* Keep block display inside table cells */
+.col-last div.block {
+    display: block;
 }
 
