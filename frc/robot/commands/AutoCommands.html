@@ -77,10 +77,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AutoCommands</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Container for autonomous command sequences used during the autonomous period.
- This class provides factory methods that create and return command sequences
- for different autonomous routines. Each method constructs a complete autonomous
- strategy that can be selected and run during the autonomous phase.</div>
+<div class="block">Container for autonomous command sequences used during the autonomous period. This class provides
+ factory methods that create and return command sequences for different autonomous routines. Each
+ method constructs a complete autonomous strategy that can be selected and run during the
+ autonomous phase.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -104,8 +104,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.wpilibj2.command.Command</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rightToReef()" class="member-name-link">rightToReef</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Autonomous routine that starts from the right spawn position, delivers coral to a reef location,
- acquires more coral from the right intake station, and delivers it to another reef location.</div>
+<div class="block">Autonomous routine that starts from the right spawn position, delivers coral to a reef
+ location, acquires more coral from the right intake station, and delivers it to another reef
+ location.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.wpilibj2.command.Command</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#simpleBackwardDrive()" class="member-name-link">simpleBackwardDrive</a>()</code></div>
@@ -147,12 +148,10 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">leftToReef</span>()</div>
 <div class="block">Autonomous routine that starts from the left spawn position, delivers coral to a reef location,
  acquires more coral from the left intake station, and delivers it to another reef location.
- 
- The sequence:
- 1. Drives to first reef position while positioning arms
- 2. Drops coral at first position (i)
- 3. Drives to intake station to collect new coral
- 4. Delivers collected coral to second reef position (j)</div>
+
+ <p>The sequence: 1. Drives to first reef position while positioning arms 2. Drops coral at
+ first position (i) 3. Drives to intake station to collect new coral 4. Delivers collected coral
+ to second reef position (j)</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>A command sequence for the complete left-side autonomous routine</dd>
@@ -163,14 +162,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="rightToReef()">
 <h3>rightToReef</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">rightToReef</span>()</div>
-<div class="block">Autonomous routine that starts from the right spawn position, delivers coral to a reef location,
- acquires more coral from the right intake station, and delivers it to another reef location.
- 
- The sequence:
- 1. Drives to first reef position while positioning arms
- 2. Drops coral at first position (f)
- 3. Drives to intake station to collect new coral
- 4. Delivers collected coral to second reef position (e)</div>
+<div class="block">Autonomous routine that starts from the right spawn position, delivers coral to a reef
+ location, acquires more coral from the right intake station, and delivers it to another reef
+ location.
+
+ <p>The sequence: 1. Drives to first reef position while positioning arms 2. Drops coral at
+ first position (f) 3. Drives to intake station to collect new coral 4. Delivers collected coral
+ to second reef position (e)</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>A command sequence for the complete right-side autonomous routine</dd>

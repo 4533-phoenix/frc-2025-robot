@@ -135,9 +135,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getEstimationStdDevs(edu.wpi.first.math.geometry.Pose2d,java.util.List)" class="member-name-link">getEstimationStdDevs</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;estimatedPose,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;org.photonvision.targeting.PhotonTrackedTarget&gt;&nbsp;targets)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">The standard deviations of the estimated pose from
- <a href="Apriltag.Camera.html#getEstimatedGlobalPose(edu.wpi.first.math.geometry.Pose2d)"><code>Apriltag.Camera.getEstimatedGlobalPose(Pose2d)</code></a>, for use
- with <code>SwerveDrivePoseEstimator</code>.</div>
+<div class="block">The standard deviations of the estimated pose from <a href="Apriltag.Camera.html#getEstimatedGlobalPose(edu.wpi.first.math.geometry.Pose2d)"><code>Apriltag.Camera.getEstimatedGlobalPose(Pose2d)</code></a>, for use with <code>SwerveDrivePoseEstimator</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInstance()" class="member-name-link">getInstance</a>()</code></div>
@@ -205,8 +203,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>aprilTag</code> - The ID of the AprilTag</dd>
-<dd><code>robotOffset</code> - The offset to apply to the pose for proper robot
-                    positioning</dd>
+<dd><code>robotOffset</code> - The offset to apply to the pose for proper robot positioning</dd>
 <dt>Returns:</dt>
 <dd>The target pose for the robot relative to the AprilTag</dd>
 </dl>
@@ -256,17 +253,14 @@ loadScripts(document, 'script');</script>
 <h3>getEstimationStdDevs</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">edu.wpi.first.math.Matrix&lt;edu.wpi.first.math.numbers.N3,<wbr>edu.wpi.first.math.numbers.N1&gt;</span>&nbsp;<span class="element-name">getEstimationStdDevs</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d&nbsp;estimatedPose,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;org.photonvision.targeting.PhotonTrackedTarget&gt;&nbsp;targets)</span></div>
-<div class="block">The standard deviations of the estimated pose from
- <a href="Apriltag.Camera.html#getEstimatedGlobalPose(edu.wpi.first.math.geometry.Pose2d)"><code>Apriltag.Camera.getEstimatedGlobalPose(Pose2d)</code></a>, for use
- with <code>SwerveDrivePoseEstimator</code>.
- This should only be used when there are targets visible.</div>
+<div class="block">The standard deviations of the estimated pose from <a href="Apriltag.Camera.html#getEstimatedGlobalPose(edu.wpi.first.math.geometry.Pose2d)"><code>Apriltag.Camera.getEstimatedGlobalPose(Pose2d)</code></a>, for use with <code>SwerveDrivePoseEstimator</code>. This should
+ only be used when there are targets visible.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>estimatedPose</code> - The estimated pose to guess standard deviations for.</dd>
 <dd><code>targets</code> - The targets used in the calc for the pose.</dd>
 <dt>Returns:</dt>
-<dd>The calculated standard deviations. Or empty if not suitable for
-         estimation.</dd>
+<dd>The calculated standard deviations. Or empty if not suitable for estimation.</dd>
 </dl>
 </section>
 </li>

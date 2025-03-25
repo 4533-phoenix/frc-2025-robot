@@ -82,16 +82,14 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">CustomSwerveInput</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.kinematics.ChassisSpeeds&gt;</span></div>
-<div class="block">Helper class to easily transform Controller inputs into workable Chassis
- speeds. Intended to easily create an
- interface that generates <code>ChassisSpeeds</code> from <code>XboxController</code>
- <p>
- <br/>
- Inspired by SciBorgs FRC 1155. <br/>
+<div class="block">Helper class to easily transform Controller inputs into workable Chassis speeds. Intended to
+ easily create an interface that generates <code>ChassisSpeeds</code> from <code>XboxController</code>
+
+ <p><br>
+ Inspired by SciBorgs FRC 1155. <br>
  Example:
- 
- <pre>
- <code>
+
+ <pre><code>
  XboxController driverXbox = new XboxController(0);
 
  CustomSwerveInput driveAngularVelocity = CustomSwerveInput.of(drivebase.getSwerveDrive(),
@@ -107,8 +105,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
          .withControllerHeadingAxis(driverXbox::getRightX,
                  driverXbox::getRightY) // Axis which give the desired heading angle using trigonometry.
          .headingWhile(true); // Enable heading based control.
- </code>
- </pre></div>
+ </code></pre></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -125,8 +122,8 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;y,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;rot)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Create a <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> for an easy way to generate
- <code>ChassisSpeeds</code> from a driver controller.</div>
+<div class="block">Create a <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> for an easy way to generate <code>ChassisSpeeds</code> from a
+ driver controller.</div>
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(swervelib.SwerveDrive,java.util.function.DoubleSupplier,java.util.function.DoubleSupplier,java.util.function.DoubleSupplier,java.util.function.DoubleSupplier)" class="member-name-link">CustomSwerveInput</a><wbr>(swervelib.SwerveDrive&nbsp;drive,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;x,
@@ -134,8 +131,8 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;headingX,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;headingY)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Create a <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> for an easy way to generate
- <code>ChassisSpeeds</code> from a driver controller.</div>
+<div class="block">Create a <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> for an easy way to generate <code>ChassisSpeeds</code> from a
+ driver controller.</div>
 </div>
 </div>
 </section>
@@ -169,14 +166,12 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#allianceRelativeControl(boolean)" class="member-name-link">allianceRelativeControl</a><wbr>(boolean&nbsp;enabled)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Modify the output <code>ChassisSpeeds</code> so that it is always relative to your
- alliance.</div>
+<div class="block">Modify the output <code>ChassisSpeeds</code> so that it is always relative to your alliance.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#allianceRelativeControl(java.util.function.BooleanSupplier)" class="member-name-link">allianceRelativeControl</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;enabled)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Modify the output <code>ChassisSpeeds</code> so that it is always relative to your
- alliance.</div>
+<div class="block">Modify the output <code>ChassisSpeeds</code> so that it is always relative to your alliance.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copy()" class="member-name-link">copy</a>()</code></div>
@@ -283,14 +278,13 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scaleRotation(double)" class="member-name-link">scaleRotation</a><wbr>(double&nbsp;scaleRotation)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Scale the rotation axis input for <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> to reduce the
- range in which they operate.</div>
+<div class="block">Scale the rotation axis input for <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> to reduce the range in which they
+ operate.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scaleTranslation(double)" class="member-name-link">scaleTranslation</a><wbr>(double&nbsp;scaleTranslation)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Scale the translation axis for <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> by a constant scalar
- value.</div>
+<div class="block">Scale the translation axis for <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> by a constant scalar value.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scaleTranslation(java.util.function.BooleanSupplier,double)" class="member-name-link">scaleTranslation</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;condition,
@@ -348,8 +342,8 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;x,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;y,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;rot)</span></div>
-<div class="block">Create a <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> for an easy way to generate
- <code>ChassisSpeeds</code> from a driver controller.</div>
+<div class="block">Create a <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> for an easy way to generate <code>ChassisSpeeds</code> from a
+ driver controller.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>drive</code> - <code>SwerveDrive</code> object for transformation.</dd>
@@ -367,8 +361,8 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;y,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;headingX,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;headingY)</span></div>
-<div class="block">Create a <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> for an easy way to generate
- <code>ChassisSpeeds</code> from a driver controller.</div>
+<div class="block">Create a <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> for an easy way to generate <code>ChassisSpeeds</code> from a
+ driver controller.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>drive</code> - <code>SwerveDrive</code> object for transformation.</dd>
@@ -397,10 +391,8 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>drive</code> - <code>SwerveDrive</code> object for transformation.</dd>
-<dd><code>x</code> - <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link"><code>DoubleSupplier</code></a> of the translation X axis of the
-              controller joystick to use.</dd>
-<dd><code>y</code> - <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link"><code>DoubleSupplier</code></a> of the translation X axis of the
-              controller joystick to use.</dd>
+<dd><code>x</code> - <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link"><code>DoubleSupplier</code></a> of the translation X axis of the controller joystick to use.</dd>
+<dd><code>y</code> - <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link"><code>DoubleSupplier</code></a> of the translation X axis of the controller joystick to use.</dd>
 <dt>Returns:</dt>
 <dd><a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> to use as you see fit.</dd>
 </dl>
@@ -456,8 +448,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <dd><code>pose</code> - <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code> for ease of use.</dd>
 <dd><code>xPIDController</code> - PID controller for the X axis, units are m/s.</dd>
 <dd><code>yPIDController</code> - PID controller for the Y axis, units are m/s.</dd>
-<dd><code>omegaPIDController</code> - PID Controller for rotational axis, units are
-                           rad/s.</dd>
+<dd><code>omegaPIDController</code> - PID Controller for rotational axis, units are rad/s.</dd>
 <dt>Returns:</dt>
 <dd>self</dd>
 </dl>
@@ -549,8 +540,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <section class="detail" id="allianceRelativeControl(java.util.function.BooleanSupplier)">
 <h3>allianceRelativeControl</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></span>&nbsp;<span class="element-name">allianceRelativeControl</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;enabled)</span></div>
-<div class="block">Modify the output <code>ChassisSpeeds</code> so that it is always relative to your
- alliance.</div>
+<div class="block">Modify the output <code>ChassisSpeeds</code> so that it is always relative to your alliance.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>enabled</code> - Alliance aware <code>ChassisSpeeds</code> output.</dd>
@@ -563,8 +553,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <section class="detail" id="allianceRelativeControl(boolean)">
 <h3>allianceRelativeControl</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></span>&nbsp;<span class="element-name">allianceRelativeControl</span><wbr><span class="parameters">(boolean&nbsp;enabled)</span></div>
-<div class="block">Modify the output <code>ChassisSpeeds</code> so that it is always relative to your
- alliance.</div>
+<div class="block">Modify the output <code>ChassisSpeeds</code> so that it is always relative to your alliance.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>enabled</code> - Alliance aware <code>ChassisSpeeds</code> output.</dd>
@@ -683,8 +672,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <section class="detail" id="scaleTranslation(double)">
 <h3>scaleTranslation</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></span>&nbsp;<span class="element-name">scaleTranslation</span><wbr><span class="parameters">(double&nbsp;scaleTranslation)</span></div>
-<div class="block">Scale the translation axis for <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> by a constant scalar
- value.</div>
+<div class="block">Scale the translation axis for <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> by a constant scalar value.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>scaleTranslation</code> - Translation axis scalar value. (0, 1]</dd>
@@ -698,9 +686,8 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <h3>scaleTranslation</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></span>&nbsp;<span class="element-name">scaleTranslation</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;condition,
  double&nbsp;scale)</span></div>
-<div class="block">Scale the translation axis based on a boolean supplier.
- When the supplier returns true, the translation will be scaled by the provided scale;
- otherwise, it will remain unscaled.</div>
+<div class="block">Scale the translation axis based on a boolean supplier. When the supplier returns true, the
+ translation will be scaled by the provided scale; otherwise, it will remain unscaled.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>condition</code> - Boolean supplier determining if scaling should be applied.</dd>
@@ -714,8 +701,8 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <section class="detail" id="scaleRotation(double)">
 <h3>scaleRotation</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></span>&nbsp;<span class="element-name">scaleRotation</span><wbr><span class="parameters">(double&nbsp;scaleRotation)</span></div>
-<div class="block">Scale the rotation axis input for <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> to reduce the
- range in which they operate.</div>
+<div class="block">Scale the rotation axis input for <a href="CustomSwerveInput.html" title="class in frc.robot.helpers"><code>CustomSwerveInput</code></a> to reduce the range in which they
+ operate.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>scaleRotation</code> - Angular velocity axis scalar value. (0, 1]</dd>
