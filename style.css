@@ -236,474 +236,11 @@ main a[href*="://"]::after {
     display: none;
 }
 
-/* Tables */
-.summary-table, .details-table, .three-column-summary, .two-column-summary {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 1em 0;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px var(--box-shadow);
-}
+/* Replace all table styling with standard Javadoc approach */
 
-.summary-table .table-header, .details-table .table-header {
-    background-color: var(--table-header-color);
-    color: var(--text-color);
-    text-align: left;
-    padding: 12px 15px;
-    font-weight: 500;
-    font-size: 1em;
-}
+/* Remove all existing table-related CSS and replace with these styles */
 
-.summary-table .col-first, .details-table .col-first {
-    width: 30%;
-}
-
-.col-first, .col-second, .col-last, .col-constructor-name, 
-.col-summary-item-name, .col-last.even-row-color, 
-.col-last.odd-row-color, .col-first.even-row-color,
-.col-first.odd-row-color {
-    padding: 12px 15px;
-    vertical-align: top;
-    background-color: transparent;
-    border-top: 1px solid var(--border-color);
-}
-
-.even-row-color {
-    background-color: var(--table-row-color);
-}
-
-.odd-row-color {
-    background-color: var(--table-alt-row-color);
-}
-
-/* Fix package summary tables */
-.summary-table .col-first a, .summary-table .col-second a {
-    display: inline-block;
-    margin-bottom: 2px;
-}
-
-/* Section Elements */
-.caption {
-    color: var(--caption-color);
-    font-weight: 500;
-    font-size: 1.2em;
-    margin: 1.5em 0 0.8em 0;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.caption span {
-    padding: 0;
-}
-
-section.summary, section.details {
-    margin-top: 2em;
-}
-
-.summary-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.summary-list li {
-    margin-bottom: 1em;
-}
-
-/* Code Blocks */
-code, pre {
-    font-family: 'Consolas', monospace;
-    background-color: var(--code-background);
-    padding: 2px 4px;
-    border-radius: 3px;
-}
-
-pre {
-    padding: 10px;
-    overflow-x: auto;
-    white-space: pre;
-}
-
-.type-signature {
-    font-family: 'Consolas', monospace;
-    background-color: var(--code-background);
-    padding: 5px 10px;
-    border-radius: 4px;
-    display: inline-block;
-    margin: 5px 0;
-}
-
-/* Method Details */
-.member-signature {
-    font-family: 'Consolas', monospace;
-    background-color: var(--code-background);
-    padding: 10px;
-    border-radius: 4px;
-    margin: 10px 0;
-    overflow-x: auto;
-    color: var(--text-color);
-}
-
-.member-name-link {
-    color: var(--link-color);
-}
-
-/* Related Package Summary */
-#related-package-summary, #class-summary, #all-packages-table {
-    margin-top: 2em;
-}
-
-#class-summary .caption, #related-package-summary .caption, #all-packages-table .caption {
-    font-size: 1.2em;
-    margin-bottom: 0.8em;
-}
-
-/* Package Specific */
-.package-declaration-page .header {
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-}
-
-#class-summary .caption, #related-package-summary .caption {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-
-/* Class Specific */
-.class-declaration-page .inheritance {
-    margin: 15px 0;
-    font-family: 'Consolas', monospace;
-    font-size: 0.9em;
-    color: var(--secondary-text-color);
-}
-
-.class-description {
-    margin: 1em 0;
-}
-
-dl.notes {
-    border-left: 4px solid var(--border-color);
-    padding-left: 10px;
-    margin-left: 0;
-}
-
-dl.notes dt {
-    font-weight: 500;
-    color: var(--secondary-text-color);
-    margin-top: 10px;
-}
-
-/* Table Tabs */
-div.table-tabs {
-    background-color: var(--background-color);
-    padding: 5px 0;
-    margin-bottom: 5px;
-}
-
-div.table-tabs > button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 5px 10px;
-    margin-right: 5px;
-    color: var(--text-color);
-    font-family: 'Roboto', sans-serif;
-    border-radius: 4px 4px 0 0;
-}
-
-div.table-tabs > button.active-table-tab {
-    background-color: var(--table-header-color);
-    font-weight: 500;
-}
-
-/* UI Elements */
-.ui-autocomplete {
-    background-color: var(--background-color);
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 4px var(--box-shadow);
-    max-height: 300px;
-    overflow-y: auto;
-    border-radius: 3px;
-    z-index: 999;
-}
-
-.ui-menu-item {
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.ui-state-active {
-    background-color: var(--code-background) !important;
-    border-color: var(--code-background) !important;
-    color: var(--text-color) !important;
-}
-
-/* Deprecation Notice */
-.deprecation-block {
-    background-color: var(--deprecation-background);
-    padding: 10px;
-    border-radius: 4px;
-    margin: 10px 0;
-}
-
-/* Block-level descriptions */
-div.block {
-    margin: 8px 0;
-    color: var(--text-color);
-    line-height: 1.5;
-    max-width: 100%;
-    display: block;
-    margin: 5px 0;
-}
-
-/* Method Summary/Detail */
-#method-summary, #constructor-summary, #field-summary {
-    margin-top: 25px;
-}
-
-#method-summary h3, #constructor-summary h3, #field-summary h3 {
-    margin-top: 0;
-}
-
-#method-detail, #constructor-detail, #field-detail {
-    margin-top: 30px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .flex-content {
-        padding: 0 10px;
-    }
-    
-    .summary-table .col-first {
-        width: 50%;
-    }
-    
-    #navbar-top-firstrow {
-        flex-direction: column;
-    }
-    
-    #navbar-top-firstrow > li {
-        margin-bottom: 5px;
-    }
-    
-    .two-column-summary .col-first,
-    .three-column-summary .col-first,
-    .summary-table .col-first {
-        width: 40%;
-    }
-    
-    .two-column-summary .col-last,
-    .summary-table .col-last {
-        width: 60%;
-    }
-}
-
-/* Improve package summary display on overview page */
-#all-packages-table {
-    margin: 1.5em 0;
-}
-
-#all-packages-table .col-first {
-    width: 25%;
-}
-
-#all-packages-table .col-last {
-    width: 75%;
-}
-
-/* Fix empty description cells */
-.col-last:empty::before {
-    content: "—";
-    color: var(--secondary-text-color);
-    font-style: italic;
-    opacity: 0.7;
-}
-
-/* Package hierarchy on tree page */
-.tree-page .header {
-    margin-bottom: 2em;
-}
-
-.package-hierarchy-label {
-    font-weight: 500;
-    color: var(--text-color);
-    display: block;
-    margin: 1em 0 0.5em 0;
-}
-
-ul.horizontal {
-    list-style: none;
-    padding: 0;
-    margin: 0.5em 0 2em 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.2em 0;
-}
-
-ul.horizontal li {
-    margin-right: 0.5em;
-}
-
-/* Class hierarchy tree styling */
-section.hierarchy {
-    margin-bottom: 2.5em;
-}
-
-section.hierarchy h2 {
-    font-size: 1.3em;
-    margin-bottom: 1em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid var(--border-color);
-}
-
-section.hierarchy > ul {
-    margin: 0;
-    padding-left: 1.5em;
-}
-
-section.hierarchy li {
-    position: relative;
-    padding: 0.2em 0;
-    list-style-type: none;
-}
-
-section.hierarchy li.circle {
-    position: relative;
-}
-
-section.hierarchy li.circle::before {
-    content: "•";
-    position: absolute;
-    left: -1em;
-    color: var(--link-color);
-}
-
-section.hierarchy li ul {
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
-    padding-left: 1.5em;
-}
-
-section.hierarchy a.type-name-link {
-    font-family: 'Consolas', monospace;
-    font-size: 0.9em;
-}
-
-/* Slightly different style for external links */
-section.hierarchy a.external-link {
-    color: var(--secondary-text-color);
-}
-
-/* Style the package titles in the main page */
-.overview-summary th, .overview-summary .table-header {
-    padding: 12px 15px;
-    font-weight: 500;
-}
-
-/* Make the tree pages more appealing */
-.tree-page .flex-content {
-    max-width: 1000px;
-}
-
-/* Fix table layouts using proper grid display */
-.two-column-summary, 
-.three-column-summary, 
-.four-column-summary {
-    display: grid;
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1em 0;
-    box-shadow: 0 1px 3px var(--box-shadow);
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.two-column-summary {
-    grid-template-columns: 30% 70%;
-}
-
-.three-column-summary {
-    grid-template-columns: 25% 25% 50%;
-}
-
-.four-column-summary {
-    grid-template-columns: 20% 20% 20% 40%;
-}
-
-/* Ensure all table cells take up 100% width of their grid cell */
-.table-header, .col-first, .col-second, .col-last {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Fix headers so they span all columns */
-.two-column-summary .table-header.col-first {
-    grid-column: 1;
-}
-
-.two-column-summary .table-header.col-last {
-    grid-column: 2;
-}
-
-.three-column-summary .table-header.col-first {
-    grid-column: 1;
-}
-
-.three-column-summary .table-header.col-second {
-    grid-column: 2;
-}
-
-.three-column-summary .table-header.col-last {
-    grid-column: 3;
-}
-
-/* Ensure even and odd rows span the entire grid width */
-.even-row-color, .odd-row-color {
-    width: 100%;
-    display: contents;
-}
-
-/* Style table content */
-.col-first, .col-second, .col-last {
-    padding: 10px 15px;
-    border-top: 1px solid var(--border-color);
-    background-color: inherit;
-}
-
-.table-header {
-    padding: 12px 15px;
-    background-color: var(--table-header-color);
-    font-weight: 500;
-    border-bottom: 1px solid var(--border-color);
-}
-
-/* Fix for media queries */
-@media screen and (max-width: 600px) {
-    .two-column-summary {
-        grid-template-columns: 100%;
-    }
-    
-    .two-column-summary .col-first,
-    .two-column-summary .col-last {
-        grid-column: 1;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .three-column-summary {
-        grid-template-columns: 40% 60%;
-    }
-    
-    .three-column-summary .table-header.col-last,
-    .three-column-summary .col-last {
-        grid-column: 1 / span 2;
-    }
-}
-
-/* Completely rewrite the table styling to match original javadoc grid layout */
+/* Standard Javadoc grid table layouts */
 .two-column-summary {
     display: grid;
     grid-template-columns: minmax(15%, max-content) minmax(15%, auto);
@@ -719,43 +256,86 @@ section.hierarchy a.external-link {
     grid-template-columns: minmax(10%, max-content) minmax(10%, max-content) minmax(10%, max-content) minmax(10%, auto);
 }
 
+/* Table borders and spacing */
+.summary-table, .details-table {
+    width: 100%;
+    border-spacing: 0;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0;
+}
+
+/* Table cell styling */
 .summary-table > div, .details-table > div {
     text-align: left;
     padding: 8px 3px 3px 7px;
 }
 
-/* Remove table-specific display properties */
-.even-row-color, .odd-row-color {
-    display: block;
+.col-first, .col-second, .col-last, .col-constructor-name, .col-summary-item-name {
+    vertical-align: top;
+    padding-right: 0;
+    padding-top: 8px;
+    padding-bottom: 3px;
 }
 
-.table-header, .col-first, .col-second, .col-last {
-    display: block;
+/* Table header styling */
+.table-header {
+    background: var(--table-header-color);
+    font-weight: bold;
 }
 
-/* Color settings */
-.even-row-color {
+/* Column font sizes */
+.col-first, .col-first {
+    font-size: 13px;
+}
+
+.col-second, .col-second, .col-last, .col-constructor-name, .col-summary-item-name, .col-last {
+    font-size: 13px;
+}
+
+/* Column overflow handling */
+.col-first, .col-second, .col-constructor-name {
+    vertical-align: top;
+    overflow: auto;
+}
+
+.col-last {
+    white-space: normal;
+}
+
+/* Link styling in tables */
+.col-first a:link, .col-first a:visited,
+.col-second a:link, .col-second a:visited,
+.col-constructor-name a:link, .col-constructor-name a:visited,
+.col-summary-item-name a:link, .col-summary-item-name a:visited {
+    font-weight: bold;
+    color: var(--link-color);
+}
+
+/* Row coloring */
+.even-row-color, .even-row-color .table-header {
     background-color: var(--table-row-color);
 }
 
-.odd-row-color {
+.odd-row-color, .odd-row-color .table-header {
     background-color: var(--table-alt-row-color);
 }
 
-.table-header {
-    background-color: var(--table-header-color);
-    font-weight: 500;
-    border-bottom: 1px solid var(--border-color);
+/* Description blocks in tables */
+div.block {
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--text-color);
+    display: block;
+    margin: 0 10px 5px 0;
 }
 
-/* Fix cell spacing and padding */
-.col-first, .col-second, .col-last {
-    padding: 8px 12px;
-    vertical-align: top;
-    border-top: none;
+.col-last div {
+    padding-top: 0;
 }
 
-/* Restore original media queries */
+/* Responsive adjustments */
 @media screen and (max-width: 600px) {
     .two-column-summary {
         display: grid;
@@ -779,5 +359,58 @@ section.hierarchy a.external-link {
         display: grid;
         grid-template-columns: minmax(15%, max-content) minmax(15%, auto);
     }
+}
+
+/* Caption styling */
+.caption {
+    position: relative;
+    text-align: left;
+    background-repeat: no-repeat;
+    color: var(--text-color);
+    font-weight: bold;
+    clear: none;
+    overflow: hidden;
+    padding: 0;
+    padding-top: 10px;
+    padding-left: 1px;
+    margin: 0;
+    white-space: pre;
+}
+
+.caption span {
+    white-space: nowrap;
+    padding-top: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 7px;
+    display: inline-block;
+    float: left;
+    background-color: var(--link-color);
+    border: none;
+    height: 16px;
+}
+
+/* Table tabs */
+div.table-tabs {
+    padding: 10px 0 0 1px;
+    margin: 0;
+}
+
+div.table-tabs > button {
+    border: none;
+    cursor: pointer;
+    padding: 5px 12px 7px 12px;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+div.table-tabs > button.active-table-tab {
+    background: var(--link-color);
+    color: var(--background-color);
+}
+
+div.table-tabs > button.table-tab {
+    background: var(--secondary-background);
+    color: var(--text-color);
 }
 
