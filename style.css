@@ -19,6 +19,8 @@
     --table-border-color: rgba(0, 0, 0, 0);
     --box-shadow: rgba(0, 0, 0, 0.05);
     --caption-color: #333333;
+    --caption-text-color: #ffffff;
+    --caption-bg-color: var(--link-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,6 +40,8 @@
         --table-border-color: #3e3e42;
         --box-shadow: rgba(0, 0, 0, 0.3);
         --caption-color: #d0d0d0;
+        --caption-text-color: #ffffff;
+        --caption-bg-color: var(--link-color);
     }
 }
 
@@ -177,18 +181,32 @@ p, ul, ol, dl {
     margin: 5px 0;
 }
 
+/* Fix sub-navigation links spacing and formatting */
 .sub-nav-list {
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
+    gap: 0;
 }
 
 .sub-nav-list li {
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 0;  /* Remove right margin */
     padding: 3px 0;
+}
+
+/* Fix separator between sub-nav items */
+.sub-nav-list li:after {
+    content: '|';
+    margin: 0 5px;  /* Reduce space around separators */
+    color: var(--border-color);
+}
+
+.sub-nav-list li:last-child:after {
+    content: '';
+    margin: 0;
 }
 
 .nav-list-search {
@@ -383,11 +401,11 @@ div.block {
     padding-left: 12px;
     padding-right: 12px;
     padding-bottom: 7px;
-    display: inline-block;
     float: left;
-    background-color: var(--link-color);
+    background-color: var(--caption-bg-color);
     border: none;
     height: 16px;
+    color: var(--caption-text-color);
 }
 
 /* Table tabs */
@@ -405,8 +423,8 @@ div.table-tabs > button {
 }
 
 div.table-tabs > button.active-table-tab {
-    background: var(--link-color);
-    color: var(--background-color);
+    background: var(--caption-bg-color);
+    color: var(--caption-text-color);
 }
 
 div.table-tabs > button.table-tab {
