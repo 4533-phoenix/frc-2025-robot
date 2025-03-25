@@ -107,15 +107,21 @@ h2 {
 }
 
 .header {
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .package-signature {
     font-family: 'Consolas', monospace;
     color: var(--secondary-text-color);
-    margin: 1em 0 2em 0;
+    margin: 1em 0;
     padding: 5px 0;
-    border-bottom: none;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    margin-top: 0;
+}
+
+.header + hr {
+    display: none;
 }
 
 p, ul, ol, dl {
@@ -241,7 +247,6 @@ main a[href*="://"]::after {
 /* Tables */
 .summary-table, .details-table, .three-column-summary, .two-column-summary {
     width: 100%;
-    table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
     margin: 1em 0;
@@ -271,7 +276,6 @@ main a[href*="://"]::after {
     vertical-align: top;
     background-color: transparent;
     border-top: 1px solid var(--border-color);
-    display: table-cell !important;
 }
 
 .even-row-color {
@@ -312,7 +316,7 @@ section.summary, section.details {
 }
 
 .summary-list li {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 /* Code Blocks */
@@ -361,22 +365,13 @@ pre {
 #class-summary .caption, #related-package-summary .caption, #all-packages-table .caption {
     font-size: 1.2em;
     margin-bottom: 0.8em;
-    display: block;
-    margin-bottom: 0.5em;
-    border-bottom: 1px solid var(--border-color);
 }
 
 /* Package Specific */
 .package-declaration-page .header {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.package-declaration-page hr {
-    margin: 10px 0;
-    border: 0;
-    height: 1px;
-    background-color: var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 #class-summary .caption, #related-package-summary .caption {
@@ -545,7 +540,6 @@ ul.horizontal {
 
 ul.horizontal li {
     margin-right: 0.5em;
-    white-space: nowrap;
 }
 
 ul.horizontal li:not(:last-child)::after {
@@ -611,5 +605,52 @@ section.hierarchy a.external-link {
 /* Make the tree pages more appealing */
 .tree-page .flex-content {
     max-width: 1000px;
+}
+
+/* Fix table layouts using proper grid display */
+.two-column-summary {
+    display: grid;
+    grid-template-columns: minmax(25%, max-content) minmax(25%, auto);
+    grid-gap: 0;
+    width: 100%;
+}
+
+.three-column-summary {
+    display: grid;
+    grid-template-columns: minmax(20%, max-content) minmax(20%, max-content) minmax(20%, auto);
+    grid-gap: 0;
+    width: 100%;
+}
+
+.four-column-summary {
+    display: grid;
+    grid-template-columns: minmax(15%, max-content) minmax(15%, max-content) minmax(15%, max-content) minmax(15%, auto);
+    grid-gap: 0;
+    width: 100%;
+}
+
+/* Make sure table columns align properly */
+.col-first, .col-second, .col-last {
+    padding: 12px 15px;
+    vertical-align: top;
+}
+
+/* Responsive adjustments for summary tables */
+@media screen and (max-width: 800px) {
+    .three-column-summary {
+        grid-template-columns: minmax(30%, max-content) minmax(30%, auto);
+    }
+    .three-column-summary .col-last {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .two-column-summary {
+        grid-template-columns: 1fr;
+    }
+    .col-first, .col-second, .col-last {
+        padding: 8px 10px;
+    }
 }
 
