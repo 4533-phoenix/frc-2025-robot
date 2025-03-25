@@ -116,12 +116,15 @@ h2 {
     margin: 1em 0;
     padding: 5px 0;
     border-top: 1px solid var(--border-color);
-    padding-top: 15px;
+    padding-top: 10px;
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .header + hr {
-    display: none;
+    display: none !important;
+    height: 0;
+    visibility: hidden;
 }
 
 p, ul, ol, dl {
@@ -186,11 +189,6 @@ p, ul, ol, dl {
     display: inline-block;
     margin-right: 15px;
     padding: 3px 0;
-}
-
-sub-nav-list li:last-child:after {
-    content: '';
-    margin-left: 0;
 }
 
 .nav-list-search {
@@ -456,6 +454,8 @@ div.block {
     color: var(--text-color);
     line-height: 1.5;
     max-width: 100%;
+    display: block;
+    margin: 5px 0;
 }
 
 /* Method Summary/Detail */
@@ -487,6 +487,17 @@ div.block {
     
     #navbar-top-firstrow > li {
         margin-bottom: 5px;
+    }
+    
+    .two-column-summary .col-first,
+    .three-column-summary .col-first,
+    .summary-table .col-first {
+        width: 40%;
+    }
+    
+    .two-column-summary .col-last,
+    .summary-table .col-last {
+        width: 60%;
     }
 }
 
@@ -602,34 +613,67 @@ section.hierarchy a.external-link {
 }
 
 /* Fix table layouts using proper grid display */
-.two-column-summary {
-    display: grid;
-    grid-template-columns: minmax(25%, 25%) 1fr;
-    grid-gap: 0;
-    width: 100%;
-}
-
-.three-column-summary {
-    display: grid;
-    grid-template-columns: minmax(20%, 20%) minmax(20%, 20%) 1fr;
-    grid-gap: 0;
-    width: 100%;
-}
-
+.two-column-summary, 
+.three-column-summary, 
 .four-column-summary {
-    display: grid;
-    grid-template-columns: minmax(15%, 15%) minmax(15%, 15%) minmax(15%, 15%) 1fr;
-    grid-gap: 0;
+    display: table;
     width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1em 0;
+    table-layout: fixed;
 }
 
-/* Make sure table columns align properly */
+.table-header {
+    display: table-cell;
+    background-color: var(--table-header-color);
+    font-weight: 500;
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    width: auto;
+}
+
 .col-first, .col-second, .col-last {
-    padding: 12px 15px;
+    display: table-cell;
+    padding: 8px 12px;
     vertical-align: top;
+    border-top: 1px solid var(--border-color);
 }
 
-/* Responsive adjustments for summary tables */
+.summary-table .col-first {
+    width: 25%;
+}
+
+.summary-table .col-second {
+    width: 25%;
+}
+
+.summary-table .col-last {
+    width: 50%;
+}
+
+.two-column-summary .col-first {
+    width: 30%;
+}
+
+.two-column-summary .col-last {
+    width: 70%;
+}
+
+.even-row-color, .odd-row-color {
+    display: table-row;
+}
+
+.even-row-color {
+    background-color: var(--table-row-color);
+}
+
+.odd-row-color {
+    background-color: var(--table-alt-row-color);
+}
+
+/* Ensure responsive behavior */
 @media screen and (max-width: 800px) {
     .three-column-summary {
         grid-template-columns: minmax(30%, 30%) 1fr;
