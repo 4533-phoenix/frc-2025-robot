@@ -103,6 +103,7 @@ h2 {
 .title {
     color: var(--text-color);
     margin-bottom: 1em;
+    margin-top: 0.5em;
 }
 
 .header {
@@ -186,7 +187,7 @@ p, ul, ol, dl {
     color: var(--border-color);
 }
 
-.sub-nav-list li:last-child:after {
+sub-nav-list li:last-child:after {
     content: '';
     margin-left: 0;
 }
@@ -486,5 +487,116 @@ div.block {
     #navbar-top-firstrow > li {
         margin-bottom: 5px;
     }
+}
+
+/* Improve package summary display on overview page */
+#all-packages-table {
+    margin: 1.5em 0;
+}
+
+#all-packages-table .col-first {
+    width: 25%;
+}
+
+#all-packages-table .col-last {
+    width: 75%;
+}
+
+/* Fix empty description cells */
+.col-last:empty::before {
+    content: "—";
+    color: var(--secondary-text-color);
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* Package hierarchy on tree page */
+.tree-page .header {
+    margin-bottom: 2em;
+}
+
+.package-hierarchy-label {
+    font-weight: 500;
+    color: var(--text-color);
+    display: block;
+    margin: 1em 0 0.5em 0;
+}
+
+ul.horizontal {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 0 2em 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em 0;
+}
+
+ul.horizontal li {
+    margin-right: 0.5em;
+}
+
+ul.horizontal li:not(:last-child)::after {
+    content: ",";
+}
+
+/* Class hierarchy tree styling */
+section.hierarchy {
+    margin-bottom: 2.5em;
+}
+
+section.hierarchy h2 {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section.hierarchy > ul {
+    margin: 0;
+    padding-left: 1.5em;
+}
+
+section.hierarchy li {
+    position: relative;
+    padding: 0.2em 0;
+    list-style-type: none;
+}
+
+section.hierarchy li.circle {
+    position: relative;
+}
+
+section.hierarchy li.circle::before {
+    content: "•";
+    position: absolute;
+    left: -1em;
+    color: var(--link-color);
+}
+
+section.hierarchy li ul {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    padding-left: 1.5em;
+}
+
+section.hierarchy a.type-name-link {
+    font-family: 'Consolas', monospace;
+    font-size: 0.9em;
+}
+
+/* Slightly different style for external links */
+section.hierarchy a.external-link {
+    color: var(--secondary-text-color);
+}
+
+/* Style the package titles in the main page */
+.overview-summary th, .overview-summary .table-header {
+    padding: 12px 15px;
+    font-weight: 500;
+}
+
+/* Make the tree pages more appealing */
+.tree-page .flex-content {
+    max-width: 1000px;
 }
 
