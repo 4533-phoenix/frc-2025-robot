@@ -83,6 +83,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">CoralArm</span>
 <span class="extends-implements">extends edu.wpi.first.wpilibj2.command.SubsystemBase</span></div>
+<div class="block">Subsystem that controls the Coral Arm, responsible for moving the arm to
+ different positions.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -97,7 +99,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>final edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
 <div class="col-second even-row-color"><code><a href="#onFront" class="member-name-link">onFront</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Trigger that is active when the elbow is on the front side.</div>
+</div>
 </div>
 </section>
 </li>
@@ -124,7 +128,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CoralArm.html" title="class in frc.robot.subsystems">CoralArm</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInstance()" class="member-name-link">getInstance</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Gets the singleton instance of the CoralArm subsystem.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -190,6 +196,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="onFront">
 <h3>onFront</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.button.Trigger</span>&nbsp;<span class="element-name">onFront</span></div>
+<div class="block">Trigger that is active when the elbow is on the front side.</div>
 </section>
 </li>
 </ul>
@@ -204,6 +211,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getInstance()">
 <h3>getInstance</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CoralArm.html" title="class in frc.robot.subsystems">CoralArm</a></span>&nbsp;<span class="element-name">getInstance</span>()</div>
+<div class="block">Gets the singleton instance of the CoralArm subsystem.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The singleton instance.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -224,6 +236,10 @@ loadScripts(document, 'script');</script>
 <h3>setZero</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">setZero</span>()</div>
 <div class="block">Command to move the arm to the ZERO position</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Command to set the arm to the ZERO position</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -231,6 +247,10 @@ loadScripts(document, 'script');</script>
 <h3>setIntake</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">setIntake</span>()</div>
 <div class="block">Command to move the arm to the INTAKE position</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Command to set the arm to the INTAKE position</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -238,6 +258,10 @@ loadScripts(document, 'script');</script>
 <h3>setLow</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">setLow</span>()</div>
 <div class="block">Command to move the arm to the LOW position</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Command to set the arm to the LOW position</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -245,6 +269,10 @@ loadScripts(document, 'script');</script>
 <h3>setMid</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">setMid</span>()</div>
 <div class="block">Command to move the arm to the MID position</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Command to set the arm to the MID position</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -252,6 +280,10 @@ loadScripts(document, 'script');</script>
 <h3>setHigh</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">setHigh</span>()</div>
 <div class="block">Command to move the arm to the HIGH position</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Command to set the arm to the HIGH position</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -259,6 +291,10 @@ loadScripts(document, 'script');</script>
 <h3>setClimb</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">setClimb</span>()</div>
 <div class="block">Command to move the arm to the CLIMB position</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Command to set the arm to the CLIMB position</dd>
+</dl>
 </section>
 </li>
 <li>

@@ -293,29 +293,35 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
  value.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translationOnlyWhile(boolean)" class="member-name-link">translationOnlyWhile</a><wbr>(boolean&nbsp;translationState)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scaleTranslation(java.util.function.BooleanSupplier,double)" class="member-name-link">scaleTranslation</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;condition,
+ double&nbsp;scale)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Enable locking of rotation and only translating, overrides everything.</div>
+<div class="block">Scale the translation axis based on a boolean supplier.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translationOnlyWhile(java.util.function.BooleanSupplier)" class="member-name-link">translationOnlyWhile</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;trigger)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translationOnlyWhile(boolean)" class="member-name-link">translationOnlyWhile</a><wbr>(boolean&nbsp;translationState)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Enable locking of rotation and only translating, overrides everything.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withControllerHeadingAxis(java.util.function.DoubleSupplier,java.util.function.DoubleSupplier)" class="member-name-link">withControllerHeadingAxis</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;headingX,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;headingY)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translationOnlyWhile(java.util.function.BooleanSupplier)" class="member-name-link">translationOnlyWhile</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;trigger)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Enable locking of rotation and only translating, overrides everything.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withControllerHeadingAxis(java.util.function.DoubleSupplier,java.util.function.DoubleSupplier)" class="member-name-link">withControllerHeadingAxis</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;headingX,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;headingY)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Add heading axis for Heading based control.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withControllerRotationAxis(java.util.function.DoubleSupplier)" class="member-name-link">withControllerRotationAxis</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;rot)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withControllerRotationAxis(java.util.function.DoubleSupplier)" class="member-name-link">withControllerRotationAxis</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;rot)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Add a rotation axis for Angular Velocity control</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withHeading(java.util.function.Supplier)" class="member-name-link">withHeading</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation2d&gt;&nbsp;heading)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withHeading(java.util.function.Supplier)" class="member-name-link">withHeading</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation2d&gt;&nbsp;heading)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Add direct heading supplier for Heading based control.</div>
 </div>
 </div>
@@ -682,6 +688,23 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>scaleTranslation</code> - Translation axis scalar value. (0, 1]</dd>
+<dt>Returns:</dt>
+<dd>this</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="scaleTranslation(java.util.function.BooleanSupplier,double)">
+<h3>scaleTranslation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></span>&nbsp;<span class="element-name">scaleTranslation</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;condition,
+ double&nbsp;scale)</span></div>
+<div class="block">Scale the translation axis based on a boolean supplier.
+ When the supplier returns true, the translation will be scaled by the provided scale;
+ otherwise, it will remain unscaled.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>condition</code> - Boolean supplier determining if scaling should be applied.</dd>
+<dd><code>scale</code> - Scale factor when condition is true.</dd>
 <dt>Returns:</dt>
 <dd>this</dd>
 </dl>

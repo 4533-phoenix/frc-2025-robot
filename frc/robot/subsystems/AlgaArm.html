@@ -83,6 +83,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AlgaArm</span>
 <span class="extends-implements">extends edu.wpi.first.wpilibj2.command.SubsystemBase</span></div>
+<div class="block">Subsystem that controls the Alga Arm, responsible for intaking and dropping
+ Alga game pieces.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -97,13 +99,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>final edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
 <div class="col-second even-row-color"><code><a href="#doesntHaveAlga" class="member-name-link">doesntHaveAlga</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Trigger that is active when the Alga Arm does not have an Alga.</div>
+</div>
 <div class="col-first odd-row-color"><code>final edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
 <div class="col-second odd-row-color"><code><a href="#hasAlga" class="member-name-link">hasAlga</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Trigger that is active when the Alga Arm has an Alga.</div>
+</div>
 <div class="col-first even-row-color"><code>final edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
 <div class="col-second even-row-color"><code><a href="#running" class="member-name-link">running</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Trigger that is active when the Alga Arm is running.</div>
+</div>
 </div>
 </section>
 </li>
@@ -120,28 +128,47 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drop()" class="member-name-link">drop</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Drops an alga until the sensor no longer detects it.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInstance()" class="member-name-link">getInstance</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Gets the singleton instance of the AlgaArm subsystem.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#intake()" class="member-name-link">intake</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Intakes an alga until the sensor detects it.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#runDrop()" class="member-name-link">runDrop</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#release()" class="member-name-link">release</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Releases the alga with a short drop.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#runIntake()" class="member-name-link">runIntake</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#runDrop()" class="member-name-link">runDrop</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Runs the drop at a constant power.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop()" class="member-name-link">stop</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#runIntake()" class="member-name-link">runIntake</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Runs the intake at a constant power.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toggle()" class="member-name-link">toggle</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop()" class="member-name-link">stop</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Stops the alga arm.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toggle()" class="member-name-link">toggle</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Toggles between intake and drop based on the current state.</div>
+</div>
 </div>
 </div>
 </div>
@@ -169,18 +196,21 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="doesntHaveAlga">
 <h3>doesntHaveAlga</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.button.Trigger</span>&nbsp;<span class="element-name">doesntHaveAlga</span></div>
+<div class="block">Trigger that is active when the Alga Arm does not have an Alga.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="hasAlga">
 <h3>hasAlga</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.button.Trigger</span>&nbsp;<span class="element-name">hasAlga</span></div>
+<div class="block">Trigger that is active when the Alga Arm has an Alga.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="running">
 <h3>running</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.button.Trigger</span>&nbsp;<span class="element-name">running</span></div>
+<div class="block">Trigger that is active when the Alga Arm is running.</div>
 </section>
 </li>
 </ul>
@@ -195,42 +225,88 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getInstance()">
 <h3>getInstance</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></span>&nbsp;<span class="element-name">getInstance</span>()</div>
+<div class="block">Gets the singleton instance of the AlgaArm subsystem.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The singleton instance.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="runIntake()">
 <h3>runIntake</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">runIntake</span>()</div>
+<div class="block">Runs the intake at a constant power.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A command that runs the intake.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="intake()">
 <h3>intake</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">intake</span>()</div>
+<div class="block">Intakes an alga until the sensor detects it.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A command that intakes an alga.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="runDrop()">
 <h3>runDrop</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">runDrop</span>()</div>
+<div class="block">Runs the drop at a constant power.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A command that runs the drop.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="drop()">
 <h3>drop</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">drop</span>()</div>
+<div class="block">Drops an alga until the sensor no longer detects it.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A command that drops an alga.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="release()">
+<h3>release</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">release</span>()</div>
+<div class="block">Releases the alga with a short drop.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A command that releases the alga.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="stop()">
 <h3>stop</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">stop</span>()</div>
+<div class="block">Stops the alga arm.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A command that stops the alga arm.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="toggle()">
 <h3>toggle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">toggle</span>()</div>
+<div class="block">Toggles between intake and drop based on the current state.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A command that toggles the alga arm.</dd>
+</dl>
 </section>
 </li>
 <li>

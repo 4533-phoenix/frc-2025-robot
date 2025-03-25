@@ -83,6 +83,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Climb</span>
 <span class="extends-implements">extends edu.wpi.first.wpilibj2.command.SubsystemBase</span></div>
+<div class="block">Subsystem that controls the climbing mechanism.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -97,10 +98,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>final edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
 <div class="col-second even-row-color"><code><a href="#atBottom" class="member-name-link">atBottom</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Trigger that is active when the climb is at the bottom limit.</div>
+</div>
 <div class="col-first odd-row-color"><code>final edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
 <div class="col-second odd-row-color"><code><a href="#atTop" class="member-name-link">atTop</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Trigger that is active when the climb is at the top limit.</div>
+</div>
 </div>
 </section>
 </li>
@@ -117,16 +122,22 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#climb()" class="member-name-link">climb</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Climbs until the top limit is reached.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Climb.html" title="class in frc.robot.subsystems">Climb</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInstance()" class="member-name-link">getInstance</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Gets the singleton instance of the Climb subsystem.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop()" class="member-name-link">stop</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Stops the climb.</div>
+</div>
 </div>
 </div>
 </div>
@@ -154,12 +165,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="atTop">
 <h3>atTop</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.button.Trigger</span>&nbsp;<span class="element-name">atTop</span></div>
+<div class="block">Trigger that is active when the climb is at the top limit.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="atBottom">
 <h3>atBottom</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.button.Trigger</span>&nbsp;<span class="element-name">atBottom</span></div>
+<div class="block">Trigger that is active when the climb is at the bottom limit.</div>
 </section>
 </li>
 </ul>
@@ -174,18 +187,33 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getInstance()">
 <h3>getInstance</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Climb.html" title="class in frc.robot.subsystems">Climb</a></span>&nbsp;<span class="element-name">getInstance</span>()</div>
+<div class="block">Gets the singleton instance of the Climb subsystem.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The singleton instance.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="climb()">
 <h3>climb</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">climb</span>()</div>
+<div class="block">Climbs until the top limit is reached.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A command that climbs.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="stop()">
 <h3>stop</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">stop</span>()</div>
+<div class="block">Stops the climb.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A command that stops the climb.</dd>
+</dl>
 </section>
 </li>
 <li>
