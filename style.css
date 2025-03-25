@@ -612,84 +612,95 @@ section.hierarchy a.external-link {
 .two-column-summary, 
 .three-column-summary, 
 .four-column-summary {
-    display: table;
+    display: grid;
     width: 100%;
     border-collapse: collapse;
-    border-spacing: 0;
     margin: 1em 0;
-    table-layout: fixed;
+    box-shadow: 0 1px 3px var(--box-shadow);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.two-column-summary {
+    grid-template-columns: 30% 70%;
+}
+
+.three-column-summary {
+    grid-template-columns: 25% 25% 50%;
+}
+
+.four-column-summary {
+    grid-template-columns: 20% 20% 20% 40%;
+}
+
+/* Ensure all table cells take up 100% width of their grid cell */
+.table-header, .col-first, .col-second, .col-last {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Fix headers so they span all columns */
+.two-column-summary .table-header.col-first {
+    grid-column: 1;
+}
+
+.two-column-summary .table-header.col-last {
+    grid-column: 2;
+}
+
+.three-column-summary .table-header.col-first {
+    grid-column: 1;
+}
+
+.three-column-summary .table-header.col-second {
+    grid-column: 2;
+}
+
+.three-column-summary .table-header.col-last {
+    grid-column: 3;
+}
+
+/* Ensure even and odd rows span the entire grid width */
+.even-row-color, .odd-row-color {
+    width: 100%;
+    display: contents;
+}
+
+/* Style table content */
+.col-first, .col-second, .col-last {
+    padding: 10px 15px;
+    border-top: 1px solid var(--border-color);
+    background-color: inherit;
 }
 
 .table-header {
-    display: table-cell;
+    padding: 12px 15px;
     background-color: var(--table-header-color);
     font-weight: 500;
-    padding: 8px 12px;
-    text-align: left;
     border-bottom: 1px solid var(--border-color);
-    width: auto;
 }
 
-.col-first, .col-second, .col-last {
-    display: table-cell;
-    padding: 8px 12px;
-    vertical-align: top;
-    border-top: 1px solid var(--border-color);
-}
-
-.summary-table .col-first {
-    width: 25%;
-}
-
-.summary-table .col-second {
-    width: 25%;
-}
-
-.summary-table .col-last {
-    width: 50%;
-}
-
-.two-column-summary .col-first {
-    width: 30%;
-}
-
-.two-column-summary .col-last {
-    width: 70%;
-}
-
-.even-row-color, .odd-row-color {
-    display: table-row;
-}
-
-.even-row-color {
-    background-color: var(--table-row-color);
-}
-
-.odd-row-color {
-    background-color: var(--table-alt-row-color);
-}
-
-/* Ensure responsive behavior */
-@media screen and (max-width: 800px) {
-    .three-column-summary {
-        display: table;
-    }
-    
-    .three-column-summary .col-last {
-        display: table-cell;
-        grid-column: unset;
-    }
-}
-
+/* Fix for media queries */
 @media screen and (max-width: 600px) {
     .two-column-summary {
-        display: table;
+        grid-template-columns: 100%;
+    }
+    
+    .two-column-summary .col-first,
+    .two-column-summary .col-last {
+        grid-column: 1;
     }
 }
 
-/* Keep block display inside table cells */
-.col-last div.block {
-    display: block;
+@media screen and (max-width: 800px) {
+    .three-column-summary {
+        grid-template-columns: 40% 60%;
+    }
+    
+    .three-column-summary .table-header.col-last,
+    .three-column-summary .col-last {
+        grid-column: 1 / span 2;
+    }
 }
 
 /* Completely rewrite the table styling to match original javadoc grid layout */
