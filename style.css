@@ -188,12 +188,6 @@ p, ul, ol, dl {
     padding: 3px 0;
 }
 
-.sub-nav-list li:after {
-    content: '|';
-    margin-left: 15px;
-    color: var(--border-color);
-}
-
 sub-nav-list li:last-child:after {
     content: '';
     margin-left: 0;
@@ -610,21 +604,21 @@ section.hierarchy a.external-link {
 /* Fix table layouts using proper grid display */
 .two-column-summary {
     display: grid;
-    grid-template-columns: minmax(25%, max-content) minmax(25%, auto);
+    grid-template-columns: minmax(25%, 25%) 1fr;
     grid-gap: 0;
     width: 100%;
 }
 
 .three-column-summary {
     display: grid;
-    grid-template-columns: minmax(20%, max-content) minmax(20%, max-content) minmax(20%, auto);
+    grid-template-columns: minmax(20%, 20%) minmax(20%, 20%) 1fr;
     grid-gap: 0;
     width: 100%;
 }
 
 .four-column-summary {
     display: grid;
-    grid-template-columns: minmax(15%, max-content) minmax(15%, max-content) minmax(15%, max-content) minmax(15%, auto);
+    grid-template-columns: minmax(15%, 15%) minmax(15%, 15%) minmax(15%, 15%) 1fr;
     grid-gap: 0;
     width: 100%;
 }
@@ -638,7 +632,7 @@ section.hierarchy a.external-link {
 /* Responsive adjustments for summary tables */
 @media screen and (max-width: 800px) {
     .three-column-summary {
-        grid-template-columns: minmax(30%, max-content) minmax(30%, auto);
+        grid-template-columns: minmax(30%, 30%) 1fr;
     }
     .three-column-summary .col-last {
         grid-column: span 2;
