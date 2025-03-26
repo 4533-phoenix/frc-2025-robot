@@ -24,7 +24,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -60,17 +60,30 @@ jobs:
           curl -L -o minhtml https://github.com/wilsonzlin/minify-html/releases/download/v0.16.4/minhtml-0.16.4-x86_64-unknown-linux-gnu
           chmod +x minhtml
 
+      # Define string replacements
+      - name: Define string replacements
+        id: define-replacements
+        run: |
+          echo "REPLACEMENTS=s/&nbsp;|&nbsp;//g;s/Package:&nbsp;/<b>Package<\/b>/g;s/<label for=\"search-input\">SEARCH:<\/label>//g;s/Summary:&nbsp;/<b>Summary<\/b>/g;s/Detail:&nbsp;/<b>Detail<\/b>/g" >> $GITHUB_ENV
+
       # Clean and Minify HTML files
       - name: Clean and Minify HTML files
+        env:
+          REPLACEMENTS: ${{ env.REPLACEMENTS }}
         run: |
           for file in $(find build/docs/javadoc -name "*.html"); do
-            sed -i 's/&nbsp;|&nbsp;//g' "$file"
-            sed -i 's/Package:&nbsp;/<b>Package<\/b>/g' "$file"
-            sed -i 's/<label for="search-input">SEARCH:<\/label>//g' "$file"
-            sed -i 's/Summary:&nbsp;/<b>Summary<\/b>/g' "$file"
-            sed -i 's/Detail:&nbsp;/<b>Detail<\/b>/g' "$file"
+            sed -i "$REPLACEMENTS" "$file"
             ./minhtml --keep-closing-tags --minify-css "$file" --output "$file"
             echo "Processed and minified $file"
+          done
+
+      # Minify CSS files by removing all whitespace
+      - name: Minify CSS files
+        run: |
+          for file in $(find build/docs/javadoc -name "*.css"); do
+            tr -d '[:space:]' < "$file" > "$file.min"
+            mv "$file.min" "$file"
+            echo "Minified $file"
           done
 
       # Upload the Javadoc as a Pages artifact
