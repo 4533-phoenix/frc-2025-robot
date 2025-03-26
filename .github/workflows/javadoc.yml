@@ -81,13 +81,15 @@ jobs:
       - name: Set up Bun
         run: |
           curl -fsSL https://bun.sh/install | bash
-          export BUN_INSTALL="$HOME/.bun"
-          export PATH="$BUN_INSTALL/bin:$PATH"
+          echo 'export BUN_INSTALL="$HOME/.bun"' >> $GITHUB_ENV
+          echo 'export PATH="$BUN_INSTALL/bin:$PATH"' >> $GITHUB_ENV
           source $HOME/.bashrc
           bun install -g csso-cli
 
       # Minify CSS files using csso
       - name: Minify CSS files
+        env:
+          PATH: ${{ env.BUN_INSTALL }}/bin:${{ env.PATH }}
         run: |
           for file in $(find build/docs/javadoc -name "*.css"); do
             bun csso "$file" --output "$file"
