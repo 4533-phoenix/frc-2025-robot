@@ -43,7 +43,16 @@ jobs:
           javadoc-source-folder: build/docs/javadoc
           target-folder: .
 
-      # Setup Bun
+      # Cache minhtml binary
+      - name: Cache minhtml binary
+        id: cache-minhtml
+        uses: actions/cache@v4
+        with:
+          path: minhtml
+          key: minhtml-0.16.4-${{ runner.os }}
+          restore-keys: |
+            minhtml-0.16.4-
+
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
@@ -64,17 +73,32 @@ jobs:
             sed -i "$REPLACEMENTS" "$file"
             echo "Processed $file"
           done
-
-      # Install minify
+          
       - name: Install minify
         run: bun install -g minify
 
-      # Minify all files
-      - name: Minify all files
+      # Minify HTML files
+      - name: Minify HTML files
         run: |
-          for file in $(find build/docs/javadoc -type f \( -name "*.html" -o -name "*.js" -o -name "*.css" \)); do
-            minify "$file" -o "$file"
-            echo "Minified $file"
+          for file in $(find build/docs/javadoc -name "*.html"); do
+            minify --html "$file" -o "$file"
+            echo "Minified HTML: $file"
+          done
+
+      # Minify JavaScript files
+      - name: Minify JavaScript files
+        run: |
+          for file in $(find build/docs/javadoc -name "*.js"); do
+            minify --js "$file" -o "$file"
+            echo "Minified JavaScript: $file"
+          done
+
+      # Minify CSS files
+      - name: Minify CSS files
+        run: |
+          for file in $(find build/docs/javadoc -name "*.css"); do
+            minify --css "$file" -o "$file"
+            echo "Minified CSS: $file"
           done
 
       # Upload the Javadoc as a Pages artifact
