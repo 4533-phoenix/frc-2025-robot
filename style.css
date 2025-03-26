@@ -126,6 +126,10 @@ ul {
   list-style-type: disc;
 }
 
+li.circle {
+  list-style: circle;    
+}
+
 .package-signature {
     font-family: 'Consolas', monospace;
     color: var(--secondary-text-color);
