@@ -43,16 +43,7 @@ jobs:
           javadoc-source-folder: build/docs/javadoc
           target-folder: .
 
-      # Cache minhtml binary
-      - name: Cache minhtml binary
-        id: cache-minhtml
-        uses: actions/cache@v4
-        with:
-          path: minhtml
-          key: minhtml-0.16.4-${{ runner.os }}
-          restore-keys: |
-            minhtml-0.16.4-
-
+      # Setup Bun
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
