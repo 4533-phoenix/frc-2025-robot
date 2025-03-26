@@ -49,7 +49,7 @@ jobs:
           for file in $(find build/docs/javadoc -name "*.html"); do
             sed -i 's/&nbsp;|&nbsp;//g' "$file"
             echo "Processed $file"
-          done | tee cleaned_files.log
+          done
 
       # Upload the Javadoc as a Pages artifact
       - name: Upload Pages artifact
@@ -61,22 +61,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      # Generate Summary
-      - name: Generate Summary
-        run: |
-          echo "## Javadoc Deployment Summary" > summary.md
-          echo "" >> summary.md
-          echo "### Cleaned HTML files" >> summary.md
-          cat cleaned_files.log >> summary.md
-          echo "" >> summary.md
-          echo "### Deployment URL" >> summary.md
-          echo "${{ steps.deployment.outputs.page_url }}" >> summary.md
-          cat summary.md
-
-      # Upload Summary as an Artifact
-      - name: Upload Summary
-        uses: actions/upload-artifact@v3
-        with:
-          name: deployment-summary
-          path: summary.md
