@@ -53,12 +53,10 @@ jobs:
           restore-keys: |
             minhtml-0.16.4-
 
-      # Download minhtml binary if not cached
-      - name: Download minhtml binary
-        if: steps.cache-minhtml.outputs.cache-hit != 'true'
-        run: |
-          curl -L -o minhtml https://github.com/wilsonzlin/minify-html/releases/download/v0.16.4/minhtml-0.16.4-x86_64-unknown-linux-gnu
-          chmod +x minhtml
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
 
       # Define string replacements
       - name: Define string replacements
@@ -66,35 +64,33 @@ jobs:
         run: |
           echo "REPLACEMENTS=s/&nbsp;|&nbsp;//g;s/Package:&nbsp;/<b>Package<\/b>/g;s/<label for=\"search-input\">SEARCH:<\/label>//g;s/Summary:&nbsp;/<b>Summary<\/b>/g;s/Detail:&nbsp;/<b>Detail<\/b>/g" >> $GITHUB_ENV
 
-      # Clean and Minify HTML files
-      - name: Clean and Minify HTML files
+      # Clean HTML files
+      - name: Clean HTML files
         env:
           REPLACEMENTS: ${{ env.REPLACEMENTS }}
         run: |
           for file in $(find build/docs/javadoc -name "*.html"); do
             sed -i "$REPLACEMENTS" "$file"
-            ./minhtml --keep-closing-tags --minify-css "$file" --output "$file"
-            echo "Processed and minified $file"
+            echo "Processed $file"
           done
+          
+      - name: Install minify
+        run: bun install -g minify
 
-      # Set up Bun and install csso
-      - name: Set up Bun
+      # Minify HTML files
+      - name: Minify HTML files
         run: |
-          curl -fsSL https://bun.sh/install | bash
-          echo 'export BUN_INSTALL="$HOME/.bun"' >> $GITHUB_ENV
-          echo 'export PATH="$BUN_INSTALL/bin:$PATH"' >> $GITHUB_ENV
-          source $HOME/.bashrc
-          bun install -g csso-cli
+          find build/docs/javadoc -name "*.html" -exec minify --html {} -o {} \;
 
-      # Minify CSS files using csso
+      # Minify JavaScript files
+      - name: Minify JavaScript files
+        run: |
+          find build/docs/javadoc -name "*.js" -exec minify --js {} -o {} \;
+
+      # Minify CSS files
       - name: Minify CSS files
-        env:
-          PATH: ${{ env.BUN_INSTALL }}/bin:${{ env.PATH }}
         run: |
-          for file in $(find build/docs/javadoc -name "*.css"); do
-            bun csso "$file" --output "$file"
-            echo "Minified $file"
-          done
+          find build/docs/javadoc -name "*.css" -exec minify --css {} -o {} \;
 
       # Upload the Javadoc as a Pages artifact
       - name: Upload Pages artifact
