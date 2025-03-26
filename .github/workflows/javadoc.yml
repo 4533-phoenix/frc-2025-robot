@@ -43,11 +43,12 @@ jobs:
           javadoc-source-folder: build/docs/javadoc
           target-folder: .
 
-      # Remove '&nbsp;|&nbsp;' from HTML files and log the changes
+      # Clean HTML files
       - name: Clean HTML files
         run: |
           for file in $(find build/docs/javadoc -name "*.html"); do
             sed -i 's/&nbsp;|&nbsp;//g' "$file"
+            sed -i 's/Package:&nbsp;/<b>Package<\/b>/g' "$file"
             echo "Processed $file"
           done
 
