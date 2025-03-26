@@ -43,6 +43,11 @@ jobs:
           javadoc-source-folder: build/docs/javadoc
           target-folder: .
 
+      # Remove '|' characters from HTML files
+      - name: Remove '|' from HTML files
+        run: |
+          find build/docs/javadoc -name "*.html" -exec sed -i 's/|//g' {} +
+
       # Upload the Javadoc as a Pages artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
