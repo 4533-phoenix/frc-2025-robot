@@ -64,24 +64,18 @@ jobs:
             sed -i "$REPLACEMENTS" "$file"
             echo "Processed $file"
           done
-          
+
+      # Install minify
       - name: Install minify
         run: bun install -g minify
 
-      # Minify HTML files
-      - name: Minify HTML files
+      # Minify all files
+      - name: Minify all files
         run: |
-          find build/docs/javadoc -name "*.html" -exec minify --html {} -o {} \;
-
-      # Minify JavaScript files
-      - name: Minify JavaScript files
-        run: |
-          find build/docs/javadoc -name "*.js" -exec minify --js {} -o {} \;
-
-      # Minify CSS files
-      - name: Minify CSS files
-        run: |
-          find build/docs/javadoc -name "*.css" -exec minify --css {} -o {} \;
+          for file in $(find build/docs/javadoc -type f \( -name "*.html" -o -name "*.js" -o -name "*.css" \)); do
+            minify "$file" -o "$file"
+            echo "Minified $file"
+          done
 
       # Upload the Javadoc as a Pages artifact
       - name: Upload Pages artifact
