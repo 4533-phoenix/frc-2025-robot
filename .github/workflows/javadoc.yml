@@ -77,12 +77,20 @@ jobs:
             echo "Processed and minified $file"
           done
 
-      # Minify CSS files by removing all whitespace
+      # Set up Bun and install csso
+      - name: Set up Bun
+        run: |
+          curl -fsSL https://bun.sh/install | bash
+          export BUN_INSTALL="$HOME/.bun"
+          export PATH="$BUN_INSTALL/bin:$PATH"
+          source $HOME/.bashrc
+          bun install -g csso-cli
+
+      # Minify CSS files using csso
       - name: Minify CSS files
         run: |
           for file in $(find build/docs/javadoc -name "*.css"); do
-            tr -d '[:space:]' < "$file" > "$file.min"
-            mv "$file.min" "$file"
+            bun csso "$file" --output "$file"
             echo "Minified $file"
           done
 
