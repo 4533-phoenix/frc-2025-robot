@@ -27,6 +27,6 @@ public final class Main {
    * @param args command line arguments (not used)
    */
   public static void main(String... args) {
-    RobotBase.startRobot(Robot::new);
+    RobotBase.startRobot(Robot::getInstance);
   }
 }
