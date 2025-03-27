@@ -461,7 +461,7 @@ public class Swerve extends SubsystemBase {
   /** Resets the odometry if the robot has not received a global pose from the AprilTag system. */
   @Override
   public void periodic() {
-    if (!Apriltag.getInstance().hasRecivedGlobalPose() && !Robot.getInstance().hasLeftDisabled()) {
+    if (!Apriltag.getInstance().hasReceivedGlobalPose() && !Robot.getInstance().hasLeftDisabled()) {
       resetOdometry(new Pose2d(
         getPose().getTranslation(),
         getAllianceRotation()
