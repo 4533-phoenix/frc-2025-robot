@@ -31,7 +31,6 @@ loadScripts(document, 'script');</script>
 <li>Package</li>
 <li>Class</li>
 <li><a href="overview-tree.html">Tree</a></li>
-<li><a href="deprecated-list.html">Deprecated</a></li>
 <li class="nav-bar-cell1-rev">Index</li>
 <li><a href="help-doc.html#index">Help</a></li>
 </ul>
@@ -255,7 +254,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#createPointToClosestSupplier(frc.robot.helpers.POI%5B%5D)" class="member-name-link">createPointToClosestSupplier(POI[])</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">For backward compatibility.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#createPointToClosestSupplier(frc.robot.helpers.POI%5B%5D,java.lang.String)" class="member-name-link">createPointToClosestSupplier(POI[], String)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
@@ -581,8 +580,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Get estimated global robot pose from this camera.</div>
 </dd>
-<dt><a href="frc/robot/Robot.html#getInstance()" class="member-name-link">getInstance()</a> - Static method in class frc.robot.<a href="frc/robot/Robot.html" title="class in frc.robot">Robot</a></dt>
-<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.html#getEstimationStdDevs(edu.wpi.first.math.geometry.Pose2d,java.util.List)" class="member-name-link">getEstimationStdDevs(Pose2d, List&lt;PhotonTrackedTarget&gt;)</a> - Static method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></dt>
+<dd>
+<div class="block">The standard deviations of the estimated pose from <a href="frc/robot/subsystems/Apriltag.Camera.html#getEstimatedGlobalPose(edu.wpi.first.math.geometry.Pose2d)"><code>Apriltag.Camera.getEstimatedGlobalPose(Pose2d)</code></a>, for use with <code>SwerveDrivePoseEstimator</code>.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html#getInstance()" class="member-name-link">getInstance()</a> - Static method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
 <dd>
 <div class="block">Gets the singleton instance of the AlgaArm subsystem.</div>
@@ -677,14 +678,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/Constants.CoralArmConstants.ArmState.html#hashCode()" class="member-name-link">hashCode()</a> - Method in record class frc.robot.<a href="frc/robot/Constants.CoralArmConstants.ArmState.html" title="class in frc.robot">Constants.CoralArmConstants.ArmState</a></dt>
 <dd>
 <div class="block">Returns a hash code value for this object.</div>
-</dd>
-<dt><a href="frc/robot/Robot.html#hasLeftDisabled()" class="member-name-link">hasLeftDisabled()</a> - Method in class frc.robot.<a href="frc/robot/Robot.html" title="class in frc.robot">Robot</a></dt>
-<dd>
-<div class="block">Get whether the robot has left disabled</div>
-</dd>
-<dt><a href="frc/robot/subsystems/Apriltag.html#hasReceivedGlobalPose()" class="member-name-link">hasReceivedGlobalPose()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></dt>
-<dd>
-<div class="block">Whether the subsystem has received a global pose from vision.</div>
 </dd>
 <dt><a href="frc/robot/helpers/CustomSwerveInput.html#headingOffset(boolean)" class="member-name-link">headingOffset(boolean)</a> - Method in class frc.robot.helpers.<a href="frc/robot/helpers/CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></dt>
 <dd>
@@ -857,10 +850,6 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/CoralManipulator.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="frc/robot/subsystems/Swerve.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
-<dd>
-<div class="block">Resets the odometry if the robot has not received a global pose from the AprilTag system.</div>
-</dd>
 <dt><a href="frc/robot/Constants.ApriltagConstants.html#PHOTON_CAMERAS" class="member-name-link">PHOTON_CAMERAS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.html" title="class in frc.robot">Constants.ApriltagConstants</a></dt>
 <dd>
 <div class="block">Photon cameras.</div>
@@ -922,6 +911,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/Robot.html" class="type-name-link" title="class in frc.robot">Robot</a> - Class in <a href="frc/robot/package-summary.html">frc.robot</a></dt>
 <dd>
 <div class="block">Main robot class that manages the robot's lifecycle and operational modes.</div>
+</dd>
+<dt><a href="frc/robot/Robot.html#%3Cinit%3E()" class="member-name-link">Robot()</a> - Constructor for class frc.robot.<a href="frc/robot/Robot.html" title="class in frc.robot">Robot</a></dt>
+<dd>
+<div class="block">Creates a new Robot and initializes the RobotContainer.</div>
 </dd>
 <dt><a href="frc/robot/RobotContainer.html" class="type-name-link" title="class in frc.robot">RobotContainer</a> - Class in <a href="frc/robot/package-summary.html">frc.robot</a></dt>
 <dd>

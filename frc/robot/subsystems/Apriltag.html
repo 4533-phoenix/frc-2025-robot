@@ -35,7 +35,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -132,21 +131,22 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get the distance of the robot from a specific AprilTag.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInstance()" class="member-name-link">getInstance</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.math.Matrix&lt;edu.wpi.first.math.numbers.N3,<wbr>edu.wpi.first.math.numbers.N1&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getEstimationStdDevs(edu.wpi.first.math.geometry.Pose2d,java.util.List)" class="member-name-link">getEstimationStdDevs</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;estimatedPose,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;org.photonvision.targeting.PhotonTrackedTarget&gt;&nbsp;targets)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">The standard deviations of the estimated pose from <a href="Apriltag.Camera.html#getEstimatedGlobalPose(edu.wpi.first.math.geometry.Pose2d)"><code>Apriltag.Camera.getEstimatedGlobalPose(Pose2d)</code></a>, for use with <code>SwerveDrivePoseEstimator</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInstance()" class="member-name-link">getInstance</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Gets the instance of the <a href="Apriltag.html" title="class in frc.robot.subsystems"><code>Apriltag</code></a> class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>org.photonvision.targeting.PhotonTrackedTarget</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTargetFromId(int,java.lang.String)" class="member-name-link">getTargetFromId</a><wbr>(int&nbsp;id,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>org.photonvision.targeting.PhotonTrackedTarget</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTargetFromId(int,java.lang.String)" class="member-name-link">getTargetFromId</a><wbr>(int&nbsp;id,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cameraName)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get tracked target from a camera for a specific AprilTag ID.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasReceivedGlobalPose()" class="member-name-link">hasReceivedGlobalPose</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Whether the subsystem has received a global pose from vision.</div>
+<div class="block">Get tracked target from a camera for a specific AprilTag ID.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
@@ -184,17 +184,6 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The instance of the <a href="Apriltag.html" title="class in frc.robot.subsystems"><code>Apriltag</code></a> class.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="hasReceivedGlobalPose()">
-<h3>hasReceivedGlobalPose</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasReceivedGlobalPose</span>()</div>
-<div class="block">Whether the subsystem has received a global pose from vision.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>True if a global pose has been received, false otherwise</dd>
 </dl>
 </section>
 </li>
@@ -256,6 +245,22 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Map of camera name to Camera object</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEstimationStdDevs(edu.wpi.first.math.geometry.Pose2d,java.util.List)">
+<h3>getEstimationStdDevs</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">edu.wpi.first.math.Matrix&lt;edu.wpi.first.math.numbers.N3,<wbr>edu.wpi.first.math.numbers.N1&gt;</span>&nbsp;<span class="element-name">getEstimationStdDevs</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d&nbsp;estimatedPose,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;org.photonvision.targeting.PhotonTrackedTarget&gt;&nbsp;targets)</span></div>
+<div class="block">The standard deviations of the estimated pose from <a href="Apriltag.Camera.html#getEstimatedGlobalPose(edu.wpi.first.math.geometry.Pose2d)"><code>Apriltag.Camera.getEstimatedGlobalPose(Pose2d)</code></a>, for use with <code>SwerveDrivePoseEstimator</code>. This should
+ only be used when there are targets visible.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>estimatedPose</code> - The estimated pose to guess standard deviations for.</dd>
+<dd><code>targets</code> - The targets used in the calc for the pose.</dd>
+<dt>Returns:</dt>
+<dd>The calculated standard deviations. Or empty if not suitable for estimation.</dd>
 </dl>
 </section>
 </li>
