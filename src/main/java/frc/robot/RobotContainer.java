@@ -132,7 +132,7 @@ public class RobotContainer {
             driveInputStream
                 .copy()
                 .withHeading(
-                    swerveDrive.createPointToClosestSupplier(Constants.FieldConstants.ALL_POIS))
+                    swerveDrive.createPointToClosestSupplier(Constants.FieldConstants.ALL_POIS, null))
                 .headingWhile(true));
     swerveDrive.setDefaultCommand(driveFieldOrientedDirectAngle);
 

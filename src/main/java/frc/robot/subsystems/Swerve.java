@@ -20,9 +20,9 @@ import edu.wpi.first.wpilibj.DriverStation.Alliance;
 import edu.wpi.first.wpilibj.Filesystem;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Robot;
 import frc.robot.Constants.RobotConstants;
 import frc.robot.helpers.POI;
-
 import java.io.File;
 import java.util.function.Supplier;
 import swervelib.SwerveDrive;
@@ -49,7 +49,7 @@ import swervelib.telemetry.SwerveDriveTelemetry.TelemetryVerbosity;
  */
 public class Swerve extends SubsystemBase {
   private static Swerve instance;
-  private SwerveDrive drivebase; 
+  private SwerveDrive drivebase;
 
   /**
    * Returns the singleton instance of the Swerve subsystem. Creates a new instance if one does not
@@ -437,8 +437,7 @@ public class Swerve extends SubsystemBase {
    * @param tag The tag to filter by, or null to consider all POIs
    * @return A supplier that provides the rotation toward the closest matching POI when called
    */
-  public Supplier<Rotation2d> createPointToClosestSupplier(
-      POI[] points, String tag) {
+  public Supplier<Rotation2d> createPointToClosestSupplier(POI[] points, String tag) {
     return () -> {
       Pose2d closestPose = getClosestPOIByTag(points, tag);
       if (closestPose == null) {
@@ -454,7 +453,19 @@ public class Swerve extends SubsystemBase {
    * @param points Array of POIs to target.
    * @return A supplier that provides the rotation toward the closest matching POI when called.
    */
+  @Deprecated
   public Supplier<Rotation2d> createPointToClosestSupplier(POI[] points) {
     return createPointToClosestSupplier(points, null);
+  }
+
+  /** Resets the odometry if the robot has not received a global pose from the AprilTag system. */
+  @Override
+  public void periodic() {
+    if (!Apriltag.getInstance().hasRecivedGlobalPose() && !Robot.getInstance().hasLeftDisabled()) {
+      resetOdometry(new Pose2d(
+        getPose().getTranslation(),
+        getAllianceRotation()
+      ));
+    }
   }
 }
