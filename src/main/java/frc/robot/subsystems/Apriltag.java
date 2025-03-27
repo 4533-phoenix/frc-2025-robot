@@ -40,9 +40,6 @@ public final class Apriltag extends SubsystemBase {
   /** Collection of all cameras on the robot. */
   private final Map<String, Camera> cameras = new HashMap<>();
 
-  /** If we have gotten and applied a global measurement pose */
-  private boolean hasReceivedGlobalPose = false;
-
   /** NetworkTable for publishing apriltag detection state. */
   private final NetworkTable table =
       NetworkTableInstance.getDefault().getTable("Robot").getSubTable("Apriltag");
@@ -82,15 +79,6 @@ public final class Apriltag extends SubsystemBase {
     }
   }
 
-  /**
-   * Whether the subsystem has received a global pose from vision.
-   * 
-   * @return True if a global pose has been received, false otherwise
-   */
-  public boolean hasReceivedGlobalPose() {
-    return hasReceivedGlobalPose;
-  }
-
   /** Updates the pose estimation in the Swerve subsystem with vision measurements. */
   @Override
   public void periodic() {
@@ -128,13 +116,20 @@ public final class Apriltag extends SubsystemBase {
         anyPoseUpdated = true;
         EstimatedRobotPose pose = estimatedPose.get();
 
-        if (!hasReceivedGlobalPose) {
-          hasReceivedGlobalPose = true;
+        // Extract targets from the most recent result
+        List<PhotonTrackedTarget> targets = new ArrayList<>();
+        if (!camera.resultsList.isEmpty()) {
+          PhotonPipelineResult latestResult = camera.resultsList.get(0);
+          if (latestResult.hasTargets()) {
+            targets = latestResult.getTargets();
+          }
         }
 
         // Add vision measurement to swerve drive
         swerveDrive.addVisionMeasurement(
-            pose.estimatedPose.toPose2d(), pose.timestampSeconds, camera.curStdDevs);
+            pose.estimatedPose.toPose2d(),
+            pose.timestampSeconds,
+            getEstimationStdDevs(pose.estimatedPose.toPose2d(), targets));
 
         cameraTable.getEntry("lastPoseTimestamp").setDouble(pose.timestampSeconds);
       }
@@ -143,7 +138,6 @@ public final class Apriltag extends SubsystemBase {
     // Update global vision status
     table.getEntry("totalTagsDetected").setInteger(totalTagsDetected);
     table.getEntry("visionUpdatingPose").setBoolean(anyPoseUpdated);
-    table.getEntry("hasReceivedGlobalPose").setBoolean(hasReceivedGlobalPose);
   }
 
   /**
@@ -439,5 +433,51 @@ public final class Apriltag extends SubsystemBase {
         curStdDevs = estStdDevs;
       }
     }
+  }
+
+  /**
+   * The standard deviations of the estimated pose from {@link
+   * Camera#getEstimatedGlobalPose(Pose2d)}, for use with {@link
+   * edu.wpi.first.math.estimator.SwerveDrivePoseEstimator SwerveDrivePoseEstimator}. This should
+   * only be used when there are targets visible.
+   *
+   * @param estimatedPose The estimated pose to guess standard deviations for.
+   * @param targets The targets used in the calc for the pose.
+   * @return The calculated standard deviations. Or empty if not suitable for estimation.
+   */
+  public static Matrix<N3, N1> getEstimationStdDevs(
+      Pose2d estimatedPose, List<PhotonTrackedTarget> targets) {
+    int numTags = 0;
+    double avgDistance = 0;
+    for (PhotonTrackedTarget target : targets) {
+      var tagPose = ApriltagConstants.FIELD_LAYOUT.getTagPose(target.getFiducialId());
+      if (tagPose.isEmpty()) continue;
+
+      numTags++;
+      avgDistance +=
+          tagPose.get().toPose2d().getTranslation().getDistance(estimatedPose.getTranslation());
+    }
+
+    Matrix<N3, N1> stdDevs = ApriltagConstants.SINGLE_TAG_STD_DEVS;
+    if (numTags == 0) {
+      return stdDevs;
+    }
+
+    avgDistance /= numTags;
+
+    // Decrease std devs if multiple targets are visible
+    if (numTags > 1) {
+      stdDevs = ApriltagConstants.MULTI_TAG_STD_DEVS;
+    }
+
+    // Increase std devs based on average distance
+    if (numTags == 1 && avgDistance > ApriltagConstants.SINGLE_TAG_CUTOFF_METER) {
+      // Too far for only one tag, throw away
+      stdDevs = VecBuilder.fill(Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE);
+    } else {
+      stdDevs = stdDevs.times(1 + (avgDistance * avgDistance / 30.0));
+    }
+
+    return stdDevs;
   }
 }

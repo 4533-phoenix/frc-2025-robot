@@ -43,6 +43,54 @@ jobs:
           javadoc-source-folder: build/docs/javadoc
           target-folder: .
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      # Define string replacements
+      - name: Define string replacements
+        id: define-replacements
+        run: |
+          echo "REPLACEMENTS=s/&nbsp;|&nbsp;//g;s/Package:&nbsp;/<b>Package<\/b>/g;s/<label for=\"search-input\">SEARCH:<\/label>//g;s/Summary:&nbsp;/<b>Summary<\/b>/g;s/Detail:&nbsp;/<b>Detail<\/b>/g" >> $GITHUB_ENV
+
+      # Clean HTML files
+      - name: Clean HTML files
+        env:
+          REPLACEMENTS: ${{ env.REPLACEMENTS }}
+        run: |
+          for file in $(find build/docs/javadoc -name "*.html"); do
+            sed -i "$REPLACEMENTS" "$file"
+            echo "Processed $file"
+          done
+          
+      - name: Install minify
+        run: bun install -g minify
+
+      # Minify HTML files
+      - name: Minify HTML files
+        run: |
+          for file in $(find build/docs/javadoc -name "*.html"); do
+            minify --html "$file" -o "$file"
+            echo "Minified HTML: $file"
+          done
+
+      # Minify JavaScript files
+      - name: Minify JavaScript files
+        run: |
+          for file in $(find build/docs/javadoc -name "*.js"); do
+            minify --js "$file" -o "$file"
+            echo "Minified JavaScript: $file"
+          done
+
+      # Minify CSS files
+      - name: Minify CSS files
+        run: |
+          for file in $(find build/docs/javadoc -name "*.css"); do
+            minify --css "$file" -o "$file"
+            echo "Minified CSS: $file"
+          done
+
       # Upload the Javadoc as a Pages artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
