@@ -21,34 +21,15 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
  * commands managed through the RobotContainer class.
  */
 public class Robot extends TimedRobot {
-  /** Singleton instance */
-  private static Robot instance;
-
   /** The autonomous command to run. */
   private Command autonomousCommand;
 
   /** The robot's container, which holds subsystems and commands. */
   private RobotContainer robotContainer;
 
-  /** If we have left disabled mode */
-  private boolean hasLeftDisabled = false;
-
-  // Private constructor for singleton
-  private Robot() {
+  /** Creates a new Robot and initializes the RobotContainer. */
+  public Robot() {
     robotContainer = new RobotContainer();
-  }
-
-  // Public method to get the singleton instance
-  public static Robot getInstance() {
-    if (instance == null) {
-      instance = new Robot();
-    }
-    return instance;
-  }
-
-  /** Get whether the robot has left disabled */
-  public boolean hasLeftDisabled() {
-    return hasLeftDisabled;
   }
 
   /**
@@ -71,9 +52,7 @@ public class Robot extends TimedRobot {
 
   /** Called once when disabled mode is exited. */
   @Override
-  public void disabledExit() {
-    hasLeftDisabled = true;
-  }
+  public void disabledExit() {}
 
   /**
    * Called when autonomous mode is initialized. Retrieves and schedules the selected autonomous

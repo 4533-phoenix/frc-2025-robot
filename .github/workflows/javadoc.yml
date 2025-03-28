@@ -71,26 +71,23 @@ jobs:
       - name: Minify HTML files
         run: |
           for file in $(find build/docs/javadoc -name "*.html"); do
-            minify "$file" > "${file}.min"
-            mv "${file}.min" "$file"
+            minify --html "$file" -o "$file"
             echo "Minified HTML: $file"
           done
 
-      # # Minify JavaScript files
-      # - name: Minify JavaScript files
-      #   run: |
-      #     for file in $(find build/docs/javadoc -name "*.js"); do
-      #       minify "$file" > "${file}.min"
-      #       mv "${file}.min" "$file"
-      #       echo "Minified JavaScript: $file"
-      #     done
+      # Minify JavaScript files
+      - name: Minify JavaScript files
+        run: |
+          for file in $(find build/docs/javadoc -name "*.js"); do
+            minify --js "$file" -o "$file"
+            echo "Minified JavaScript: $file"
+          done
 
       # Minify CSS files
       - name: Minify CSS files
         run: |
           for file in $(find build/docs/javadoc -name "*.css"); do
-            minify "$file" > "${file}.min"
-            mv "${file}.min" "$file"
+            minify --css "$file" -o "$file"
             echo "Minified CSS: $file"
           done
 
