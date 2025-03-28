@@ -31,6 +31,7 @@ loadScripts(document, 'script');</script>
 <li>Package</li>
 <li>Class</li>
 <li><a href="overview-tree.html">Tree</a></li>
+<li><a href="deprecated-list.html">Deprecated</a></li>
 <li class="nav-bar-cell1-rev">Index</li>
 <li><a href="help-doc.html#index">Help</a></li>
 </ul>
@@ -52,6 +53,10 @@ loadScripts(document, 'script');</script>
 <a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:K">K</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a><span class="vertical-separator">|</span><a href="constant-values.html">Constant&nbsp;Field&nbsp;Values</a>
 <h2 class="title" id="I:A">A</h2>
 <dl class="index">
+<dt><a href="frc/robot/subsystems/CoralArm.html#aboveSafeHeight" class="member-name-link">aboveSafeHeight</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralArm.html" title="class in frc.robot.subsystems">CoralArm</a></dt>
+<dd>
+<div class="block">Trigger that is active when the elevator is at a safe height.</div>
+</dd>
 <dt><a href="frc/robot/helpers/CustomSwerveInput.html#aim(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">aim(Pose2d)</a> - Method in class frc.robot.helpers.<a href="frc/robot/helpers/CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></dt>
 <dd>
 <div class="block">Aim the <code>SwerveDrive</code> at this pose while driving.</div>
@@ -254,7 +259,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#createPointToClosestSupplier(frc.robot.helpers.POI%5B%5D)" class="member-name-link">createPointToClosestSupplier(POI[])</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
-<div class="block">For backward compatibility.</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#createPointToClosestSupplier(frc.robot.helpers.POI%5B%5D,java.lang.String)" class="member-name-link">createPointToClosestSupplier(POI[], String)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
@@ -580,10 +585,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Get estimated global robot pose from this camera.</div>
 </dd>
-<dt><a href="frc/robot/subsystems/Apriltag.html#getEstimationStdDevs(edu.wpi.first.math.geometry.Pose2d,java.util.List)" class="member-name-link">getEstimationStdDevs(Pose2d, List&lt;PhotonTrackedTarget&gt;)</a> - Static method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></dt>
-<dd>
-<div class="block">The standard deviations of the estimated pose from <a href="frc/robot/subsystems/Apriltag.Camera.html#getEstimatedGlobalPose(edu.wpi.first.math.geometry.Pose2d)"><code>Apriltag.Camera.getEstimatedGlobalPose(Pose2d)</code></a>, for use with <code>SwerveDrivePoseEstimator</code>.</div>
-</dd>
+<dt><a href="frc/robot/Robot.html#getInstance()" class="member-name-link">getInstance()</a> - Static method in class frc.robot.<a href="frc/robot/Robot.html" title="class in frc.robot">Robot</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/AlgaArm.html#getInstance()" class="member-name-link">getInstance()</a> - Static method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
 <dd>
 <div class="block">Gets the singleton instance of the AlgaArm subsystem.</div>
@@ -679,6 +682,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns a hash code value for this object.</div>
 </dd>
+<dt><a href="frc/robot/Robot.html#hasLeftDisabled()" class="member-name-link">hasLeftDisabled()</a> - Method in class frc.robot.<a href="frc/robot/Robot.html" title="class in frc.robot">Robot</a></dt>
+<dd>
+<div class="block">Get whether the robot has left disabled</div>
+</dd>
+<dt><a href="frc/robot/subsystems/Apriltag.html#hasReceivedGlobalPose()" class="member-name-link">hasReceivedGlobalPose()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Apriltag.html" title="class in frc.robot.subsystems">Apriltag</a></dt>
+<dd>
+<div class="block">Whether the subsystem has received a global pose from vision.</div>
+</dd>
 <dt><a href="frc/robot/helpers/CustomSwerveInput.html#headingOffset(boolean)" class="member-name-link">headingOffset(boolean)</a> - Method in class frc.robot.helpers.<a href="frc/robot/helpers/CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></dt>
 <dd>
 <div class="block">Heading offset enable</div>
@@ -706,6 +717,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Integral gain.</div>
 </dd>
+<dt><a href="frc/robot/subsystems/CoralArm.html#inSafeAngle" class="member-name-link">inSafeAngle</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralArm.html" title="class in frc.robot.subsystems">CoralArm</a></dt>
+<dd>
+<div class="block">Trigger that is active when the elbow angle won't hit the elevator tower</div>
+</dd>
 <dt><a href="frc/robot/subsystems/CoralManipulator.html#instantStop()" class="member-name-link">instantStop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
 <dd>
 <div class="block">Instantly stops the coral manipulator.</div>
@@ -729,14 +744,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/Constants.FieldConstants.html#INTAKE_STATIONS" class="member-name-link">INTAKE_STATIONS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.FieldConstants.html" title="class in frc.robot">Constants.FieldConstants</a></dt>
 <dd>
 <div class="block">Array of points of interest for intake stations.</div>
-</dd>
-<dt><a href="frc/robot/Constants.CoralArmConstants.html#INTERMEDIATE_ELBOW_BACK_ANGLE" class="member-name-link">INTERMEDIATE_ELBOW_BACK_ANGLE</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralArmConstants.html" title="class in frc.robot">Constants.CoralArmConstants</a></dt>
-<dd>
-<div class="block">Intermediate elbow back angle.</div>
-</dd>
-<dt><a href="frc/robot/Constants.CoralArmConstants.html#INTERMEDIATE_ELBOW_FRONT_ANGLE" class="member-name-link">INTERMEDIATE_ELBOW_FRONT_ANGLE</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralArmConstants.html" title="class in frc.robot">Constants.CoralArmConstants</a></dt>
-<dd>
-<div class="block">Intermediate elbow front angle.</div>
 </dd>
 <dt><a href="frc/robot/Constants.CoralManipulatorConstants.html#INVERTED" class="member-name-link">INVERTED</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralManipulatorConstants.html" title="class in frc.robot">Constants.CoralManipulatorConstants</a></dt>
 <dd>
@@ -850,6 +857,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/CoralManipulator.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/Swerve.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
+<dd>
+<div class="block">Resets the odometry if the robot has not received a global pose from the AprilTag system.</div>
+</dd>
 <dt><a href="frc/robot/Constants.ApriltagConstants.html#PHOTON_CAMERAS" class="member-name-link">PHOTON_CAMERAS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ApriltagConstants.html" title="class in frc.robot">Constants.ApriltagConstants</a></dt>
 <dd>
 <div class="block">Photon cameras.</div>
@@ -912,10 +923,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Main robot class that manages the robot's lifecycle and operational modes.</div>
 </dd>
-<dt><a href="frc/robot/Robot.html#%3Cinit%3E()" class="member-name-link">Robot()</a> - Constructor for class frc.robot.<a href="frc/robot/Robot.html" title="class in frc.robot">Robot</a></dt>
-<dd>
-<div class="block">Creates a new Robot and initializes the RobotContainer.</div>
-</dd>
 <dt><a href="frc/robot/RobotContainer.html" class="type-name-link" title="class in frc.robot">RobotContainer</a> - Class in <a href="frc/robot/package-summary.html">frc.robot</a></dt>
 <dd>
 <div class="block">Main robot configuration class that binds controls and commands to subsystems.</div>
@@ -955,6 +962,14 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:S">S</h2>
 <dl class="index">
+<dt><a href="frc/robot/Constants.CoralArmConstants.html#SAFE_ANGLE_DEADZONE_BACK" class="member-name-link">SAFE_ANGLE_DEADZONE_BACK</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralArmConstants.html" title="class in frc.robot">Constants.CoralArmConstants</a></dt>
+<dd>
+<div class="block">Safe angle deadzone back</div>
+</dd>
+<dt><a href="frc/robot/Constants.CoralArmConstants.html#SAFE_ANGLE_DEADZONE_FRONT" class="member-name-link">SAFE_ANGLE_DEADZONE_FRONT</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralArmConstants.html" title="class in frc.robot">Constants.CoralArmConstants</a></dt>
+<dd>
+<div class="block">Safe angle deadzone front</div>
+</dd>
 <dt><a href="frc/robot/Constants.CoralArmConstants.html#SAFE_ELEVATOR_HEIGHT" class="member-name-link">SAFE_ELEVATOR_HEIGHT</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.CoralArmConstants.html" title="class in frc.robot">Constants.CoralArmConstants</a></dt>
 <dd>
 <div class="block">Safe elevator height.</div>
