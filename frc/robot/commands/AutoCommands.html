@@ -114,6 +114,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a simple test command that drives the robot backward at a fixed speed for a set time.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#victoryLap()" class="member-name-link">victoryLap</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Creates a command that follows the PathPlanner path "Victory Lap".</div>
+</div>
 </div>
 </div>
 </div>
@@ -173,6 +178,18 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>A command sequence for the complete right-side autonomous routine</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="victoryLap()">
+<h3>victoryLap</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">victoryLap</span>()</div>
+<div class="block">Creates a command that follows the PathPlanner path "Victory Lap".
+ This autonomous routine makes the robot drive in a predetermined path around the field.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A command that follows the Victory Lap path, or a simple backup command if the path cannot be loaded</dd>
 </dl>
 </section>
 </li>
