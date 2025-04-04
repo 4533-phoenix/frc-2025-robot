@@ -9,6 +9,7 @@ public final class POI {
   private final Pose2d pose;
   private final String tag;
   private final String addr;
+  private Pose2d cachedRedPose; // Cache for the flipped pose
 
   /**
    * Creates a new POI.
@@ -33,7 +34,10 @@ public final class POI {
     if (alliance == Alliance.Blue) {
       return pose;
     } else {
-      return FlippingUtil.flipFieldPose(pose);
+      if (cachedRedPose == null) {
+        cachedRedPose = FlippingUtil.flipFieldPose(pose);
+      }
+      return cachedRedPose;
     }
   }
 

@@ -204,7 +204,7 @@ public final class Constants {
             "INTAKE", new ArmState(Degree.of(70), Inch.of(1.25)),
             "LOW", new ArmState(Degree.of(-90), Inch.of(6.0)),
             "MID", new ArmState(Degree.of(-30), Inch.of(0.0)),
-            "HIGH", new ArmState(Degree.of(-30), Inch.of(15.0)),
+            "HIGH", new ArmState(Degree.of(-30), Inch.of(15.5)),
             "CLIMB", new ArmState(Degree.of(-30), Inch.of(13.0)));
   }
 

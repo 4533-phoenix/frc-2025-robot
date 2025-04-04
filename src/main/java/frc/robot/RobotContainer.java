@@ -1,6 +1,9 @@
 package frc.robot;
 
+import java.util.function.Supplier;
+
 import edu.wpi.first.math.geometry.Pose2d;
+import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.DriverStation;
@@ -64,6 +67,11 @@ public class RobotContainer {
           .deadband(OIConstants.DRIVER_DEADBAND)
           .allianceRelativeControl(true)
           .headingWhile(true);
+
+  /** Create the closest point supplier */
+  private final Supplier<Rotation2d> closestPointSupplier =
+    swerveDrive.createPointToClosestSupplier(
+      Constants.FieldConstants.ALL_POIS, null);
 
   // private final SwerveInputStream driveInputStream =
   // SwerveInputStream.of(swerveDrive.getSwerveDrive(),
@@ -141,9 +149,7 @@ public class RobotContainer {
         swerveDrive.driveFieldOriented(
             driveInputStream
                 .copy()
-                .withHeading(
-                    swerveDrive.createPointToClosestSupplier(
-                        Constants.FieldConstants.ALL_POIS, null))
+                .withHeading(closestPointSupplier)
                 .headingWhile(true));
     swerveDrive.setDefaultCommand(driveFieldOrientedDirectAngle);
 
