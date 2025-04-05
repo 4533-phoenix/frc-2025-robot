@@ -4,6 +4,7 @@ import edu.wpi.first.math.geometry.Pose3d;
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.wpilibj.Alert;
 import edu.wpi.first.wpilibj.Alert.AlertType;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.ApriltagConstants;
 import frc.robot.helpers.PhotonConfig;
@@ -45,7 +46,7 @@ public class Vision extends SubsystemBase {
   }
 
   public static record AprilTagCamera(
-      ApriltagIO io, AprilTagIOInputs inputs, Alert disconnectedAlert) {}
+      ApriltagIO io, AprilTagIOInputs inputs, PhotonConfig config, Alert disconnectedAlert) {}
 
   private final List<AprilTagCamera> aprilTagCameras = new ArrayList<>();
 
@@ -63,7 +64,7 @@ public class Vision extends SubsystemBase {
               "The AprilTag camera " + config.name() + " is disconnected.",
               AlertType.kWarning);
 
-      aprilTagCameras.add(new AprilTagCamera(io, new AprilTagIOInputs(), disconnectedAlert));
+      aprilTagCameras.add(new AprilTagCamera(io, new AprilTagIOInputs(), config, disconnectedAlert));
     }
   }
   
@@ -99,6 +100,7 @@ public class Vision extends SubsystemBase {
       cam.io.updateInputs(cam.inputs);
 
       cam.disconnectedAlert.set(!cam.inputs.connected);
+      SmartDashboard.putBoolean(cam.config.name() + " Connected", cam.inputs.connected);
 
       validCorners.addAll(Arrays.asList(cam.inputs.validCorners));
       rejectedCorners.addAll(Arrays.asList(cam.inputs.rejectedCorners));
