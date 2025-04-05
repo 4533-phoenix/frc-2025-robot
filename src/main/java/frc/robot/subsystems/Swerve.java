@@ -19,11 +19,14 @@ import edu.wpi.first.math.kinematics.ChassisSpeeds;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.DriverStation.Alliance;
 import edu.wpi.first.wpilibj.Filesystem;
+import edu.wpi.first.wpilibj.smartdashboard.Field2d;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.RobotConstants;
 import frc.robot.Robot;
 import frc.robot.helpers.POI;
+import frc.robot.subsystems.vision.Vision;
+
 import java.io.File;
 import java.util.function.Supplier;
 import swervelib.SwerveDrive;
@@ -463,10 +466,19 @@ public class Swerve extends SubsystemBase {
     return createPointToClosestSupplier(points, null);
   }
 
+  /**
+   * Get the drivebase's field 2d object.
+   * 
+   * @return the field 2d object
+   */
+  public Field2d getField2d() {
+    return drivebase.field;
+  }
+
   /** Resets the odometry if the robot has not received a global pose from the AprilTag system. */
   @Override
   public void periodic() {
-    if (!Apriltag.getInstance().hasReceivedGlobalPose() && !Robot.getInstance().hasLeftDisabled()) {
+    if (!Vision.getInstance().hasReceivedGlobalPose() && !Robot.getInstance().hasLeftDisabled()) {
       resetOdometry();
     }
   }
