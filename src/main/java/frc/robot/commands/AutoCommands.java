@@ -9,7 +9,6 @@ import edu.wpi.first.wpilibj.DriverStation.Alliance;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 import frc.robot.Constants.FieldConstants;
-import frc.robot.subsystems.AlgaArm;
 import frc.robot.subsystems.CoralArm;
 import frc.robot.subsystems.CoralManipulator;
 import frc.robot.subsystems.Swerve;
@@ -67,7 +66,6 @@ public class AutoCommands {
     // Get subsystem instances
     Swerve swerve = Swerve.getInstance();
     CoralArm coralArm = CoralArm.getInstance();
-    AlgaArm algaArm = AlgaArm.getInstance();
     CoralManipulator coralManipulator = CoralManipulator.getInstance();
 
     return Commands.sequence(
@@ -80,8 +78,7 @@ public class AutoCommands {
                           FieldConstants.getPoiByTagAndAddress("CORAL_REEF", "i").get(alliance);
                       swerve.driveToPose(firstPose).schedule();
                     }),
-                coralArm.setMid(), // Position coral arm for delivery
-                algaArm.release()), // Ensure alga arm is not in the way
+                coralArm.setMid()),
 
             // Phase 2: Wait for movement to complete before delivery
             Commands.waitUntil(
@@ -117,8 +114,7 @@ public class AutoCommands {
                           FieldConstants.getPoiByTagAndAddress("CORAL_REEF", "j").get(alliance);
                       swerve.driveToPose(secondPose).schedule();
                     }),
-                coralArm.setMid(), // Position for delivery
-                algaArm.release()),
+                coralArm.setMid()),
 
             // Phase 6: Wait for movement to complete before second delivery
             Commands.waitUntil(
@@ -148,7 +144,6 @@ public class AutoCommands {
     // Get subsystem instances
     Swerve swerve = Swerve.getInstance();
     CoralArm coralArm = CoralArm.getInstance();
-    AlgaArm algaArm = AlgaArm.getInstance();
     CoralManipulator coralManipulator = CoralManipulator.getInstance();
 
     return Commands.sequence(
@@ -161,8 +156,7 @@ public class AutoCommands {
                           FieldConstants.getPoiByTagAndAddress("CORAL_REEF", "f").get(alliance);
                       swerve.driveToPose(firstPose).schedule();
                     }),
-                coralArm.setMid(), // Position coral arm for delivery
-                algaArm.release()), // Ensure alga arm is not in the way
+                coralArm.setMid()),
 
             // Phase 2: Wait for movement to complete before delivery
             Commands.waitUntil(
@@ -197,8 +191,7 @@ public class AutoCommands {
                           FieldConstants.getPoiByTagAndAddress("CORAL_REEF", "e").get(alliance);
                       swerve.driveToPose(secondPose).schedule();
                     }),
-                coralArm.setMid(), // Position for delivery
-                algaArm.release()),
+                coralArm.setMid()),
 
             // Phase 6: Wait for movement to complete before second delivery
             Commands.waitUntil(

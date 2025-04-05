@@ -21,6 +21,8 @@ import edu.wpi.first.units.measure.Distance;
 import edu.wpi.first.units.measure.LinearVelocity;
 import frc.robot.helpers.PID;
 import frc.robot.helpers.POI;
+import frc.robot.helpers.PhotonConfig;
+
 import java.util.Arrays;
 import java.util.Map;
 import org.photonvision.PhotonPoseEstimator.PoseStrategy;
@@ -239,73 +241,21 @@ public final class Constants {
 
   /** Constants for apriltag vision. */
   public static final class ApriltagConstants {
-    /** Apriltag camera configuration. */
-    public static final class ApriltagCameraConfig {
-      /** Name of the camera. */
-      private String name;
-
-      /** Transform of the camera. */
-      private Transform3d transform;
-
-      /** Strategy of the camera. */
-      private PoseStrategy strategy;
-
-      /**
-       * Apriltag camera configuration.
-       *
-       * @param name Name of the camera
-       * @param transform Transform of the camera
-       * @param strategy Strategy of the camera
-       */
-      public ApriltagCameraConfig(String name, Transform3d transform, PoseStrategy strategy) {
-        this.name = name;
-        this.transform = transform;
-        this.strategy = strategy;
-      }
-
-      /**
-       * Gets the name of the camera.
-       *
-       * @return Name of the camera
-       */
-      public String getName() {
-        return name;
-      }
-
-      /**
-       * Gets the transform of the camera.
-       *
-       * @return Transform of the camera
-       */
-      public Transform3d getTransform() {
-        return transform;
-      }
-
-      /**
-       * Gets the strategy of the camera.
-       *
-       * @return Strategy of the camera
-       */
-      public PoseStrategy getStrategy() {
-        return strategy;
-      }
-    }
-
     /** Photon cameras. */
-    public static final ApriltagCameraConfig[] PHOTON_CAMERAS = {
-      new ApriltagCameraConfig(
+    public static final PhotonConfig[] PHOTON_CAMERAS = {
+      new PhotonConfig(
           "Front Left",
           new Transform3d(
               new Translation3d(0.27305, 0.28448, 0.2921),
               new Rotation3d(0, Degree.of(-20.0).in(Radian), Degree.of(-16.38).in(Radian))),
           PoseStrategy.MULTI_TAG_PNP_ON_COPROCESSOR),
-      new ApriltagCameraConfig(
+      new PhotonConfig(
           "Back Right",
           new Transform3d(
               new Translation3d(-0.2794, -0.3175, 0.2921),
               new Rotation3d(0, Degree.of(-20.0).in(Radian), Degree.of(-196.38).in(Radian))),
           PoseStrategy.MULTI_TAG_PNP_ON_COPROCESSOR),
-      new ApriltagCameraConfig(
+      new PhotonConfig(
           "Back Left",
           new Transform3d(
               new Translation3d(-0.28194, 0.3048, 0.2667),
@@ -334,6 +284,9 @@ public final class Constants {
 
     /** Maximum number of camera results to keep in memory */
     public static final int MAX_CAMERA_RESULTS = 5;
+
+    /** MORE BULLSHIT */
+    public static final int NO_AMBIGUITY = -100;
   }
 
   /** Constants for field positions and points of interest */

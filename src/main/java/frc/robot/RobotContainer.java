@@ -18,6 +18,7 @@ import frc.robot.Constants.OIConstants;
 import frc.robot.commands.*;
 import frc.robot.helpers.CustomSwerveInput;
 import frc.robot.subsystems.*;
+import frc.robot.subsystems.vision.Vision;
 
 /**
  * Main robot configuration class that binds controls and commands to subsystems. This class serves
@@ -84,9 +85,6 @@ public class RobotContainer {
   // .deadband(OIConstants.DRIVER_DEADBAND)
   // .allianceRelativeControl(true);
 
-  /** Alga arm subsystem for handling alga gamepieces. */
-  private final AlgaArm algaArm = AlgaArm.getInstance();
-
   /** Coral handler subsystem for handling coral gamepieces. */
   private final CoralManipulator coralManipulator = CoralManipulator.getInstance();
 
@@ -98,7 +96,7 @@ public class RobotContainer {
 
   /** Apriltag subsystem for handling apriltags */
   @SuppressWarnings("unused")
-  private final Apriltag apriltag = Apriltag.getInstance();
+  private final Vision apriltag = Vision.getInstance();
 
   // Add the SendableChooser for autonomous
   private final SendableChooser<Command> autoChooser = new SendableChooser<>();
@@ -174,14 +172,6 @@ public class RobotContainer {
 
   /** Configure operator controller bindings for game piece and mechanism controls */
   private void configureOperatorControls() {
-    // ---- ALGA ARM CONTROLS ----
-    // Toggle alga arm
-    operatorController.a().onTrue(algaArm.toggle());
-    // Run alga intake while held
-    operatorController.leftBumper().whileTrue(algaArm.runIntake());
-    // Run alga drop while held
-    operatorController.rightBumper().whileTrue(algaArm.runDrop());
-
     // ---- CORAL MANIPULATOR CONTROLS ----
     operatorController.b().onTrue(coralManipulator.ejectOrDrop().onlyIf(coralArm.onFront.negate()));
 
