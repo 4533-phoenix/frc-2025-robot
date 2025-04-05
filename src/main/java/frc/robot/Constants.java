@@ -285,7 +285,7 @@ public final class Constants {
     /** Maximum number of camera results to keep in memory */
     public static final int MAX_CAMERA_RESULTS = 5;
 
-    /** MORE BULLSHIT */
+    /** Value indicating no ambiguity in pose estimation */
     public static final int NO_AMBIGUITY = -100;
   }
 
