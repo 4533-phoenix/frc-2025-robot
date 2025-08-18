@@ -2,4 +2,3 @@ frc.robot
 frc.robot.commands
 frc.robot.helpers
 frc.robot.subsystems
-frc.robot.subsystems.vision

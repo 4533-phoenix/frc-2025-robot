@@ -35,7 +35,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -84,20 +83,25 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Swerve</span>
 <span class="extends-implements">extends edu.wpi.first.wpilibj2.command.SubsystemBase</span></div>
-<div class="block">Manages the robot's swerve drive system, providing control over movement, autonomous path
- following, and odometry tracking. This subsystem handles both autonomous and teleoperated drive
+<div class="block">Manages the robot's swerve drive system, providing control over movement,
+ autonomous path
+ following, and odometry tracking. This subsystem handles both autonomous and
+ teleoperated drive
  control, integrating with PathPlanner for advanced autonomous capabilities.
 
- <p>Features include:
+ <p>
+ Features include:
 
  <ul>
-   <li>Field-oriented drive control
-   <li>Autonomous path following and path finding
-   <li>Odometry tracking and pose estimation
-   <li>Wheel locking for stability
+ <li>Field-oriented drive control
+ <li>Autonomous path following and path finding
+ <li>Odometry tracking and pose estimation
+ <li>Wheel locking for stability
  </ul>
 
- <p>Uses YAGSL (Yet Another Generic Swerve Library) for underlying swerve drive implementation and
+ <p>
+ Uses YAGSL (Yet Another Generic Swerve Library) for underlying swerve drive
+ implementation and
  PathPlanner for autonomous navigation.</div>
 </section>
 <section class="summary">
@@ -112,7 +116,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">Swerve</a>()</code></div>
 <div class="col-last even-row-color">
-<div class="block">Creates a new Swerve subsystem that manages drive control, path following, and odometry.</div>
+<div class="block">Creates a new Swerve subsystem that manages drive control, path following,
+ and odometry.</div>
 </div>
 </div>
 </section>
@@ -122,49 +127,16 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation2d&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#createPointToClosestSupplier(frc.robot.helpers.POI%5B%5D)" class="member-name-link">createPointToClosestSupplier</a><wbr>(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation2d&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createPointToClosestSupplier(frc.robot.helpers.POI%5B%5D,java.lang.String)" class="member-name-link">createPointToClosestSupplier</a><wbr>(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tag)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Creates a supplier that returns a Rotation2d pointing toward the closest POI with a specific
- tag.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#driveFieldOriented(java.util.function.Supplier)" class="member-name-link">driveFieldOriented</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.kinematics.ChassisSpeeds&gt;&nbsp;velocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Creates a command to drive the robot in field-oriented mode.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#driveToPose(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">driveToPose</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;targetPose)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Creates a command to autonomously drive the robot to a specific pose using PathPlanner.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.geometry.Pose2d</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClosestPOI(frc.robot.helpers.POI%5B%5D)" class="member-name-link">getClosestPOI</a><wbr>(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Finds the closest point from an array of field POIs to the robot's current position.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.geometry.Pose2d</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClosestPOIByTag(frc.robot.helpers.POI%5B%5D,java.lang.String)" class="member-name-link">getClosestPOIByTag</a><wbr>(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tag)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Finds the closest POI with a specific tag to the robot's current position.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.geometry.Pose2d</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClosestPoint(edu.wpi.first.math.geometry.Pose2d%5B%5D)" class="member-name-link">getClosestPoint</a><wbr>(edu.wpi.first.math.geometry.Pose2d[]&nbsp;points)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Finds the closest point from an array of positions to the robot's current position.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj.smartdashboard.Field2d</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getField2d()" class="member-name-link">getField2d</a>()</code></div>
@@ -199,23 +171,20 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Resets the odometry if the robot has not received a global pose from the AprilTag system.</div>
+<div class="block">Resets the odometry if the robot has not received a global pose from the
+ AprilTag system.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetOdometry()" class="member-name-link">resetOdometry</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Resets the robot's odometry to the center of the field (8.774m, 4.026m), with rotation based on
+<div class="block">Resets the robot's odometry to the center of the field (8.774m, 4.026m), with
+ rotation based on
  alliance (0° for blue, 180° for red).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetOdometry(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">resetOdometry</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Resets the robot's odometry to a specific pose.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setupPathPlanner()" class="member-name-link">setupPathPlanner</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Configures PathPlanner for autonomous path following.</div>
 </div>
 </div>
 </div>
@@ -244,8 +213,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;()">
 <h3>Swerve</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Swerve</span>()</div>
-<div class="block">Creates a new Swerve subsystem that manages drive control, path following, and odometry.
- Initializes the swerve drive with high telemetry verbosity and configures various drive
+<div class="block">Creates a new Swerve subsystem that manages drive control, path following,
+ and odometry.
+ Initializes the swerve drive with high telemetry verbosity and configures
+ various drive
  parameters.</div>
 <dl class="notes">
 <dt>Throws:</dt>
@@ -265,7 +236,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getInstance()">
 <h3>getInstance</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Swerve.html" title="class in frc.robot.subsystems">Swerve</a></span>&nbsp;<span class="element-name">getInstance</span>()</div>
-<div class="block">Returns the singleton instance of the Swerve subsystem. Creates a new instance if one does not
+<div class="block">Returns the singleton instance of the Swerve subsystem. Creates a new
+ instance if one does not
  exist.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -274,31 +246,25 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setupPathPlanner()">
-<h3>setupPathPlanner</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setupPathPlanner</span>()</div>
-<div class="block">Configures PathPlanner for autonomous path following. Sets up the necessary callbacks and
- controllers for autonomous navigation, including pose estimation, odometry reset, and velocity
- control. Also initializes path finding warm-up for better initial performance.</div>
-</section>
-</li>
-<li>
 <section class="detail" id="driveFieldOriented(java.util.function.Supplier)">
 <h3>driveFieldOriented</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">driveFieldOriented</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.kinematics.ChassisSpeeds&gt;&nbsp;velocity)</span></div>
 <div class="block">Creates a command to drive the robot in field-oriented mode.
 
- <p>Example:
+ <p>
+ Example:
 
  <pre><code>
  Swerve.getInstance().driveFieldOriented(() -&gt; new ChassisSpeeds(1.0, 0.0, 0.5));
  </code></pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>velocity</code> - a supplier that provides the desired chassis speeds in field-oriented
-     coordinates</dd>
+<dd><code>velocity</code> - a supplier that provides the desired chassis speeds in
+                 field-oriented
+                 coordinates</dd>
 <dt>Returns:</dt>
-<dd>a command that continuously updates drive output based on supplied velocities</dd>
+<dd>a command that continuously updates drive output based on supplied
+         velocities</dd>
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list">
@@ -312,10 +278,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="lockWheels()">
 <h3>lockWheels</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">lockWheels</span>()</div>
-<div class="block">Locks the swerve modules in an X pattern to prevent the robot from moving. Useful for
+<div class="block">Locks the swerve modules in an X pattern to prevent the robot from moving.
+ Useful for
  maintaining position or preparing for disable.
 
- <p>Example:
+ <p>
+ Example:
 
  <pre><code>
  Swerve.getInstance().lockWheels();
@@ -326,11 +294,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="resetOdometry()">
 <h3>resetOdometry</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resetOdometry</span>()</div>
-<div class="block">Resets the robot's odometry to the center of the field (8.774m, 4.026m), with rotation based on
- alliance (0° for blue, 180° for red). This is typically used at the start of autonomous
+<div class="block">Resets the robot's odometry to the center of the field (8.774m, 4.026m), with
+ rotation based on
+ alliance (0° for blue, 180° for red). This is typically used at the start of
+ autonomous
  routines.
 
- <p>Example:
+ <p>
+ Example:
 
  <pre><code>
  Swerve.getInstance().resetOdometry();
@@ -343,7 +314,8 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose2d</span>&nbsp;<span class="element-name">getPose</span>()</div>
 <div class="block">Retrieves the current estimated pose of the robot on the field.
 
- <p>Example:
+ <p>
+ Example:
 
  <pre><code>
  Pose2d currentPose = Swerve.getInstance().getPose();
@@ -360,7 +332,8 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resetOdometry</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</span></div>
 <div class="block">Resets the robot's odometry to a specific pose.
 
- <p>Example:
+ <p>
+ Example:
 
  <pre><code>
  Swerve.getInstance().resetOdometry(new Pose2d(new Translation2d(8.0, 4.0), Rotation2d.fromDegrees(90)));
@@ -377,7 +350,8 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.kinematics.ChassisSpeeds</span>&nbsp;<span class="element-name">getRobotVelocity</span>()</div>
 <div class="block">Gets the current velocity of the robot.
 
- <p>Example:
+ <p>
+ Example:
 
  <pre><code>
  ChassisSpeeds speeds = Swerve.getInstance().getRobotVelocity();
@@ -394,7 +368,8 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">swervelib.SwerveDrive</span>&nbsp;<span class="element-name">getSwerveDrive</span>()</div>
 <div class="block">Gets the underlying SwerveDrive object.
 
- <p>Example:
+ <p>
+ Example:
 
  <pre><code>
  SwerveDrive drive = Swerve.getInstance().getSwerveDrive();
@@ -402,101 +377,6 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the SwerveDrive instance used by this subsystem</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="driveToPose(edu.wpi.first.math.geometry.Pose2d)">
-<h3>driveToPose</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">driveToPose</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d&nbsp;targetPose)</span></div>
-<div class="block">Creates a command to autonomously drive the robot to a specific pose using PathPlanner.
-
- <p>Example:
-
- <pre><code>
- Command autoDrive = Swerve.getInstance()
-         .driveToPose(new Pose2d(new Translation2d(6.0, 3.0), Rotation2d.fromDegrees(45)));
- </code></pre></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>targetPose</code> - the target Pose2d to drive to</dd>
-<dt>Returns:</dt>
-<dd>a Command that will drive the robot to the specified pose</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getClosestPoint(edu.wpi.first.math.geometry.Pose2d[])">
-<h3>getClosestPoint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose2d</span>&nbsp;<span class="element-name">getClosestPoint</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d[]&nbsp;points)</span></div>
-<div class="block">Finds the closest point from an array of positions to the robot's current position. Uses
- squared distance for optimization to avoid expensive square root operations.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>points</code> - Array of Pose2d positions to check</dd>
-<dt>Returns:</dt>
-<dd>The closest Pose2d from the array, or null if the array is empty</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getClosestPOI(frc.robot.helpers.POI[])">
-<h3>getClosestPOI</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose2d</span>&nbsp;<span class="element-name">getClosestPOI</span><wbr><span class="parameters">(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points)</span></div>
-<div class="block">Finds the closest point from an array of field POIs to the robot's current position. Takes
- alliance into account and optimizes calculations for frequent calls.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>points</code> - Array of POI objects to check</dd>
-<dt>Returns:</dt>
-<dd>The Pose2d of the closest POI, or null if the array is empty</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getClosestPOIByTag(frc.robot.helpers.POI[],java.lang.String)">
-<h3>getClosestPOIByTag</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose2d</span>&nbsp;<span class="element-name">getClosestPOIByTag</span><wbr><span class="parameters">(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tag)</span></div>
-<div class="block">Finds the closest POI with a specific tag to the robot's current position. Highly optimized for
- frequent calls in control loops.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>points</code> - Array of POI objects to check</dd>
-<dd><code>tag</code> - The tag to filter by, or null to check all POIs</dd>
-<dt>Returns:</dt>
-<dd>The Pose2d of the closest matching POI, or null if none found</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="createPointToClosestSupplier(frc.robot.helpers.POI[],java.lang.String)">
-<h3>createPointToClosestSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation2d&gt;</span>&nbsp;<span class="element-name">createPointToClosestSupplier</span><wbr><span class="parameters">(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tag)</span></div>
-<div class="block">Creates a supplier that returns a Rotation2d pointing toward the closest POI with a specific
- tag.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>points</code> - Array of POIs to target</dd>
-<dd><code>tag</code> - The tag to filter by, or null to consider all POIs</dd>
-<dt>Returns:</dt>
-<dd>A supplier that provides the rotation toward the closest matching POI when called</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="createPointToClosestSupplier(frc.robot.helpers.POI[])">
-<h3>createPointToClosestSupplier</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;edu.wpi.first.math.geometry.Rotation2d&gt;</span>&nbsp;<span class="element-name">createPointToClosestSupplier</span><wbr><span class="parameters">(<a href="../helpers/POI.html" title="class in frc.robot.helpers">POI</a>[]&nbsp;points)</span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
-<div class="block">For backward compatibility.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>points</code> - Array of POIs to target.</dd>
-<dt>Returns:</dt>
-<dd>A supplier that provides the rotation toward the closest matching POI when called.</dd>
 </dl>
 </section>
 </li>
@@ -515,7 +395,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="periodic()">
 <h3>periodic</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">periodic</span>()</div>
-<div class="block">Resets the odometry if the robot has not received a global pose from the AprilTag system.</div>
+<div class="block">Resets the odometry if the robot has not received a global pose from the
+ AprilTag system.</div>
 </section>
 </li>
 </ul>

@@ -35,7 +35,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -97,27 +96,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#leftToReef()" class="member-name-link">leftToReef</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Autonomous routine that starts from the left spawn position, delivers coral to a reef location,
- acquires more coral from the left intake station, and delivers it to another reef location.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rightToReef()" class="member-name-link">rightToReef</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Autonomous routine that starts from the right spawn position, delivers coral to a reef
- location, acquires more coral from the right intake station, and delivers it to another reef
- location.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.wpilibj2.command.Command</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#simpleBackwardDrive()" class="member-name-link">simpleBackwardDrive</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a simple test command that drives the robot backward at a fixed speed for a set time.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#victoryLap()" class="member-name-link">victoryLap</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Creates a command that follows the PathPlanner path "Victory Lap".</div>
 </div>
 </div>
 </div>
@@ -145,51 +126,6 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>A command that drives backward at 1.0 m/s for 3 seconds and then stops</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="leftToReef()">
-<h3>leftToReef</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">leftToReef</span>()</div>
-<div class="block">Autonomous routine that starts from the left spawn position, delivers coral to a reef location,
- acquires more coral from the left intake station, and delivers it to another reef location.
-
- <p>The sequence: 1. Drives to first reef position while positioning arms 2. Drops coral at
- first position (i) 3. Drives to intake station to collect new coral 4. Delivers collected coral
- to second reef position (j)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>A command sequence for the complete left-side autonomous routine</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="rightToReef()">
-<h3>rightToReef</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">rightToReef</span>()</div>
-<div class="block">Autonomous routine that starts from the right spawn position, delivers coral to a reef
- location, acquires more coral from the right intake station, and delivers it to another reef
- location.
-
- <p>The sequence: 1. Drives to first reef position while positioning arms 2. Drops coral at
- first position (f) 3. Drives to intake station to collect new coral 4. Delivers collected coral
- to second reef position (e)</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>A command sequence for the complete right-side autonomous routine</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="victoryLap()">
-<h3>victoryLap</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">victoryLap</span>()</div>
-<div class="block">Creates a command that follows the PathPlanner path "Victory Lap".
- This autonomous routine makes the robot drive in a predetermined path around the field.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>A command that follows the Victory Lap path, or a simple backup command if the path cannot be loaded</dd>
 </dl>
 </section>
 </li>
