@@ -77,6 +77,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Array of points of interest for alga stations.</div>
 </dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html" class="type-name-link" title="class in frc.robot.subsystems">AlgaArm</a> - Class in <a href="frc/robot/subsystems/package-summary.html">frc.robot.subsystems</a></dt>
+<dd>
+<div class="block">Subsystem that controls the Alga Arm, responsible for intaking and dropping Alga game pieces.</div>
+</dd>
 <dt><a href="frc/robot/Constants.FieldConstants.html#ALL_POIS" class="member-name-link">ALL_POIS</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.FieldConstants.html" title="class in frc.robot">Constants.FieldConstants</a></dt>
 <dd>
 <div class="block">All consolidated points of interest on the field</div>
@@ -325,6 +329,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the value of the <code>disconnectedAlert</code> record component.</div>
 </dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#doesntHaveAlga" class="member-name-link">doesntHaveAlga</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Trigger that is active when the Alga Arm does not have an Alga.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/CoralManipulator.html#doesntHaveCoral" class="member-name-link">doesntHaveCoral</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
 <dd>
 <div class="block">Trigger that is active when the Coral Manipulator does not have a coral.</div>
@@ -360,6 +368,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/helpers/CustomSwerveInput.html#driveToPoseEnabled(java.util.function.BooleanSupplier)" class="member-name-link">driveToPoseEnabled(BooleanSupplier)</a> - Method in class frc.robot.helpers.<a href="frc/robot/helpers/CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></dt>
 <dd>
 <div class="block">Enable driving to the target pose.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#drop()" class="member-name-link">drop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Drops an alga until the sensor no longer detects it.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/CoralManipulator.html#drop()" class="member-name-link">drop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
 <dd>
@@ -579,6 +591,10 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/Robot.html#getInstance()" class="member-name-link">getInstance()</a> - Static method in class frc.robot.<a href="frc/robot/Robot.html" title="class in frc.robot">Robot</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#getInstance()" class="member-name-link">getInstance()</a> - Static method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Gets the singleton instance of the AlgaArm subsystem.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/Climb.html#getInstance()" class="member-name-link">getInstance()</a> - Static method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
 <dd>
 <div class="block">Gets the singleton instance of the Climb subsystem.</div>
@@ -638,6 +654,10 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:H">H</h2>
 <dl class="index">
+<dt><a href="frc/robot/subsystems/AlgaArm.html#hasAlga" class="member-name-link">hasAlga</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Trigger that is active when the Alga Arm has an Alga.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/CoralManipulator.html#hasCoral" class="member-name-link">hasCoral</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
 <dd>
 <div class="block">Trigger that is active when the Coral Manipulator has a coral.</div>
@@ -706,6 +726,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsystems/CoralManipulator.html#instantStop()" class="member-name-link">instantStop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
 <dd>
 <div class="block">Instantly stops the coral manipulator.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#intake()" class="member-name-link">intake()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Intakes an alga until the sensor detects it.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/CoralManipulator.html#intake()" class="member-name-link">intake()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
 <dd>
@@ -840,6 +864,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Proportional gain.</div>
 </dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/Climb.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/CoralArm.html#periodic()" class="member-name-link">periodic()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralArm.html" title="class in frc.robot.subsystems">CoralArm</a></dt>
@@ -907,6 +933,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/vision/Vision.AprilTagIOInputs.html#rejectedPoses" class="member-name-link">rejectedPoses</a> - Variable in class frc.robot.subsystems.vision.<a href="frc/robot/subsystems/vision/Vision.AprilTagIOInputs.html" title="class in frc.robot.subsystems.vision">Vision.AprilTagIOInputs</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#release()" class="member-name-link">release()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Releases the alga with a short drop.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/Swerve.html#resetOdometry()" class="member-name-link">resetOdometry()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Swerve.html" title="class in frc.robot.subsystems">Swerve</a></dt>
 <dd>
 <div class="block">Resets the robot's odometry to the center of the field (8.774m, 4.026m), with rotation based on
@@ -949,6 +979,18 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/helpers/CustomSwerveInput.html#robotRelative(java.util.function.BooleanSupplier)" class="member-name-link">robotRelative(BooleanSupplier)</a> - Method in class frc.robot.helpers.<a href="frc/robot/helpers/CustomSwerveInput.html" title="class in frc.robot.helpers">CustomSwerveInput</a></dt>
 <dd>
 <div class="block">Set the stream to output robot relative <code>ChassisSpeeds</code></div>
+</dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#runDrop()" class="member-name-link">runDrop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Runs the drop at a constant power.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#runIntake()" class="member-name-link">runIntake()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Runs the intake at a constant power.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#running" class="member-name-link">running</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Trigger that is active when the Alga Arm is running.</div>
 </dd>
 <dt><a href="frc/robot/subsystems/CoralManipulator.html#running" class="member-name-link">running</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/CoralManipulator.html" title="class in frc.robot.subsystems">CoralManipulator</a></dt>
 <dd>
@@ -1042,6 +1084,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the value of the <code>stdDevs</code> record component.</div>
 </dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#stop()" class="member-name-link">stop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Stops the alga arm.</div>
+</dd>
 <dt><a href="frc/robot/subsystems/Climb.html#stop()" class="member-name-link">stop()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/Climb.html" title="class in frc.robot.subsystems">Climb</a></dt>
 <dd>
 <div class="block">Stops the climb.</div>
@@ -1093,6 +1139,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsystems/vision/PoseObservation.html#timestampSeconds()" class="member-name-link">timestampSeconds()</a> - Method in record class frc.robot.subsystems.vision.<a href="frc/robot/subsystems/vision/PoseObservation.html" title="class in frc.robot.subsystems.vision">PoseObservation</a></dt>
 <dd>
 <div class="block">Returns the value of the <code>timestampSeconds</code> record component.</div>
+</dd>
+<dt><a href="frc/robot/subsystems/AlgaArm.html#toggle()" class="member-name-link">toggle()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></dt>
+<dd>
+<div class="block">Toggles between intake and drop based on the current state.</div>
 </dd>
 <dt><a href="frc/robot/Constants.ClimbConstants.html#TOP_LIMIT_CHANNEL" class="member-name-link">TOP_LIMIT_CHANNEL</a> - Static variable in class frc.robot.<a href="frc/robot/Constants.ClimbConstants.html" title="class in frc.robot">Constants.ClimbConstants</a></dt>
 <dd>
