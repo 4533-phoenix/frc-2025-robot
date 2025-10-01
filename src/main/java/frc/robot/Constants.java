@@ -39,25 +39,40 @@ public final class Constants {
     public static final LinearVelocity MAX_SPEED = MetersPerSecond.of(5.45);
   }
 
-  /** Constants for the alga arm mechanism. */
-  public static final class AlgaArmConstants {
+  /** Constants for the alga elevator mechanism. */
+  public static final class AlgaElevatorConstants {
     /** Private constructor to prevent instantiation. */
-    private AlgaArmConstants() {}
+    private AlgaElevatorConstants() {}
+
+    /** Can ID for the retraction motor. */
+    public static final int RETRACTION_CAN_ID = 35;
+
+    /** Percentage of power to apply to the motor */
+    public static final double RETRACTION_POWER = -1.0;
+
+    /** Upper limit switch port */
+    public static final int UPPER_LIMIT_CHANNEL = 7;
+
+    /** Lower limit switch port */
+    public static final int LOWER_LIMIT_CHANNEL = 6;
+  }
+
+  /** Constants for the alga grabber mechanism. */
+  public static final class AlgaGrabberConstants {
+    /** Private constructor to prevent instantiation. */
+    private AlgaGrabberConstants() {}
 
     /** CAN ID for the alga motor. */
     public static final int CAN_ID = 19;
 
-    /** Sensor channel for the alga sensor. */
-    public static final int SENSOR_CHANNEL = 7;
-
-    /** Intake power for the alga arm. */
+    /** Intake power for the alga grabber. */
     public static final double INTAKE_POWER = 0.85;
 
-    /** Drop power for the alga arm. */
+    /** Drop power for the alga grabber. */
     public static final double DROP_POWER = -1.0;
 
-    /** Whether the alga arm is inverted. */
-    public static final boolean ALGA_INVERTED = false;
+    /** Whether the alga grabber is inverted. */
+    public static final boolean INVERTED = false;
   }
 
   /** Constants for the climbing mechanism. */
@@ -338,7 +353,7 @@ public final class Constants {
           "CORAL_REEF",
           "b"),
 
-      // Alga stations
+      // Alga station
       new POI(new Pose2d(6.0, 0.75, Rotation2d.fromDegrees(180.0)), "ALGA_STATION", "default"),
 
       // Cages

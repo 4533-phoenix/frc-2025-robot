@@ -84,9 +84,12 @@ public class RobotContainer {
   // .cubeRotationControllerAxis(true)
   // .deadband(OIConstants.DRIVER_DEADBAND)
   // .allianceRelativeControl(true);
-  
-  /** Alga arm subsystem for handling alga gamepieces. */
-  private final AlgaArm algaArm = AlgaArm.getInstance();
+
+  /** Alga elevator subsystem for handling alga arm position. */
+  private final AlgaElevator algaElevator = AlgaElevator.getInstance();
+
+  /** Alga grabber subsystem for handling alga gamepieces. */
+  private final AlgaGrabber algaGrabber = AlgaGrabber.getInstance();
 
   /** Coral handler subsystem for handling coral gamepieces. */
   private final CoralManipulator coralManipulator = CoralManipulator.getInstance();
@@ -176,14 +179,14 @@ public class RobotContainer {
   /** Configure operator controller bindings for game piece and mechanism controls */
   private void configureOperatorControls() {
     // ---- ALGA ARM CONTROLS ----
-    // Toggle alga arm
-    operatorController.a().onTrue(algaArm.toggle());
-    
     // Run alga intake while held
-    operatorController.leftBumper().whileTrue(algaArm.runIntake());
+    operatorController.leftBumper().whileTrue(algaGrabber.runIntake());
 
     // Run alga drop while held
-    operatorController.rightBumper().whileTrue(algaArm.runDrop());
+    operatorController.rightBumper().whileTrue(algaGrabber.runDrop());
+
+    // Toggle alga arm position (up/down)
+    operatorController.y().onTrue(algaElevator.togglePosition());
 
     // ---- CORAL MANIPULATOR CONTROLS ----
     operatorController.b().onTrue(coralManipulator.ejectOrDrop().onlyIf(coralArm.onFront.negate()));
