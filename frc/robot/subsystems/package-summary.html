@@ -15,7 +15,11 @@
 <script type="text/javascript" src="../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="package-declaration-page">
-<script type="text/javascript">var pathtoroot = "../../../";
+<script type="text/javascript">var evenRowColor = "even-row-color";
+var oddRowColor = "odd-row-color";
+var tableTab = "table-tab";
+var activeTableTab = "active-table-tab";
+var pathtoroot = "../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -81,13 +85,22 @@ loadScripts(document, 'script');</script>
 </li>
 <li>
 <div id="class-summary">
-<div class="caption"><span>Classes</span></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="class-summary-tab0" role="tab" aria-selected="true" aria-controls="class-summary.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary', 2)" class="active-table-tab">All Classes and Interfaces</button><button id="class-summary-tab2" role="tab" aria-selected="false" aria-controls="class-summary.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary-tab2', 2)" class="table-tab">Classes</button><button id="class-summary-tab3" role="tab" aria-selected="false" aria-controls="class-summary.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary-tab3', 2)" class="table-tab">Enum Classes</button></div>
+<div id="class-summary.tabpanel" role="tabpanel" aria-labelledby="class-summary-tab0">
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Class</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="AlgaArm.html" title="class in frc.robot.subsystems">AlgaArm</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="AlgaElevator.html" title="class in frc.robot.subsystems">AlgaElevator</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Subsystem that controls the Alga Arm, responsible for intaking and dropping Alga game pieces.</div>
+<div class="block">Subsystem that controls the Alga Elevator position mechanism.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab3"><a href="AlgaElevator.ElevatorState.html" title="enum class in frc.robot.subsystems">AlgaElevator.ElevatorState</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab3">
+<div class="block">Enum representing the position state of the Alga Elevator.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="AlgaGrabber.html" title="class in frc.robot.subsystems">AlgaGrabber</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Subsystem that controls the Alga Grabber motor mechanism.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Climb.html" title="class in frc.robot.subsystems">Climb</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -105,6 +118,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">Manages the robot's swerve drive system, providing control over movement, autonomous path
  following, and odometry tracking.</div>
+</div>
 </div>
 </div>
 </div>
