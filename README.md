@@ -1,6 +1,6 @@
 <h1 align="left">
 FRC 2025 Robot Code
-<img src="https://waterga.me/share/logo.svg" align="right" width="45" height="45" />
+<img src="https://phoenix4533.org/favicon.svg" align="right" width="45" height="45" />
 </h1>
 
 Welcome to the official repository for **FRC Team 4533 Phoenix's 2025 Robot Code**! This repository contains all the code for our robot, including subsystems, commands, and autonomous routines.
