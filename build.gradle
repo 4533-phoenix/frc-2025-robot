@@ -103,6 +103,13 @@ tasks.withType(JavaCompile) {
     options.compilerArgs.add '-XDstringConcat=inline'
 }
 
+task downloadJavadocStyle(type: Download) {
+    src 'https://github.com/4533-phoenix/javadoc-style/raw/refs/heads/main/style.css'
+    dest "${buildDir}/style.css"
+    overwrite true
+}
+
 javadoc {
-    options.stylesheetFile = file("https://github.com/4533-phoenix/javadoc-style/raw/refs/heads/main/style.css")
+    dependsOn downloadJavadocStyle
+    options.stylesheetFile = file("${buildDir}/style.css")
 }
